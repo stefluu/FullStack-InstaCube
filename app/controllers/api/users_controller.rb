@@ -5,10 +5,10 @@ class Api::UsersController < ApplicationController
 
     if @user.save!
       login!(@user)
-      render: 'api/images/index'
+      render 'api/images/index'
     else
-      flash[:errors]= @user.errors.full_messages, status: 422
-      render: 'api/session/new'
+      render json: @user.errors.full_messages, status: 422
+      # render 'api/session/new'
     end
 
   end
@@ -34,6 +34,6 @@ class Api::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user),permit(:username, :email, :display_name, :bio, :password)
+    params.require(:user).permit(:username, :email, :display_name, :bio, :password)
   end
 end

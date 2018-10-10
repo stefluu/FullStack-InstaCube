@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  # protect_from_forgery with: :exception
 
-  helper_methods: :current_user, :require_login, :logged_in?
+  helper_method :current_user, :require_login, :logged_in?
 
   def current_user
     @current_user || User.find_by(session_token: session[:session_token])
@@ -14,11 +14,11 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless logged_in?
-      render: 'api/session/new'
+      render 'api/session/new'
       #if you attempt to comment when logged out, it redirects you to login page
     end
   end
-  
+
   def logged_in?
     !!current_user
   end
@@ -26,5 +26,5 @@ class ApplicationController < ActionController::Base
   def logout!
     current_user.reset_session_token!
     session[:session_token] = nil
-  # end
+  end
 end

@@ -20,9 +20,14 @@
     "lib": "lib",
     "test": "test"
   },
+  "engines": {
+    "node": "8.4.0",
+    "npm": "6.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack-start": "webpack --mode=development --watch"
+    "webpack-start": "webpack --mode=development --watch",
+    "postinstall": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",

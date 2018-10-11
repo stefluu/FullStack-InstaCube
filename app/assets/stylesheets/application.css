@@ -19,8 +19,19 @@
   align-items: flex-end;
 }
 
-#footer-list {
-  list-style-type: none;
+#splash{
+  flex-direction: row;
   align-items: flex-end;
-  flex-direction:row;
+  background: orange;
+}
+
+#footer-list {
+
+}
+
+#footer {
+  height: 25px;
+  justify-content: flex-end;
+  flex-direction: row;
+
 }

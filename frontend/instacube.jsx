@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 // import { signup, login, logout } from './util/session_api_util'
 // above for testing session api
 
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   // window.logout = logout;
 
   ReactDOM.render(
-    <RootReducer />,
+    <h1> I'm instagram! </h1>,
     root
   );
 });

@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2018_10_10_045901) do
     t.string "username", null: false
     t.string "email", null: false
     t.string "full_name", null: false
-    t.string "display_name", null: false
+    t.string "display_name"
     t.text "bio"
     t.string "password_digest", null: false
     t.string "session_token", null: false

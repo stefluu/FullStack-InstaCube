@@ -29,14 +29,14 @@ export const logout = () => {
 }
 
 
-const receiveUser = (user) => {
+const receiveCurrentUser = (user) => {
   return{
     type: RECEIVE_CURRENT_USER,
     user,
   };
 };
 
-const logoutUser = () => {
+const logoutCurrentUser = () => {
   return {
     type: LOGOUT_CURRENT_USER
   };

@@ -9,7 +9,7 @@ class Splash extends React.Component{
       <div>
         <Route exact path="/" component={LoginContainer} />
         <footer>
-          <ul>
+          <ul id="footer-list">
             <li>ABOUT US</li>
             <li>SUPPORT</li>
             <li>PRESS</li>

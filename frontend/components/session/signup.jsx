@@ -21,7 +21,7 @@ class SignupContainer extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.signup(this.state).then( () => this.props.history.push('/signup'));
+    this.props.signup(this.state).then( () => this.props.history.push('/index'));
   }
 //split off the onSubmit from form bc it was getting to crowded
 //default action for button in form is sending post request which causes rerender

@@ -18,3 +18,9 @@
   background: pink;
   align-items: flex-end;
 }
+
+#footer-list {
+  list-style-type: none;
+  align-items: flex-end;
+  flex-direction:row;
+}

@@ -1,8 +1,11 @@
 import React from 'react';
+import { Route, HashRouter, Link } from 'react-router-dom';
+import Login from './session/login_container'
 
 const App = () => (
   <div>
     <h1>This is being rendered from app.jsx</h1>
+    <Route path="/" component={Login} />
     <footer>
       <ul>
         <li>ABOUT US</li>

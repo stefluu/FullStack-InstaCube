@@ -27,29 +27,30 @@ class Signup extends React.Component{
 //default action for button in form is sending post request which causes rerender
 
   render(){
-    return {
+    return(
+      <link rel="stylesheet" href="signup_form.css">
       <div>
         <form className='signup-form' onSubmit={() => this.props.signup(this.state)}>
           <input type='text'
             placeholder="Email"
-            value={this.state.email} onChange={this.handleInput('email')}> </input>
+            value={this.state.email} onChange={this.handleInput('email')}/>
 
           <input type='text'
             placeholder="Full Name"
-            value={this.state.full_name} onChange={this.handleInput('full_name')}></input>
+            value={this.state.full_name} onChange={this.handleInput('full_name')}/
 
           <input type='text'
             placeholder="Username"
-            value={this.state.username} onChange={this.handleInput('username')}> </input>
+            value={this.state.username} onChange={this.handleInput('username')}/>
 
           <input type='password'
             placeholder='Password'
-            value={this.state.password} onChange={this.handleInput('password')}> </input>
+            value={this.state.password} onChange={this.handleInput('password')}/>
 
           <button onClick={this.handleSubmit.bind(this)}>Sign Up</button>
         </form>
       </div>
-    };
+    );
   };
   //need to call this on handle submit bc it is not bound to this instance of state
 };

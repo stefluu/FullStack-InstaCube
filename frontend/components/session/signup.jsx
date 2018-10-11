@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Signup extends React.Component{
   constructor(props){
@@ -20,7 +21,7 @@ class Signup extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.signup(this.state).then( () => this.props.history.push('/api/images/index'));
+    this.props.signup(this.state).then( () => this.props.history.push('/signup')); //is this api/images/index?
   }
 //split off the onSubmit from form bc it was getting to crowded
 //default action for button in form is sending post request which causes rerender
@@ -53,4 +54,4 @@ class Signup extends React.Component{
   //need to call this on handle submit bc it is not bound to this instance of state
 };
 
-export default Signup;
+export default withRouter(Signup);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import LoginContainer from '../session/login_container';
-import AuthRoute from '../../util/route_util';
+import { AuthRoute } from '../../util/route_util';
 
 
 class Splash extends React.Component{

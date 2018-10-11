@@ -9,9 +9,9 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <h1>This is being rendered from app.jsx</h1>
-    <Route exact path="/" component={Splash} />
     <AuthRoute path="/signup" component={SignupContainer} />
     <ProtectedRoute path="/index" component={IndexContainer} />
+    <Route exact path="/" component={Splash} />
   </div>
 );
 

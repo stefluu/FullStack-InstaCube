@@ -14,8 +14,8 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(params[:username])
-    render: 'api/users/show'
+    @user = User.find_by(username: params[:user][:username])
+    render 'api/users/show'
   end
 
   def edit
@@ -26,7 +26,7 @@ class Api::UsersController < ApplicationController
     @user = current_user
     if @user && @user.update_attributes(user_params)
       @user.save!
-      render: 'api/users/show'
+      render 'api/users/show'
     else
       require_login
     end

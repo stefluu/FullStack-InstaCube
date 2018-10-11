@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   // window.logout = logout;
 
   ReactDOM.render(
-    <h1>Instagram Clone!</h1>,
+    <RootReducer />,
     root
   );
 });

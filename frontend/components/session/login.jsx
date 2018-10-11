@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-class Login extends React.Component{
+class LoginContainer extends React.Component{
   constructor(props){
     super(props);
     this.state ={
@@ -51,4 +51,4 @@ class Login extends React.Component{
   //need to call this on handle submit bc it is not bound to this instance of state
 };
 
-export default withRouter(Login);
+export default withRouter(LoginContainer);

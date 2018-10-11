@@ -1,7 +1,7 @@
 
 import { connect } from 'React-redux';
 import { signup } from '../../actions/session';
-import Signup from './signup';
+import SignupContainer from './signup';
 
 const mdtp = (dispatch) =>{
   return {
@@ -9,4 +9,4 @@ const mdtp = (dispatch) =>{
   };
 };
 
-export default connect(null, mdtp)(Signup);
+export default connect(null, mdtp)(SignupContainer);

@@ -41,3 +41,9 @@ const logoutUser = () => {
     type: LOGOUT_CURRENT_USER
   };
 };
+
+// const receiveErrors = (errors) => {
+//   return{
+
+// }
+// }

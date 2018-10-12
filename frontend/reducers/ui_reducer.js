@@ -1,0 +1,10 @@
+import React from 'react';
+import { combineReducers } from 'redux';
+import modalReducer from './modal_reducer';
+
+const UiReducer = combineReducers({
+  modal: modelReducer
+  // errors: errorsReducer
+});
+
+export default RootReducer;

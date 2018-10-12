@@ -11,6 +11,16 @@ class Splash extends React.Component{
         <div id="splash">
           <AuthRoute exact path="/" component={LoginContainer} />
           <img id="phone-pic" src="https://images.indianexpress.com/2016/07/instagram-759.jpg" />
+
+          <div id="get-connected">
+            <h4>Get connected.</h4>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"></link>
+
+            <a href="https://github.com/stefluu"><i id="github-splash" class="fab fa-github"></i></a>
+
+            <a href="https://www.linkedin.com/in/stefanieluu/"><i id="linkedin-splash" class="fab fa-linkedin"></i></a>
+          </div>
+
           <footer id="footer">
             <ul id="footer-list">
               <li>ABOUT US</li>

@@ -192,5 +192,26 @@
   height: 522px;
   width: 840px;
   left: -100px;
+}
 
+
+#get-connected{
+  position:relative;
+  font-family: helvetica;
+  font-weight: normal;
+  font-size: 14px;
+  bottom: 100px;
+  left: 1000px;
+  /* border: 1px red solid; */
+  width: 200px;
+  margin-left: -200px;
+  margin-bottom: -123px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#github-splash,
+#linkedin-splash{
+  font-size: 40px;
+  margin: 0px 25px;
 }

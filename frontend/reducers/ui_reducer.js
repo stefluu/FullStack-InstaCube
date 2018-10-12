@@ -3,8 +3,8 @@ import { combineReducers } from 'redux';
 import modalReducer from './modal_reducer';
 
 const UiReducer = combineReducers({
-  modal: modelReducer
-  // errors: errorsReducer
+  modal: modalReducer
+
 });
 
-export default RootReducer;
+export default UiReducer;

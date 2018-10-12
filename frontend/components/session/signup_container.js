@@ -1,5 +1,5 @@
 
-import { connect } from 'React-redux';
+import { connect } from 'react-redux';
 import { signup } from '../../actions/session';
 import SignupContainer from './signup';
 

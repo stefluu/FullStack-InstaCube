@@ -11,7 +11,23 @@ document.addEventListener('DOMContentLoaded', () =>{
   // window.signup = signup;
   // window.login = login;
   // window.logout = logout;
-  const store = configureStore();
+  let preloadedState = {}
+  const user = window.currentUser;
+  if (window.currentUser){
+    preloadedState = {
+      entities: {
+        users: user,
+      },
+      session: {
+        currentUserId: Object.values(user)[0].id
+      }
+    };
+  };
+
+  delete window.currentUser;
+  //so window doesn't hold extra info bc we already stored it.
+  
+  const store = configureStore(preloadedState);
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;

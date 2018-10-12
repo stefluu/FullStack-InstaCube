@@ -9,7 +9,7 @@ class Splash extends React.Component{
     return(
       <div>
         <div id="splash">
-          <AuthRoute exact path="/" component={LoginContainer} />
+          <Route exact path="/" component={LoginContainer} />
           <img id="phone-pic" src="../../../ig_screenshot.png" />
 
           <div id="get-connected">

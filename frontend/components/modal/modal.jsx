@@ -1,13 +1,13 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import ModalWindow from './modal_window'
+import ModalWindowContainer from './modal_window_container'
 
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
   }
-  const component = <ModalWindow />
+  const component = <ModalWindowContainer />
 
   return (
     <div className="modal-background" onClick={closeModal}>

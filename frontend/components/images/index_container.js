@@ -4,7 +4,8 @@ import IndexContainer from './index'
 
 const mstp = (state) => {
   return {
-    currentUserId: this.state.session.currentUserId
+    currentUserId: this.state.session.currentUserId,
+    images: Object.values(this.state.entites.images)
   };
 };
 

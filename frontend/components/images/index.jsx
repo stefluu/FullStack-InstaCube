@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
 
-
 class IndexContainer extends React.Component{
   render(){
     return(
@@ -12,9 +11,21 @@ class IndexContainer extends React.Component{
       <Link to={`/users/${this.props.currentUserId}`}><i className="far fa-user"></i></Link>
 
     <i class="fab fa-instagram"></i>
+
+      <ul>
+        {[1, 2, 3, 4].map(num => {
+          console.log(num);
+        })}
+
+      </ul>
+
       </div>
     )
   }
 }
 
 export default withRouter(IndexContainer);
+
+// {this.props.images.map( image => {
+//   console.log(image);
+// })}

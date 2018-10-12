@@ -24,11 +24,12 @@ export const login = (user) => {
 //the payload comes from current_user.json.jbuilder which has all info specified in partial but for currentUser
 
 export const logout = () => {
-  console.log(APIUtil.logout());
   return dispatch => {
+    console.log("1");
     return APIUtil.logout().then(() => {
+      console.log("2")
       return dispatch(logoutCurrentUser())
-    })
+    },()=> console.log("2.5"))
   }
 }
 
@@ -48,6 +49,7 @@ const receiveUserSignup = (user) => {
 };
 
 const logoutCurrentUser = () => {
+  console.log("3")
   return {
     type: LOGOUT_CURRENT_USER
   };

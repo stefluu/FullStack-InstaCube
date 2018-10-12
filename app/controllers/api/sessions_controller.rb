@@ -29,7 +29,7 @@ class Api::SessionsController < ApplicationController
     @user = current_user
     if @user
       logout!
-      render '/'
+      render json: {message: "success"}
       # render json: ["logged out!"], status: 418 #postman test
       # render 'api/session'
     else

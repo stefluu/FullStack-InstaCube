@@ -13,10 +13,10 @@ const App = () => (
   <div>
     <Modal />
     <AuthRoute path="/signup" component={SignupContainer} />
-    <Route path="/index" component={IndexContainer} />
+    <ProtectedRoute exact path="/index" component={IndexContainer} />
     <Route exact path="/login" component={LoginContainer} />
-    <Route path="/users/:userId" component={UserShowContainer} />
-    <Route exact path="/" component={Splash} />
+    <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
+    <Route path="/" component={Splash} />
   </div>
 );
 

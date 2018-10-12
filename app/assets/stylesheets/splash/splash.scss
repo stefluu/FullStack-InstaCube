@@ -1,0 +1,129 @@
+
+#splash{
+  flex-direction: row;
+  align-items: flex-end;
+  /* background: orange; */
+  height: 100%;
+  width: 100%;
+}
+
+#footer {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  /* justify-content: flex-end; */
+  flex-direction: row;
+  /* border: red 3px solid; */
+  /* justify-content: center; */
+  font-size: 12px;
+  /* padding-left: 100px;
+  padding-top: 25px; */
+  font-weight: bold;
+  padding-top: 127px;
+  padding-left: 83px;
+}
+
+
+#footer-list {
+  display: flex;
+  list-style:none;
+  justify-content: space-between;
+  width: 1000px;
+  /* background: green; */
+  font-family: helvetica;
+  float: left;
+  margin-left: 107px;
+  color: darkslategray;
+}
+
+.ig-copymark{
+  /* background: violet; */
+  width: 170px;
+  /* float:right; */
+  /* text-align: center; */
+  top: 20px;
+  padding-left: 63px;
+  /* border: green solid 1px; */
+  padding-right: 20px;
+  color: gray;
+  font-weight: normal;
+}
+
+.login-form{
+  position: relative;
+  right: 335px;
+  top: 75px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  height: 345px;
+  width: 350px;
+  border: lightgray solid 1px;
+  font-size: 25px;
+  font-family: 'Lobster', cursive;
+  float: right;
+
+    /* background: papayawhip; */
+}
+
+.login-form input, button{
+  width: 250px;
+  height: 30px;
+  border-radius: 5%;
+  font-size: 12px;
+  margin:3px;
+}
+
+.login-form button{
+  padding-top: 5px;
+  background: Dodgerblue;
+  color: white;
+  width: 255px;
+}
+
+#donthaveaccount {
+  position: relative;
+  height: 30px;
+  width: 310px;
+  padding: 20px;
+  border: solid lightgray 1px;
+  font-size: 14px;
+  text-align: center;
+  font-family: Helvetica;
+  top: 430px;
+  left: 723px;
+}
+
+.instacube-name{
+
+}
+
+#phone-pic{
+  height: 522px;
+  width: 840px;
+  left: -100px;
+}
+
+
+#get-connected{
+  position:relative;
+  font-family: helvetica;
+  font-weight: normal;
+  font-size: 14px;
+  bottom: 100px;
+  left: 1000px;
+  /* border: 1px red solid; */
+  width: 200px;
+  margin-left: -200px;
+  margin-bottom: -123px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#github-splash,
+#linkedin-splash{
+  color: steelblue;
+  font-size: 40px;
+  margin: 0px 25px;
+}

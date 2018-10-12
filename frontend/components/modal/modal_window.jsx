@@ -5,11 +5,21 @@ import { logout } from '../../actions/session';
 
 
 class ModalWindow extends React.Component {
-  componentDidMount(){
-    this.props = {
-      logout: () => dispatch(logout())
-    }
+
+  constructor(props){
+    super(props);
+    // this.state = {
+    //   modal: this.props.modal,
+    //   logout: () => dispatch(logout().bind(this.state))
+    // }
+    console.log(this.props);
   }
+  // componentDidMount(){
+  //   this.setState = {
+  //     modal: this.props.modal,
+  //     logout: () => dispatch(logout().bind(this.state))
+  //   }
+  // }
 
   render(){
     console.log(this.props);

@@ -53,8 +53,9 @@ const logoutCurrentUser = () => {
   };
 };
 
-// const receiveErrors = (errors) => {
-//   return{
-
-// }
-// }
+const receiveErrors = (errors) => {
+  return{
+    type: RECEIVE_SESSION_ERRORS,
+    errors
+  }
+}

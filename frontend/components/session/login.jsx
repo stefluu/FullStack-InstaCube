@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 class LoginContainer extends React.Component{
   constructor(props){
     super(props);
-    this.state ={
+    this.state = {
       username: "",
       password: ""
     };
@@ -35,13 +35,15 @@ class LoginContainer extends React.Component{
           <input type='text'placeholder="Username"
             value={this.state.username} onChange={this.handleInput('username')} />
 
+          <br/>
+
           <input type='password'
             placeholder='Password'
             value={this.state.password} onChange={this.handleInput('password')}/>
 
           <button onClick={this.handleSubmit.bind(this)}>Log in</button>
 
-          <div>
+          <div id="donthaveaccount">
             Don't have an account? <Link to='/signup'>Sign up</Link>
           </div>
         </form>

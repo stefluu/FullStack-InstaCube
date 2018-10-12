@@ -15,8 +15,13 @@
  */
 
 .login-form {
-  background: pink;
   align-items: flex-end;
+  height: 325px;
+  width: 300px;
+  float: right;
+  margin: 100px;
+  border: red solid, 1px;
+  background: papayawhip;
 }
 
 #splash{
@@ -33,5 +38,24 @@
   height: 25px;
   justify-content: flex-end;
   flex-direction: row;
+}
+
+#donthaveaccount {
+  padding: 20px;
+  border: solid lightgray 1px;
+  margin-top: 300px;
+  margin-bottom: 50px;
+  font-size: 14px;
+  text-align: center;
+  font-family: Helvetica;
+}
+
+ /* for image index below */
+
+#images-index{
 
 }
+
+ .far fa-user {
+   justify-content: flex-end
+ }

@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save!
       login!(@user)
-      render 'api/images/index'
+      render 'api/sessions/current_user'
     else
       render json: @user.errors.full_messages, status: 422
       # render 'api/session/new'

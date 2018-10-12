@@ -1,12 +1,15 @@
-import { RECEIVE_CURRENT_USER} from '../actions/session';
+import { RECEIVE_CURRENT_USER, RECEIVE_USER_SIGNUP} from '../actions/session';
 import { merge } from 'lodash';
 
 const usersReducer = (state = {}, action) => {
-  if (action.type === RECEIVE_CURRENT_USER) {
-    return merge({}, state, { [action.user.id]: action.user})
-  } else {
-    return state;
-  };
+  switch (action.type) {
+    case RECEIVE_CURRENT_USER:
+      return merge({}, state, action.payload);
+    case RECEIVE_USER_SIGNUP:
+      return merge({}, state, action.user);
+    default:
+      return state;
+  }
 };
 
 export default usersReducer;

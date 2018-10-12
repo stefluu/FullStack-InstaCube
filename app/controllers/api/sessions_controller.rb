@@ -9,7 +9,8 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login!(@user)
-      render 'api/images/index'
+      render 'api/sessions/current_user'
+      #rendering this json.jbuilder, which has access to currentUser payload
     else
       render json: ["Invalid login credentials"], status: 401
       # render json: 'api/session/create'

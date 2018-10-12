@@ -12,7 +12,6 @@ import Modal from '../components/modal/modal';
 const App = () => (
   <div>
     <Modal />
-    <h1>This is being rendered from app.jsx</h1>
     <AuthRoute path="/signup" component={SignupContainer} />
     <Route path="/index" component={IndexContainer} />
     <Route exact path="/login" component={LoginContainer} />

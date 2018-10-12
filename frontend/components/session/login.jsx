@@ -29,24 +29,27 @@ class LoginContainer extends React.Component{
   render(){
     return(
       <div>
-        <form className='login-form'>
+        <div className="login-container">
+          <form className='login-form'>
 
+            <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
 
-          <input type='text'placeholder="Username"
-            value={this.state.username} onChange={this.handleInput('username')} />
+            <h2 id="instacube-name"> Insta<sup>3</sup> </h2>
 
-          <br/>
+            <input type='text'placeholder="Username"
+              value={this.state.username} onChange={this.handleInput('username')} />
 
-          <input type='password'
-            placeholder='Password'
-            value={this.state.password} onChange={this.handleInput('password')}/>
+            <input type='password'
+              placeholder='Password'
+              value={this.state.password} onChange={this.handleInput('password')}/>
 
-          <button onClick={this.handleSubmit.bind(this)}>Log in</button>
+            <button onClick={this.handleSubmit.bind(this)}>Log in</button>
 
+          </form>
           <div id="donthaveaccount">
             Don't have an account? <Link to='/signup'>Sign up</Link>
           </div>
-        </form>
+        </div>
       </div>
     );
   };

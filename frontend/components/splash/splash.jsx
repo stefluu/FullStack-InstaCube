@@ -10,6 +10,7 @@ class Splash extends React.Component{
       <div>
         <div id="splash">
           <AuthRoute exact path="/" component={LoginContainer} />
+          <img id="phone-pic" src="https://images.indianexpress.com/2016/07/instagram-759.jpg" />
           <footer id="footer">
             <ul id="footer-list">
               <li>ABOUT US</li>
@@ -21,10 +22,10 @@ class Splash extends React.Component{
               <li>TERMS</li>
               <li>DIRECTORY</li>
               <li>PROFILES</li>
-              <li>HASHTAG</li>
+              <li>HASHTAGS</li>
               <li>LANGUAGE</li>
+              <li className="ig-copymark">© 2018 INSTACUBE</li>
             </ul>
-            <h4>© 2018 INSTACUBE</h4>
           </footer>
         </div>
       </div>

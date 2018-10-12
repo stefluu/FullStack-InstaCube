@@ -24,8 +24,9 @@ export const login = (user) => {
 //the payload comes from current_user.json.jbuilder which has all info specified in partial but for currentUser
 
 export const logout = () => {
+  console.log(APIUtil.logout());
   return dispatch => {
-    return APIUtil.logout().then(user => {
+    return APIUtil.logout().then(() => {
       return dispatch(logoutCurrentUser())
     })
   }

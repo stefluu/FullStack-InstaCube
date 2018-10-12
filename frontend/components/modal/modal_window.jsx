@@ -1,10 +1,18 @@
 
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { logout } from '../../actions/session';
 
 
 class ModalWindow extends React.Component {
+  componentDidMount(){
+    this.props = {
+      logout: () => dispatch(logout())
+    }
+  }
+
   render(){
+    console.log(this.props);
     return(
       <div className="modal-window">
         <li>Change Password</li>

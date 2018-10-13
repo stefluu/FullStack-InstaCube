@@ -19,8 +19,8 @@
   /* padding-left: 100px;
   padding-top: 25px; */
   font-weight: bold;
-  padding-top: 127px;
-  padding-left: 83px;
+  padding-top: 322px;
+  padding-left: 338px;
 }
 
 
@@ -49,15 +49,31 @@
   font-weight: normal;
 }
 
+#center-splash{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#phone-pic{
+  position: relative;
+  border: 1px red solid;
+  height: 600px;
+  width: 400px;
+  right: 263px;
+  top: 130px;
+  background-image: url("https://s3-us-west-1.amazonaws.com/instacube-dev/ig_screenshot.png");
+}
+
 .login-form{
   position: relative;
-  right: 335px;
-  top: 75px;
+  left: 480px;
+  top: 43px;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content:flex-start;
-  height: 345px;
+  height: 355px;
   width: 350px;
   border: lightgray solid 1px;
   font-size: 25px;
@@ -85,24 +101,25 @@
 #donthaveaccount {
   position: relative;
   height: 30px;
-  width: 310px;
+  width: 300px;
   padding: 20px;
   border: solid lightgray 1px;
   font-size: 14px;
   text-align: center;
   font-family: Helvetica;
-  top: 430px;
-  left: 723px;
+  top: 410px;
+  left: 490px;
+}
+
+#donthaveaccount h6 {
+  position: relative;
+  font-size: 14px;
+  font-weight: normal;
+  bottom: 300px;
 }
 
 .instacube-name{
 
-}
-
-#phone-pic{
-  height: 522px;
-  width: 840px;
-  left: -100px;
 }
 
 
@@ -111,14 +128,14 @@
   font-family: helvetica;
   font-weight: normal;
   font-size: 14px;
-  bottom: 100px;
-  left: 1000px;
+  // bottom: 100px;
+  // left: 1000px;
   /* border: 1px red solid; */
   width: 200px;
-  margin-left: -200px;
-  margin-bottom: -123px;
+  // margin-left: -200px;
+  // margin-bottom: -123px;
   text-align: center;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
 }
 
 #github-splash,

@@ -45,11 +45,11 @@ class LoginContainer extends React.Component{
 
             <button onClick={this.handleSubmit.bind(this)}>Log in</button>
 
-            <button>Demo Login</button> 
+            <button>Demo Login</button>
 
           </form>
           <div id="donthaveaccount">
-            Don't have an account? <Link to='/signup'>Sign up</Link>
+            <div id ="donthaveaccount-text">Don't have an account? <Link to='/signup'>Sign up</Link></div>
           </div>
         </div>
       </div>

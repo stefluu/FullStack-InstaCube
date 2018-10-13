@@ -9,16 +9,18 @@ class Splash extends React.Component{
     return(
       <div>
         <div id="splash">
-          <Route exact path="/" component={LoginContainer} />
-          <img id="phone-pic" src="../../../ig_screenshot.png" />
+          <div id="center-splash">
+            <Route exact path="/" component={LoginContainer} />
+            <div id="phone-pic"></div>
 
-          <div id="get-connected">
-            <h4>Get connected.</h4>
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
+            <div id="get-connected">
+              <h4>Get connected.</h4>
+              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
 
-            <a href="https://github.com/stefluu"><i id="github-splash" class="fab fa-github"></i></a>
+              <a href="https://github.com/stefluu"><i id="github-splash" class="fab fa-github"></i></a>
 
-            <a href="https://www.linkedin.com/in/stefanieluu/"><i id="linkedin-splash" className="fab fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/stefanieluu/"><i id="linkedin-splash" className="fab fa-linkedin"></i></a>
+            </div>
           </div>
 
           <footer id="footer">

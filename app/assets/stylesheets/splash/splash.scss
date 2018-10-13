@@ -69,61 +69,6 @@ body {
   background-image: url("https://s3-us-west-1.amazonaws.com/instacube-dev/ig_screenshot.png");
 }
 
-.login-form{
-  position: relative;
-  left: 495px;
-  top: 51px;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content:flex-start;
-  height: 355px;
-  width: 350px;
-  border: gainsboro solid 1px;
-  font-size: 25px;
-  font-family: 'Lobster', cursive;
-  float: right;
-  background: white;
-
-    /* background: papayawhip; */
-}
-
-.login-form input, button{
-  width: 250px;
-  height: 30px;
-  border-radius: 5%;
-  font-size: 12px;
-  margin:3px;
-}
-
-.login-form button{
-  padding-top: 5px;
-  background: Dodgerblue;
-  color: white;
-  width: 255px;
-}
-
-#donthaveaccount {
-  position: relative;
-  height: 30px;
-  width: 315px;
-  padding: 20px;
-  border: solid gainsboro 1px;
-  font-size: 14px;
-  text-align: center;
-  font-family: Helvetica;
-  top: 420px;
-  left: 500px;
-  background: white;
-}
-
-#donthaveaccount-text{
-  position: absolute;
-  font-weight: normal;
-  padding-left: 50px;
-  padding-top: 5px;
-}
-
 
 #get-connected{
   position:relative;

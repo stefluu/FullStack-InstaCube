@@ -1,0 +1,42 @@
+
+.complete_navBar{
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  border-bottom: gainsboro solid 1px;
+}
+
+.complete_navBar section {
+  display:flex;
+  justify-content: space-between;
+  margin: 30px;
+  margin-bottom: 0px;
+}
+
+
+.complete_navBar input {
+  height: 20px;
+  width: 200px;
+}
+#navBar-right {
+  margin-right: 500px;
+}
+
+#navBar-left {
+  margin-left: 500px;
+}
+
+#navBar-right link, i {
+  font-size: 20px;
+  padding: 10px;
+}
+
+#navBar-left Link, h2 {
+  padding: 30px;
+}
+
+
+#ig-cube{
+  width: 35px;
+  height: 35px;
+}

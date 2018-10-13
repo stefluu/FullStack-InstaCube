@@ -51,6 +51,9 @@ class LoginContainer extends React.Component{
 
             <button onClick={this.handleSubmit.bind(this)}>Log in</button>
 
+            <section id="or-linebreak">
+              <hr/> OR <hr/> </section>
+
             <button onClick={() => this.handleDummyLogin()}>Demo Login</button>
 
           </form>

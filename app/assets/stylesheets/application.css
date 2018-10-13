@@ -29,7 +29,11 @@
 
 /* for splash page */
 
-@import './splash/splash.scss'
+@import './splash/splash.scss';
+
+/* for login page */
+
+@import './login_form/login_form.scss';
 
  /* for image index below */
 

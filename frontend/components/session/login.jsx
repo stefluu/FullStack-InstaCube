@@ -19,7 +19,13 @@ class LoginContainer extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     this.props.login(this.state).then( () => this.props.history.push('/index'));
-  }
+  };
+
+  handleDummyLogin(){
+    // e.preventDefault();
+    this.props.login({username: "demo_user", password: "123456"}).then( () =>
+    this.props.history.push('/index'));
+  };
 
 //split off the onSubmit from form bc it was getting to crowded
 //default action for button in form is sending post request which causes rerender
@@ -45,7 +51,7 @@ class LoginContainer extends React.Component{
 
             <button onClick={this.handleSubmit.bind(this)}>Log in</button>
 
-            <button>Demo Login</button>
+            <button onClick={() => this.handleDummyLogin()}>Demo Login</button>
 
           </form>
           <div id="donthaveaccount">

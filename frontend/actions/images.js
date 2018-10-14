@@ -6,6 +6,7 @@ export const FETCH_IMAGE = "FETCH_IMAGE";
 export const fetchImages = () => {
   return dispatch => {
     return APIUtil.fetchImages().then(images => {
+      console.log(images);
       return dispatch(fetchAllImages(images))
     });
   };

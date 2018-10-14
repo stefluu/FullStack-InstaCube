@@ -1,6 +1,7 @@
 import { FETCH_IMAGES, FETCH_IMAGE} from '../actions/images';
 import { merge } from 'lodash';
 
+
 const imagesReducer = (state = {}, action) => {
   Object.freeze();
   switch (action.type) {

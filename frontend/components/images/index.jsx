@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar'
 
@@ -7,8 +7,9 @@ class IndexContainer extends React.Component{
     return(
       <div id="images-index">
 
-      <Route exact path='/index' component={NavBarContainer} />
-
+        <Route exact path='/index' component={NavBarContainer} />
+        <div className="news-feed">
+        </div>
       </div>
     )
   }
@@ -27,3 +28,7 @@ export default withRouter(IndexContainer);
 //   })}
 //
 // </ul>
+
+// {this.props.images.map(image =>{
+//   return <img src ="image"/>
+// })}

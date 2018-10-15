@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar'
+import IndexPosts from './post'
 
 
 class IndexContainer extends React.Component{
@@ -18,11 +19,14 @@ class IndexContainer extends React.Component{
         <Route exact path='/index' component={NavBarContainer} />
         <div className="news-feed">
           <ul>
-            <li>
-              {this.props.images.map(image => (
-              <img className="image-post" src = {image.photo_url}/>
-            ))}
-            </li>
+            <section className="post">
+                {this.props.images.map(image => (
+                <li>
+                  <IndexPosts image={image} users={this.props.users}/>
+                </li>
+              ))}
+
+          </section>
           </ul>
         </div>
       </div>
@@ -31,19 +35,3 @@ class IndexContainer extends React.Component{
 }
 
 export default withRouter(IndexContainer);
-
-// {this.props.images.map( image => {
-//   console.log(image);
-// })}
-
-//
-// <ul>
-//   {[1, 2, 3, 4].map(num => {
-//     console.log(num);
-//   })}
-//
-// </ul>
-
-// {this.props.images.map(image =>{
-//   return <img src ="image"/>
-// })}

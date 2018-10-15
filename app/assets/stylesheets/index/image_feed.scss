@@ -1,8 +1,23 @@
 
 
-.image-post{
-  width: 600px;
-  height: auto;
+.news-feed{
   display: flex;
-  justify-content: column;
+  justify-content: center;
+}
+
+.news-feed li {
+  list-style: none;
+}
+
+.post {
+  width: 640px;
+}
+
+.post li {
+  margin: 60px 0px 30px 0px;
+  border: 1px solid gainsboro;
+}
+
+.post li:first-of-type {
+  margin: 30px 0px 30px 0px;
 }

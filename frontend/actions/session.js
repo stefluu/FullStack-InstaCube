@@ -8,7 +8,6 @@ export const RECEIVE_USER_SIGNUP = "RECEIVE_USER_SIGNUP";
 export const signup = (user) => {
   return dispatch => {
     return APIUtil.signup(user).then(user => {
-      console.log(user);
       return dispatch(receiveUserSignup(user))
     });
   };
@@ -25,11 +24,9 @@ export const login = (user) => {
 
 export const logout = () => {
   return dispatch => {
-    console.log("1");
     return APIUtil.logout().then(() => {
-      console.log("2")
       return dispatch(logoutCurrentUser())
-    },()=> console.log("2.5"))
+    })
   }
 }
 
@@ -49,7 +46,6 @@ const receiveUserSignup = (user) => {
 };
 
 const logoutCurrentUser = () => {
-  console.log("3")
   return {
     type: LOGOUT_CURRENT_USER
   };

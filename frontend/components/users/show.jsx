@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 
 class Show extends React.Component {
   render(){
-    console.log(this.props);
     return(
       <div>
         <h2> This is the user show page </h2>

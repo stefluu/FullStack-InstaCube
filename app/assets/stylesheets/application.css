@@ -37,14 +37,9 @@
 
  /* for image index below */
 
-#images-index{
+@import './image_feed.scss';
 
-}
+@import './nav_bar.scss';
 
- .far fa-user {
-   justify-content: flex-end
- }
-
-
-
+@import './post.scss';
 /* for login form */

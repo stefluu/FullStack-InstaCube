@@ -11,6 +11,8 @@ class navBar extends React.Component{
         <section id="navBar-left">
           <Link to='/index'><img id="ig-cube" src="https://s3-us-west-1.amazonaws.com/instacube-dev/43880183_544694999309669_656150743744512_n.png"/></Link>
 
+          <div className="verticalLine"></div>
+
           <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
 
           <h2 id="instacube-name"> Insta<sup>3</sup> </h2>

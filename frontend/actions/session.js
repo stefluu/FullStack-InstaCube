@@ -3,17 +3,21 @@ import * as APIUtil from '../util/session_api_util'
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_USER_SIGNUP = "RECEIVE_USER_SIGNUP";
-// export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
+export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
+export const CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
 
 
 export const signup = (user) => {
   return dispatch => {
     return APIUtil.signup(user).then(
-      user => {
-        return dispatch(receiveUserSignup(user));
-        dispatch()}
-      // err => {
-      //   return dispatch(receiveSessionErrors(err.responseJSON))}
+      user => (
+        dispatch(
+          receiveUserSignup(user),
+          clearSessionErrors()
+        )
+      ),
+      err => {
+        return dispatch(receiveSessionErrors(err.responseJSON))}
     );
   };
 };
@@ -21,10 +25,14 @@ export const signup = (user) => {
 export const login = (user) => {
   return dispatch => {
     return APIUtil.login(user).then(
-      payload => {
-        return dispatch(receiveCurrentUser(payload))}
-      // err => {
-      //   return dispatch(receiveSessionErrors(err.responseJSON))}
+      payload => (
+        dispatch(
+        receiveCurrentUser(payload),
+        clearSessionErrors()
+        )
+      ),
+      err => {
+        return dispatch(receiveSessionErrors(err.responseJSON))}
     );
   };
 };
@@ -33,11 +41,15 @@ export const login = (user) => {
 export const logout = () => {
   return dispatch => {
     return APIUtil.logout().then(
-      () => {
-        return dispatch(logoutCurrentUser())}
-      // err => {
-      //   return dispatch(receiveSessionErrors(err.responseJSON))
-      // }
+      () => (
+        dispatch(
+          logoutCurrentUser(),
+          clearSessionErrors()
+        )
+      ),
+      err => {
+        return dispatch(receiveSessionErrors(err.responseJSON))
+      }
     );
   };
 };
@@ -63,9 +75,13 @@ const logoutCurrentUser = () => {
   };
 };
 
-// const receiveSessionErrors = (errors) => {
-//   return{
-//     type: RECEIVE_SESSION_ERRORS,
-//     errors
-//   }
-// }
+const receiveSessionErrors = (errors) =>{
+  return {
+    type: RECEIVE_SESSION_ERRORS,
+    errors
+  };
+};
+
+const clearSessionErrors = () => {
+  type: CLEAR_SESSION_ERRORS
+}

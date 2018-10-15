@@ -22,8 +22,8 @@ class LoginContainer extends React.Component{
     this.props.login(this.state).then( () => this.props.history.push('/index'));
   };
 
-  handleDummyLogin(){
-    // e.preventDefault();
+  handleDummyLogin(e){
+    e.preventDefault();
     this.props.login({username: "demo_user", password: "123456"}).then( () =>
     this.props.history.push('/index'));
   };
@@ -60,7 +60,7 @@ class LoginContainer extends React.Component{
             <section id="or-linebreak">
               <hr/> OR <hr/> </section>
 
-            <button onClick={() => this.handleDummyLogin()}>Demo Login</button>
+            <button onClick={this.handleDummyLogin.bind(this)}>Demo Login</button>
 
           </form>
           <div id="donthaveaccount">

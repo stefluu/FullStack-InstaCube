@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import ErrorsList from './errors_list';
 
 class SignupContainer extends React.Component{
   constructor(props){
@@ -29,6 +30,7 @@ class SignupContainer extends React.Component{
   render(){
     return(
       <div>
+        <ErrorsList errors={this.props.errors} />
         <form className='signup-form' onSubmit={() => this.props.signup(this.state)}>
           <input type='text'
             placeholder="Email"

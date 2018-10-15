@@ -15,7 +15,11 @@ class navBar extends React.Component{
 
           <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
 
-          <h2 id="instacube-name"> Insta<sup>3</sup> </h2>
+          <div id="instacube-name">
+            <img src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-15+at+11.09.16+AM.png" />
+            <h2 id="instacube-3"> <sup>3</sup> </h2>
+          </div>
+
         </section>
 
         <input type="text" placeholder="Search.."/>

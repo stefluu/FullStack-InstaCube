@@ -1,0 +1,42 @@
+
+.entire_show_container{
+  display:flex;
+  justify-content: center;
+}
+
+.usershow-top{
+  border: 1px solid red;
+  display:flex;
+  justify-content: center;
+  font-size: 32px;
+  font-family: helvetica;
+}
+
+#usershow-avatar{
+  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+  margin-right: 100px;
+}
+
+#user-info{
+  text-align: left;
+}
+
+#user-edit-modal{
+  width: 400px;
+  border: 1px black solid;
+  display:flex;
+  flex-direction: row;
+}
+
+#user-info h3{
+  font-size: 15px;
+}
+
+#user-edit-modal button{
+  border-radius: 5px;
+  width: 100px;
+  font-weight: bold;
+  margin-left: 20px;
+}

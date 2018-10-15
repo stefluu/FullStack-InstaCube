@@ -3,10 +3,16 @@ import { connect } from 'react-redux';
 import { login } from '../../actions/session';
 import LoginContainer from './login';
 
+const mstp = (state) => {
+  return{
+    errors: state.errors.session
+  };
+};
+
 const mdtp = (dispatch) =>{
   return {
     login: (user) => dispatch(login(user))
   };
 };
 
-export default connect(null, mdtp)(LoginContainer);
+export default connect(mstp, mdtp)(LoginContainer);

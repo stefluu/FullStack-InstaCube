@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import ErrorsList from './errors_list';
 
 class LoginContainer extends React.Component{
   constructor(props){
@@ -36,11 +37,16 @@ class LoginContainer extends React.Component{
     return(
       <div>
         <div className="login-container">
+          <ErrorsList errors={this.props.errors} />
           <form className='login-form'>
 
             <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
 
-            <h2 id="instacube-name"> Insta<sup>3</sup> </h2>
+
+            <h2 id="instacube-name">
+              <img src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-15+at+11.09.16+AM.png" />
+              <sup>3</sup>
+            </h2>
 
             <input type='text'placeholder="Username"
               value={this.state.username} onChange={this.handleInput('username')} />

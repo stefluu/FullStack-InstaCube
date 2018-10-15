@@ -1,16 +1,34 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import NavBarContainer from '../nav_bar/nav_bar'
 
 class Show extends React.Component {
   render(){
     return(
       <div>
-        <h2> This is the user show page </h2>
-        <h2> {this.props.currentUser.username} </h2>
+        <NavBarContainer />
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
+        <div className="entire-show-container">
+          <div className="usershow-top">
+            <section id="usershow-avatar"></section>
 
-        <i class="fas fa-circle-notch" onClick={() => this.props.toggleModal()}></i>
+            <section id="user-info">
+              <section id="user-edit-modal">
+                <h4> {this.props.currentUser.username} </h4>
+                <button>Edit Profile</button>
+
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
+
+                <i class="fas fa-circle-notch" onClick={() => this.props.toggleModal()}></i>
+              </section>
+
+              <h3> {this.props.currentUser.bio} bio that doesn't exist</h3>
+              
+            </section>
+
+
+          </div>
+        </div>
       </div>
     )
   }

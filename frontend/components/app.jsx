@@ -12,7 +12,7 @@ import Modal from '../components/modal/modal';
 const App = () => (
   <div>
     <Modal />
-    <AuthRoute path="/signup" component={SignupContainer} />
+    <AuthRoute exact path="/signup" component={SignupContainer} />
     <ProtectedRoute exact path="/index" component={IndexContainer} />
     <Route exact path="/login" component={LoginContainer} />
     <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />

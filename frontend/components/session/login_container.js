@@ -4,7 +4,6 @@ import { login } from '../../actions/session';
 import LoginContainer from './login';
 
 const mstp = (state) => {
-  debugger
   return{
     errors: state.errors.session
   };

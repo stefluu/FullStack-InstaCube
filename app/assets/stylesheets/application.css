@@ -34,17 +34,17 @@
 
 /* for splash page */
 
-@import './splash/splash.scss';
+@import 'splash/splash.scss';
 
 /* for login page */
 
-@import './login_form/login_form.scss';
+@import 'login_form/login_form.scss';
 
  /* for image index below */
 
-@import './image_feed.scss';
+@import 'image_feed.scss';
 
-@import './nav_bar.scss';
+@import 'nav_bar.scss';
 
-@import './post.scss';
+@import 'post.scss';
 /* for login form */

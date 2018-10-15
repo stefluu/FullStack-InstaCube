@@ -1,12 +1,12 @@
 import React from 'react';
-import { RECEIVE_SESSION_ERRORS, CLEAR_SESSION_ERRORS } from '../actions/session_errors';
+import { RECEIVE_SESSION_ERRORS, RECEIVE_CURRENT_USER } from '../actions/session';
 
 
 const sessionErrorsReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
       return action.errors;
-    case CLEAR_SESSION_ERRORS:
+    case RECEIVE_CURRENT_USER:
       return [];
     default:
       return state;

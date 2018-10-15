@@ -4,7 +4,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_USER_SIGNUP = "RECEIVE_USER_SIGNUP";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
-export const CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
+// export const CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
 
 
 export const signup = (user) => {
@@ -13,7 +13,7 @@ export const signup = (user) => {
       user => (
         dispatch(
           receiveUserSignup(user),
-          clearSessionErrors()
+          clearSessionErrors(user)
         )
       ),
       err => {
@@ -82,6 +82,6 @@ const receiveSessionErrors = (errors) =>{
   };
 };
 
-const clearSessionErrors = () => {
-  type: CLEAR_SESSION_ERRORS
-}
+// const clearSessionErrors = () => {
+//   type: CLEAR_SESSION_ERRORS
+// }

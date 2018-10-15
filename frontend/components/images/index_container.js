@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import IndexContainer from './index';
 import { fetchImages } from '../../actions/images';
 import { fetchUsers } from '../../actions/users';
+// import { clearSessionErrors } from '../../actions/session'
 
 
 const mstp = (state) => {
@@ -16,7 +17,8 @@ const mstp = (state) => {
 const mdtp = (dispatch) => {
   return{
     fetchImages: () => dispatch(fetchImages()),
-    fetchUsers: () => dispatch(fetchUsers())
+    fetchUsers: () => dispatch(fetchUsers()),
+    // clearSessionErrors: () => dispatch(clearSessionErrors())
   };
 };
 

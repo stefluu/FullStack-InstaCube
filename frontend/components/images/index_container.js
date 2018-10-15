@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import IndexContainer from './index';
-import { fetchImages } from '../../actions/images'
+import { fetchImages } from '../../actions/images';
+import { fetchUsers } from '../../actions/users';
 
 
 const mstp = (state) => {
@@ -14,7 +15,8 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
   return{
-    fetchImages: () => dispatch(fetchImages())
+    fetchImages: () => dispatch(fetchImages()),
+    fetchUsers: () => dispatch(fetchUsers())
   };
 };
 

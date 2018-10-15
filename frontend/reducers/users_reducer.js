@@ -1,4 +1,5 @@
 import { RECEIVE_CURRENT_USER, RECEIVE_USER_SIGNUP} from '../actions/session';
+import { FETCH_USERS } from '../actions/users';
 import { merge } from 'lodash';
 
 const usersReducer = (state = {}, action) => {
@@ -7,6 +8,8 @@ const usersReducer = (state = {}, action) => {
       return merge({}, state, action.payload);
     case RECEIVE_USER_SIGNUP:
       return merge({}, state, action.user);
+    case FETCH_USERS:
+      return merge({}, state, action.users)
     default:
       return state;
   }

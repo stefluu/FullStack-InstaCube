@@ -17,8 +17,11 @@
     /* background: papayawhip; */
 }
 
-.login-form h2 {
-  margin: 30px;
+#instacube-name-login{
+  margin: 5px 10px 0px 10px;
+  width: 150px;
+  height: auto;
+  padding-bottom: 10px;
 }
 
 .login-form input, button{
@@ -27,6 +30,10 @@
   border-radius: 5%;
   font-size: 12px;
   margin:3px;
+}
+
+.login-form input{
+  background: #fafafa;
 }
 
 .login-form button{
@@ -43,14 +50,14 @@
   font-family: helvetica;
   font-size: 12px;
   font-weight: bold;
-  color: gray;
+  color: #999;
   width: 255px;
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
 #or-linebreak hr{
-  width: 100px;
+  width: 80px;
   color: gainsboro;
 }
 

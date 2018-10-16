@@ -12,8 +12,7 @@ export const signup = (user) => {
     return APIUtil.signup(user).then(
       user => (
         dispatch(
-          receiveUserSignup(user),
-          clearSessionErrors(user)
+          receiveUserSignup(user)
         )
       ),
       err => {
@@ -27,8 +26,7 @@ export const login = (user) => {
     return APIUtil.login(user).then(
       payload => (
         dispatch(
-        receiveCurrentUser(payload),
-        clearSessionErrors()
+        receiveCurrentUser(payload)
         )
       ),
       err => {
@@ -43,8 +41,7 @@ export const logout = () => {
     return APIUtil.logout().then(
       () => (
         dispatch(
-          logoutCurrentUser(),
-          clearSessionErrors()
+          logoutCurrentUser()
         )
       ),
       err => {

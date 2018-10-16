@@ -1,0 +1,80 @@
+
+
+.signup-form{
+  height: 542px;
+  width: 300px;
+  border: 1px solid gainsboro;
+  padding: 15px;
+  margin: auto;
+  margin-top: 20px;
+  align-items: center;
+}
+
+#signup-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#instacube-name-login {
+  margin-left: 10px;
+  font-size: 35px;
+  font-family: 'Lobster';
+}
+
+#instacube-name-login img{
+  margin-left: 48px;
+}
+
+h4{
+  margin: auto;
+  font-family: helvetica;
+  color: #999;
+  text-align: center;
+  font-size: 17px;
+  border: 1px solid black;
+  width:250px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#haveaccountlogin{
+  width: 275px;
+  height: 15px;
+  border: 1px solid gainsboro;
+  margin: auto;
+  margin-top: 12px;
+  text-align: center;
+  padding: 28px;
+  font-family: helvetica;
+  font-size: 14px;
+}
+
+#get-connected-signup{
+  margin: auto;
+  margin-top: 15px;
+  text-align: center;
+  font-family: helvetica;
+  font-size: 14px;
+}
+
+#get-connected-signup h4{
+  margin-bottom: 10px;
+  color: black;
+  font-size: 14px;
+  border: none;
+}
+
+#footer-signup{
+  // bottom: 300px;
+  // display: flex;
+  // list-style:none;
+  // justify-content: space-between;
+  // width: 1000px;
+  /* background: green; */
+  font-family: helvetica;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 450px;
+  margin-top: 40px;
+  color: darkslategray;
+}

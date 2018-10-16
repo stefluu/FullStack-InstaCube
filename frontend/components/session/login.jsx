@@ -36,14 +36,14 @@ class LoginContainer extends React.Component{
   render(){
     return(
       <div>
+        <ErrorsList errors={this.props.errors} />
         <div className="login-container">
-          <ErrorsList errors={this.props.errors} />
           <form className='login-form'>
 
             <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
 
 
-            <h2 id="instacube-name">
+            <h2 id="instacube-name-login">
               <img src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-15+at+11.09.16+AM.png" />
               <sup>3</sup>
             </h2>
@@ -58,14 +58,18 @@ class LoginContainer extends React.Component{
             <button onClick={this.handleSubmit.bind(this)}>Log in</button>
 
             <section id="or-linebreak">
-              <hr/> OR <hr/> </section>
+              <hr/> OR <hr/>
+            </section>
 
             <button onClick={this.handleDummyLogin.bind(this)}>Demo Login</button>
 
           </form>
-          <div id="donthaveaccount">
-            <div id ="donthaveaccount-text">Don't have an account? <Link to='/signup'>Sign up</Link></div>
-          </div>
+          <section id="donthaveaccount">
+            <div id ="donthaveaccount-text">
+              Don't have an account?
+              <Link to='/signup'>Sign up</Link>
+            </div>
+          </section>
         </div>
       </div>
     );

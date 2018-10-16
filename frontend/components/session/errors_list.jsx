@@ -6,7 +6,7 @@ const ErrorsList = ({errors}) => {
 
   return (
     <ul className="errors-list">
-      {errorsItems}
+      <li>{errorsItems}</li>
     </ul>
   )
 };

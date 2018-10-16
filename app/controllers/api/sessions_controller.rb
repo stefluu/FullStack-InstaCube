@@ -35,7 +35,11 @@ class Api::SessionsController < ApplicationController
       # render 'api/session'
     else
       # render json @user.errors.full_messages, status: 404
-      render json: ["No user logged in"], status: 404
+      # render json: ["No user logged in"], status: 404
+      # render 'api/'
+
+      render json: [message: "default to splash"]
+      #instagram defaults to splash page when not logged in
     end
   end
 end

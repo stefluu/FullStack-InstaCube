@@ -70,19 +70,30 @@ body {
 }
 
 
-#get-connected{
+#get-connected-splash {
   position:relative;
   font-family: helvetica;
   font-weight: normal;
   font-size: 14px;
-  top: 380px;
+  top: 400px;
   right: 178px;
   /* border: 1px red solid; */
   width: 200px;
   // margin-left: -200px;
   // margin-bottom: -123px;
-  text-align: center;
   // padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#get-connected h4{
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+
+.my_links{
+  display: flex;
+  text-align: row;
 }
 
 #github-splash,

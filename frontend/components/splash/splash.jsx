@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import LoginContainer from '../session/login_container';
 import { AuthRoute } from '../../util/route_util';
+import ErrorsList from '../session/errors_list';
 
 
 class Splash extends React.Component{
@@ -13,13 +14,15 @@ class Splash extends React.Component{
             <Route exact path="/" component={LoginContainer} />
             <div id="phone-pic"></div>
 
-            <div id="get-connected">
+            <div id="get-connected-splash">
               <h4>Get connected.</h4>
               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
 
-              <a href="https://github.com/stefluu"><i id="github-splash" class="fab fa-github"></i></a>
+              <section className="my-links">
+                <a href="https://github.com/stefluu"><i id="github-splash" class="fab fa-github"></i></a>
 
-              <a href="https://www.linkedin.com/in/stefanieluu/"><i id="linkedin-splash" className="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/stefanieluu/"><i id="linkedin-splash" className="fab fa-linkedin"></i></a>
+              </section>
             </div>
           </div>
 

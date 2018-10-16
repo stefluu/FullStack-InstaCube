@@ -11,7 +11,7 @@ body {
   width: 100%;
 }
 
-#footer {
+#footer-splash {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -23,7 +23,7 @@ body {
   /* padding-left: 100px;
   padding-top: 25px; */
   font-weight: bold;
-  padding-top: 322px;
+  padding-top: 270px;
   padding-left: 338px;
 }
 
@@ -69,31 +69,44 @@ body {
   background-image: url("https://s3-us-west-1.amazonaws.com/instacube-dev/ig_screenshot.png");
 }
 
-
-#get-connected-splash {
-  position:relative;
+#get-connected-splash{
+  position: relative;
   font-family: helvetica;
-  font-weight: normal;
   font-size: 14px;
-  top: 400px;
-  right: 178px;
-  /* border: 1px red solid; */
-  width: 200px;
-  // margin-left: -200px;
-  // margin-bottom: -123px;
-  // padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-#get-connected h4{
+  top: 380px;
+  right: 200px;
   text-align: center;
-  margin: 10px 0px 10px 0px;
 }
 
-.my_links{
-  display: flex;
-  text-align: row;
+#get-connected-splash h4{
+  color: black;
+  font-size: 14px;
+}
+
+// #get-connected-splash {
+//   position:relative;
+//   font-family: helvetica;
+//   font-weight: normal;
+//   font-size: 14px;
+//   top: 400px;
+//   right: 178px;
+//   /* border: 1px red solid; */
+//   width: 200px;
+//   // margin-left: -200px;
+//   // margin-bottom: -123px;
+//   // padding-bottom: 30px;
+//   display: flex;
+//   flex-direction: column;
+// }
+//
+// #get-connected h4{
+//   text-align: center;
+//   margin: 10px 0px 10px 0px;
+// }
+
+.my-links{
+
+  padding-top: 20px;
 }
 
 #github-splash,

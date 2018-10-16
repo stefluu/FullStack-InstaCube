@@ -7,12 +7,13 @@ class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    if @user.save!
+    if @user.save
       login!(@user)
       render 'api/sessions/current_user'
     else
-      render json: @user.errors.full_messages, status: 422
+      # render json: @user.errors.full_messages, status: 422
       # render 'api/session/new'
+      render json: ["Unable to create this user."], status: 422
     end
 
   end

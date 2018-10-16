@@ -21,7 +21,12 @@
   margin: 5px 10px 0px 10px;
   width: 150px;
   height: auto;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+#instacube-name-login img {
+  padding-left: 15px;
+  width: 100px;
 }
 
 .login-form input, button{
@@ -34,6 +39,7 @@
 
 .login-form input{
   background: #fafafa;
+  border: gainsboro 1px solid;
 }
 
 .login-form button{

@@ -13,6 +13,12 @@ class SignupContainer extends React.Component{
     };
   };
 
+  componentDidMount(){
+    this.props.clearSessionErrors()
+  }
+
+
+
   //constructor keeps track of all of the fields of form we are building
   handleInput(type){
     return (e) => {

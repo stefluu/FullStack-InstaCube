@@ -67,7 +67,7 @@ class LoginContainer extends React.Component{
           <section id="donthaveaccount">
             <div id ="donthaveaccount-text">
               Don't have an account?
-              <Link to='/signup'>Sign up</Link>
+              <Link to='/signup'> Sign up</Link>
             </div>
           </section>
         </div>

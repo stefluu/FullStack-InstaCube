@@ -4,7 +4,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_USER_SIGNUP = "RECEIVE_USER_SIGNUP";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
-// export const CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
+export const CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
 
 
 export const signup = (user) => {
@@ -16,6 +16,7 @@ export const signup = (user) => {
         )
       ),
       err => {
+        debugger
         return dispatch(receiveSessionErrors(err.responseJSON))}
     );
   };
@@ -52,6 +53,7 @@ export const logout = () => {
 };
 
 
+
 const receiveCurrentUser = (payload) => {
   return{
     type: RECEIVE_CURRENT_USER,
@@ -79,6 +81,8 @@ const receiveSessionErrors = (errors) =>{
   };
 };
 
-// const clearSessionErrors = () => {
-//   type: CLEAR_SESSION_ERRORS
-// }
+export const clearSessionErrors = () => {
+  return {
+    type: CLEAR_SESSION_ERRORS
+  }
+}

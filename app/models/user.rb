@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   validates :username, :email, :full_name, :password_digest, :session_token, presence: true
+  validates :username, :email, :password_digest, uniqueness: true;
   validates :password, length: {minimum: 6, allow_nil: true}
 
   attr_reader :password

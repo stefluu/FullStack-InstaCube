@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
   // delete window.currentUser;
   //so window doesn't hold extra info bc we already stored it.
+  //window.currentUser doesn't exist until logged in and upon page refresh while logged in
 
   const store = configureStore(preloadedState);
 

@@ -11,8 +11,8 @@ class Splash extends React.Component{
       <div>
         <div id="splash">
           <div id="center-splash">
-            <Route exact path="/" component={LoginContainer} />
-            <div id="phone-pic"></div>
+              <Route exact path="/" component={LoginContainer} />
+              <div id="phone-pic"></div>
 
             <div id="get-connected-splash">
               <h4>Get connected.</h4>
@@ -26,7 +26,7 @@ class Splash extends React.Component{
             </div>
           </div>
 
-          <footer id="footer">
+          <footer id="footer-splash">
             <ul id="footer-list">
               <li>ABOUT US</li>
               <li>SUPPORT</li>

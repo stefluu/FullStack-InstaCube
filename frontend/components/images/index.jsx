@@ -22,7 +22,7 @@ class IndexContainer extends React.Component{
         <div className="news-feed">
           <ul>
             <section className="post">
-                {this.props.images.map(image => (
+                {Object.values(this.props.images).map(image => (
                 <li>
                   <IndexPosts image={image} users={this.props.users}/>
                 </li>

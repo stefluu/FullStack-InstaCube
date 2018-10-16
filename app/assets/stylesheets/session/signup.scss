@@ -13,16 +13,64 @@
 #signup-container{
   display: flex;
   flex-direction: column;
+  background: #fafafa;
+  color: #999;
+  font-family: helvetica;
 }
 
-#instacube-name-login {
-  margin-left: 10px;
+.instacube-name-signup {
   font-size: 35px;
   font-family: 'Lobster';
+  color: black;
+  margin: auto;
+  width: 110px;
 }
 
 #instacube-name-login img{
   margin-left: 48px;
+}
+
+.signup-tosee{
+  margin-left: 20px;
+}
+
+.button-input-section {
+  margin-left: 24px;
+  align-items: center;
+}
+
+button{
+  background: steelblue;
+  color: white;
+  border-radius: 15px;
+}
+
+.signup-input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+}
+
+.signup-input-field input {
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid gainsboro;
+  width: 250px;
+  height: 30px;
+  background: #fafafa;
+}
+
+.signup-input-field input:last-of-type {
+  margin-bottom: 5px;
+}
+
+.by-signingUp{
+  width: 250px;
+  font-family: helvetica;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
 }
 
 h4{
@@ -47,6 +95,7 @@ h4{
   padding: 28px;
   font-family: helvetica;
   font-size: 14px;
+  color: black;
 }
 
 #get-connected-signup{

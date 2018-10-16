@@ -9,7 +9,7 @@ import { fetchUsers } from '../../actions/users';
 const mstp = (state) => {
   return {
     currentUserId: Object.values(window.currentUser)[0].id,
-    images: Object.values(state.entities.images),
+    images:state.entities.images,
     users: state.entities.users
   };
 };

@@ -39,38 +39,40 @@ class SignupContainer extends React.Component{
         <ErrorsList errors={this.props.errors} />
         <form className='signup-form' onSubmit={() => this.props.signup(this.state)}>
 
-          <h2 id="instacube-name-login">
+          <h2 className="instacube-name-signup">
             <img src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-15+at+11.09.16+AM.png" />
             <sup>3</sup>
           </h2>
 
-          <h4>Sign up to see photos and videos from your friends.</h4>
+          <h4 className="signup-tosee">Sign up to see photos and videos from your friends.</h4>
+          <div className="button-input-section">
+            <button onClick={this.handleDummyLogin.bind(this)}>Demo Login</button>
 
-          <button onClick={this.handleDummyLogin.bind(this)}>Demo Login</button>
+            <section id="or-linebreak">
+              <hr/> OR <hr/>
+            </section>
+            <ul className="signup-input-field">
+              <input type='text'
+                placeholder="Email"
+                value={this.state.email} onChange={this.handleInput('email')}/>
 
-          <section id="or-linebreak">
-            <hr/> OR <hr/>
-          </section>
+              <input type='text'
+                placeholder="Full Name"
+                value={this.state.full_name} onChange={this.handleInput('full_name')}/>
 
-          <input type='text'
-            placeholder="Email"
-            value={this.state.email} onChange={this.handleInput('email')}/>
+              <input type='text'
+                placeholder="Username"
+                value={this.state.username} onChange={this.handleInput('username')}/>
 
-          <input type='text'
-            placeholder="Full Name"
-            value={this.state.full_name} onChange={this.handleInput('full_name')}/>
+              <input type='password'
+                placeholder='Password'
+                value={this.state.password} onChange={this.handleInput('password')}/>
+            </ul>
 
-          <input type='text'
-            placeholder="Username"
-            value={this.state.username} onChange={this.handleInput('username')}/>
+            <button onClick={this.handleSubmit.bind(this)}>Sign Up</button>
 
-          <input type='password'
-            placeholder='Password'
-            value={this.state.password} onChange={this.handleInput('password')}/>
-
-          <button onClick={this.handleSubmit.bind(this)}>Sign Up</button>
-
-          <h5>By signing up, you agree to our Terms, Data Policy and Cookies Policy.</h5>
+            <h5 className="by-signingUp">By signing up, you agree to our Terms, Data Policy and Cookies Policy.</h5>
+          </div>
         </form>
 
         <section id="haveaccountlogin">

@@ -20,7 +20,8 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find_by(username: params[:user][:username])
-    render "api/users/#{@user.id}"
+    # render `api/users/#{@user.id}`
+    render 'api/users/show'
   end
 
   def edit

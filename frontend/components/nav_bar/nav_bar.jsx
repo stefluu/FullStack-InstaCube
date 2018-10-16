@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 // import LoginContainer from '../session/login_container';
 //
@@ -38,4 +39,10 @@ class navBar extends React.Component{
   };
 };
 
-export default withRouter(navBar);
+const mstp = (state) => {
+  return {
+    currentUserId: state.session.currentUserId
+  };
+};
+
+export default connect(mstp, null)(withRouter(navBar));

@@ -1,6 +1,6 @@
 
 import { connect } from 'react-redux';
-import { login } from '../../actions/session';
+import { login, clearSessionErrors } from '../../actions/session';
 import LoginContainer from './login';
 
 const mstp = (state) => {
@@ -11,7 +11,8 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) =>{
   return {
-    login: (user) => dispatch(login(user))
+    login: (user) => dispatch(login(user)),
+    clearSessionErrors: () =>dispatch(clearSessionErrors())
   };
 };
 

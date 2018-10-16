@@ -1,4 +1,13 @@
 
+div{
+  background: #fafafa;
+}
+
+#errorlist-signup{
+  color: black;
+  font-weight: normal;
+  margin:auto;
+}
 
 .signup-form{
   height: 542px;
@@ -8,6 +17,7 @@
   margin: auto;
   margin-top: 15px;
   align-items: center;
+  background: white;
 }
 
 #signup-container{

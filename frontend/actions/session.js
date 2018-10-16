@@ -16,7 +16,6 @@ export const signup = (user) => {
         )
       ),
       err => {
-        debugger
         return dispatch(receiveSessionErrors(err.responseJSON))}
     );
   };

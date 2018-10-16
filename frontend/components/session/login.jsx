@@ -11,6 +11,10 @@ class LoginContainer extends React.Component{
     };
   };
 
+  componentDidMount(){
+    this.props.clearSessionErrors();
+  }
+
   handleInput(type){
     return (e) => {
       this.setState({[type]: e.target.value})

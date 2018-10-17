@@ -15,6 +15,7 @@ function Modal({modal, closeModal}) {
       break;
     case 'image-click':
       component = <ModalImageContainer />;
+      break;
     default:
       return null;
   }

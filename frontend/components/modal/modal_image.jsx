@@ -12,10 +12,9 @@ class ModalImage extends React.Component {
   }
 
   render(){
-    console.log(this.props);
     return(
       <div className="modal-image">
-        <img className="profile-tile" src = {props.image.photo_url}/>
+        <img className="profile-tile" src = {this.props.image.photo_url}/>
       </div>
     )
   };

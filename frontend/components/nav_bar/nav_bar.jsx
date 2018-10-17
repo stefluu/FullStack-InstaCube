@@ -16,9 +16,11 @@ class navBar extends React.Component{
 
           <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
 
-          <div className="instacube-name">
-            <img src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-15+at+11.09.16+AM.png" />
-          </div>
+          <Link to='/index'><div>
+            <div className="instacube-name">
+              <img src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-15+at+11.09.16+AM.png" />
+            </div>
+          </div></Link>
           <h2 id="instacube-3"> <sup>3</sup> </h2>
 
         </section>

@@ -18,7 +18,7 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
   return{
-    toggleModal: () => dispatch(openModal()),
+    openModal: () => dispatch(openModal()),
     fetchImages: () => dispatch(fetchImages()),
     fetchUsers: () => dispatch(fetchUsers())
   };

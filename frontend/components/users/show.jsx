@@ -6,10 +6,14 @@ import ProfileTile from '../images/profile_tile'
 class Show extends React.Component {
 
   componentDidMount(){
-    this.props.fetchImages()
+    this.props.fetchImages();
+    this.props.fetchUsers();
   };
 
   render(){
+    let idStart = window.location.hash.search(/[0-9]/);
+    let userProfileId = parseInt(window.location.hash.slice(idStart))
+    let profileOwner = this.props.users[userProfileId]
     return(
       <div>
         <NavBarContainer />
@@ -20,7 +24,7 @@ class Show extends React.Component {
 
             <section id="user-info">
               <section className="user-edit-modal">
-                <h4 id="showpage-username"> {this.props.currentUser.username} </h4>
+                <h4 id="showpage-username"> {profileOwner.username} </h4>
                 <button>Edit Profile</button>
 
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
@@ -35,8 +39,8 @@ class Show extends React.Component {
               </section>
 
               <section className="displayname-bio">
-                <h3>{this.props.currentUser.display_name}</h3>
-                <h3>{this.props.currentUser.bio}</h3>
+                <h3>{profileOwner.display_name}</h3>
+                <h3>{profileOwner.bio}</h3>
               </section>
 
             </section>
@@ -55,7 +59,7 @@ class Show extends React.Component {
             <ul className="profile-ul">
               <section className="profile-posts">
                 {Object.values(this.props.images).filter(image => (
-                  (image.user_id === this.props.currentUserId)
+                  (image.user_id === this.props.userProfileId)
                 )).map(image => (
                   <li>
                     <ProfileTile image={image} />

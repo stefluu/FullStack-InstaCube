@@ -3,21 +3,23 @@ import { connect } from 'react-redux';
 import Show from './show';
 import { openModal } from '../../actions/modal_actions';
 import { fetchImages } from '../../actions/images';
+import { fetchUsers } from '../../actions/users';
 
 const mstp = (state) => {
   return{
     // users: state.entities.users,
-    currentUserId: state.session.currentUserId,
-    currentUser: (state.entities.users)[state.session.currentUserId],
+    // currentUserId: state.session.currentUserId,
+    // currentUser: (state.entities.users)[state.session.currentUserId],
     images: state.entities.images,
-    // users: state.entities.users
+    users: state.entities.users
   };
 };
 
 const mdtp = (dispatch) => {
   return{
     toggleModal: () => dispatch(openModal()),
-    fetchImages: () => dispatch(fetchImages())
+    fetchImages: () => dispatch(fetchImages()),
+    fetchUsers: () => dispatch(fetchUsers())
   };
 };
 

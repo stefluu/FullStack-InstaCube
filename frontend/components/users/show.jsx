@@ -1,8 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import NavBarContainer from '../nav_bar/nav_bar'
+import NavBarContainer from '../nav_bar/nav_bar';
+import IndexPosts from '../images/post'
 
 class Show extends React.Component {
+
+  componentDidMount(){
+    this.props.fetchImages()
+  };
+
   render(){
     return(
       <div>
@@ -23,9 +29,21 @@ class Show extends React.Component {
               </section>
 
               <h3> {this.props.currentUser.bio} bio that doesn't exist</h3>
-              
+
             </section>
 
+            <ul>
+              <section className="profile-post">
+                {Object.values(this.props.images).filter(image => (
+                  (image.user_id === this.props.currentUserId)
+                )).map(image => (
+                  <li>
+                    <IndexPosts image={image} users={this.props.users}/>
+                  </li>
+                ))}
+              </section>
+
+            </ul>
 
           </div>
         </div>

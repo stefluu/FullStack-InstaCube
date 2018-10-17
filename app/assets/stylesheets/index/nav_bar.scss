@@ -1,49 +1,96 @@
 
 .complete_navBar{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   font-size: 25px;
   border-bottom: gainsboro solid 1px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  height: 40px;
 }
 
 .complete_navBar section {
   display:flex;
-  justify-content: space-between;
-  margin: 30px;
-  margin-bottom: 0px;
+  // justify-content: space-between;
+  margin: 0px 20px 0px 20px;
+  padding-bottom: 10px;
 }
-
 
 .complete_navBar input {
-  height: 20px;
+  height: 23px;
   width: 200px;
-}
-#navBar-right {
-  margin-right: 500px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  margin-right: 300px;
+  font-size: 14px;
 }
 
-#navBar-left {
-  margin-left: 500px;
+// .searchBar {
+//   position: relative;
+// }
+//
+// .search input {
+//   text-indent: 30px;
+// }
+//
+// .search i {
+//   position: absolute;
+//   top: 24px;
+//   right: 80px;
+//   font-size: 10px;
+// }
+
+.navBar-right {
+  // margin-right: 1000px;
+  width: 150px;
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+  font-size: 13px;
+  color: gray;
+  // margin-left: 300px;
 }
 
-#navBar-right link, i {
+.navBar-left {
+  display: flex;
+  // margin-left: 300px;
+  // justify-content: flex-start;
+  width: 300px;
+  // border: 1px solid purple;
+}
+
+.navBar-right Link, i {
   font-size: 20px;
   padding: 10px;
+  color: gray;
 }
 
-#navBar-left Link, h2 {
-  padding: 30px;
+h2 {
+  font-family: 'Lobster';
+  font-size: 30px;
+  // margin-left: 0px;
+}
+
+input {
+  margin: 0px 200px 0px 0px;
+}
+
+.instacube-name{
+  margin: 10px;
 }
 
 .verticalLine{
   border: 0.5px solid black;
-  height: 40px;
-  margin: 10px 0;
+  height: 30px;
+  margin: 15px 0px 10px 0px;
 }
 
 #ig-cube{
   width: 35px;
   height: 35px;
-  // margin-right: 30px;
+  margin: 15px 20px 30px 0px;
+  margin-bottom: 0px;
 }

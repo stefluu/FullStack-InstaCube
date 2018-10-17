@@ -9,23 +9,23 @@ class navBar extends React.Component{
   render(){
     return(
       <div className="complete_navBar">
-        <section id="navBar-left">
+        <section className="navBar-left">
           <Link to='/index'><img id="ig-cube" src="https://s3-us-west-1.amazonaws.com/instacube-dev/43880183_544694999309669_656150743744512_n.png"/></Link>
 
           <div className="verticalLine"></div>
 
           <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
 
-          <div id="instacube-name">
+          <div className="instacube-name">
             <img src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-15+at+11.09.16+AM.png" />
-            <h2 id="instacube-3"> <sup>3</sup> </h2>
           </div>
+          <h2 id="instacube-3"> <sup>3</sup> </h2>
 
         </section>
 
-        <input type="text" placeholder="Search.."/>
+        <input type="text" placeholder="Search.." />
 
-        <section id="navBar-right">
+        <section className="navBar-right">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
 
           <i className="far fa-compass"></i>
@@ -46,3 +46,10 @@ const mstp = (state) => {
 };
 
 export default connect(mstp, null)(withRouter(navBar));
+
+//
+// <div className="searchBar">
+//   <input placeholder="Search" />
+//   <i class="fas fa-search"></i>
+// </div>
+//

@@ -10,7 +10,7 @@ const mstp = (state) => {
     currentUserId: state.session.currentUserId,
     currentUser: (state.entities.users)[state.session.currentUserId],
     images: state.entities.images,
-    users: state.entities.users
+    // users: state.entities.users
   };
 };
 

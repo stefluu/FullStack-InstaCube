@@ -5,11 +5,35 @@
   align-items: flex-start;
 }
 
+.profile-tile-container{
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  margin-top: 10px;
+}
+
+.profile-ul {
+  display:flex;
+  flex-direction: row;
+}
+
+.profile-posts{
+  display: flex;
+  list-style: none;
+}
+
 
 .profile-tile-box{
   height: 300px;
   width: 300px;
-  display:relative;
+  display:flex;
   border: 1px solid gainsboro;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 2px 0px 20px;
+  flex-direction: center;
+  justify-content: center;
+}
+
+.profile-tile-box img {
+  max-height: 100%;
+  max-width: 100%;
 }

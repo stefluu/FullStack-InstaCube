@@ -2,12 +2,13 @@
 .entire_show_container{
   display:flex;
   justify-content: center;
+  align-items: column;
   // width: 1000px;
   // height: 400px;
 }
 
 .usershow-top{
-  border: 1px solid red;
+  // border: 1px solid red;
   display:flex;
   justify-content: center;
   font-size: 32px;
@@ -22,37 +23,91 @@
   height: 200px;
   border: 1px solid green;
   margin-right: 100px;
+  margin-top: 25px;
 }
 
 #user-info{
+  margin: 60px;
   text-align: left;
+  color: black;
+  margin-left: 0px;
 }
 
-#user-edit-modal{
+.user-edit-modal{
+  position: relative;
   width: 400px;
-  border: 1px black solid;
+  // border: 1px black solid;
   display:flex;
   flex-direction: row;
+  right: 50px;
 }
 
 #user-info h3{
   font-size: 15px;
-}
-
-#user-edit-modal button{
-  border-radius: 5px;
-  width: 100px;
-  font-weight: bold;
-  margin-left: 20px;
-  background: white;
   color: black;
 }
 
-ul {
-  display:flex;
-  flex-direction: row;
+#user-info h3:first-of-type {
+  font-weight: bold;
 }
-// 
+
+.user-edit-modal button{
+  position:relative;
+  border-radius: 5px;
+  width: 100px;
+  font-weight: bold;
+  margin-left: 10px;
+  background: white;
+  color: black;
+  right: 40px;
+}
+
+#showpage-username{
+  float: left;
+  color: black;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.user-edit-modal i {
+  position: relative;
+  right: 45px;
+  bottom: 10px;
+}
+
+.posts-followers-following{
+  position: relative;
+  display:flex;
+  align-items: space-between;
+  // border: 1px solid blue;
+  list-style: none;
+  font-size: 16px;
+  font-family: helvetica;
+  margin: 20px;
+  margin-left: 0px;
+  margin-top: 0px;
+  right: 10px;
+}
+
+.posts-followers-following li{
+  margin: 0px 10px 0px 10px;
+}
+
+.posts-followers-following span{
+  font-weight: bold;
+}
+
+.displayname-bio{
+  margin-top: 20px;
+}
+
+.displayname-bio h3:first-of-type{
+  margin-bottom: 5px;
+}
+
+
+
+//
 // li {
 //   height: 30px;
 //   width: 30px;

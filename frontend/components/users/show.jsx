@@ -19,8 +19,8 @@ class Show extends React.Component {
             <section id="usershow-avatar"></section>
 
             <section id="user-info">
-              <section id="user-edit-modal">
-                <h4> {this.props.currentUser.username} </h4>
+              <section className="user-edit-modal">
+                <h4 id="showpage-username"> {this.props.currentUser.username} </h4>
                 <button>Edit Profile</button>
 
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
@@ -28,12 +28,31 @@ class Show extends React.Component {
                 <i class="fas fa-circle-notch" onClick={() => this.props.toggleModal()}></i>
               </section>
 
-              <h3> {this.props.currentUser.bio} bio that doesn't exist</h3>
+              <section className="posts-followers-following">
+                <li><span>6</span> posts</li>
+                <li><span>73</span> followers</li>
+                <li><span>181</span> following</li>
+              </section>
+
+              <section className="displayname-bio">
+                <h3>{this.props.currentUser.display_name}</h3>
+                <h3>{this.props.currentUser.bio}</h3>
+              </section>
 
             </section>
           </div>
+
+          <section className="posts-igtv-saved-tagged">
+            <ul className="middle-tabs">
+              <li><i class="fas fa-th"></i> POSTS</li>
+              <li><i class="far fa-square"></i> IGTV</li>
+              <li><i class="far fa-bookmark"></i> SAVED</li>
+              <li><i class="fas fa-user-tag"></i> TAGGED</li>
+            </ul>
+          </section>
+
           <div className="profile-tile-container">
-            <ul>
+            <ul className="profile-ul">
               <section className="profile-posts">
                 {Object.values(this.props.images).filter(image => (
                   (image.user_id === this.props.currentUserId)

@@ -1,0 +1,21 @@
+.middle-tabs{
+  position: relative;
+  display:flex;
+  justify-content: space-around;
+  font-size: 13px;
+  list-style: none;
+  width: 500px;
+  align-items: center;
+  margin-left: 700px;
+  padding-top: 10px;
+  font-family: helvetica;
+  color: gray;
+  // border-top: solid 2px transparent;
+}
+
+.middle-tabs li:hover{
+  // text-decoration: overline;
+  color: black;
+  padding-top: 20px;
+  border-top: solid 2px black;
+}

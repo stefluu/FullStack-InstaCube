@@ -73,7 +73,7 @@ body {
   position: relative;
   font-family: helvetica;
   font-size: 14px;
-  top: 380px;
+  top: 390px;
   right: 200px;
   text-align: center;
 }
@@ -81,6 +81,8 @@ body {
 #get-connected-splash h4{
   color: black;
   font-size: 14px;
+  font-weight: normal;
+  border: none;
 }
 
 // #get-connected-splash {
@@ -106,7 +108,7 @@ body {
 
 .my-links{
 
-  padding-top: 20px;
+  // padding-top: 20px;
 }
 
 #github-splash,

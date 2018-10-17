@@ -11,13 +11,35 @@ div{
 
 .signup-form{
   height: 542px;
-  width: 310px;
+  width: 340px;
   border: 1px solid gainsboro;
-  padding: 15px;
+  // padding: 15px;
   margin: auto;
   margin-top: 15px;
   align-items: center;
   background: white;
+  // padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-form h2{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.signup-form h4{
+  margin-top: 0px;
+  border: none;
+  padding-top: 10px;
+  margin-left: 45px;
+}
+
+.signup-form button {
+  background: Dodgerblue;
+  color: white;
+  text-align: center;
 }
 
 #signup-container{
@@ -49,7 +71,7 @@ div{
 }
 
 .button-input-section {
-  margin-left: 30px;
+  margin-left: 200px;
   align-items: center;
 }
 
@@ -73,6 +95,7 @@ button{
   width: 250px;
   height: 30px;
   background: #fafafa;
+  margin-bottom: 5px;
 }
 
 .signup-input-field input:last-of-type {
@@ -100,7 +123,7 @@ h4{
 }
 
 #haveaccountlogin{
-  width: 275px;
+  width: 285px;
   height: 15px;
   border: 1px solid gainsboro;
   margin: auto;
@@ -110,6 +133,7 @@ h4{
   font-family: helvetica;
   font-size: 14px;
   color: black;
+  background: white;
 }
 
 #get-connected-signup{
@@ -125,6 +149,7 @@ h4{
   color: black;
   font-size: 14px;
   border: none;
+  font-weight: normal;
 }
 
 #footer-signup{
@@ -137,7 +162,7 @@ h4{
   font-family: helvetica;
   font-size: 12px;
   font-weight: bold;
-  margin-left: 450px;
-  margin-top: 40px;
+  margin-left: 365px;
+  margin-top: 85px;
   color: darkslategray;
 }

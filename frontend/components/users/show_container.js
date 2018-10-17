@@ -11,7 +11,8 @@ const mstp = (state) => {
     // currentUserId: state.session.currentUserId,
     // currentUser: (state.entities.users)[state.session.currentUserId],
     images: state.entities.images,
-    users: state.entities.users
+    users: state.entities.users,
+    userId: (parseInt(window.location.hash.slice(window.location.hash.search(/[0-9]/))))
   };
 };
 

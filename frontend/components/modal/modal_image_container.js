@@ -2,20 +2,20 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import ModalWindow from './modal_window';
-import { logout } from '../../actions/session';
+import ModalImage from './modal_image';
+import { fetchImage } from '../../actions/images';
 
 const mstp = (state) => {
   return {
-    formType: 'logout'
+    formType: 'image-click'
   };
 };
 
 const mdtp = (dispatch) => {
   return{
-    logout: () => dispatch(logout()),
+    fetchImage: (id) => dispatch(fetchImage(id)),
     closeModal: () => dispatch(closeModal())
   };
 };
 
-export default connect(null, mdtp)(ModalWindow);
+export default connect(null, mdtp)(ModalImage);

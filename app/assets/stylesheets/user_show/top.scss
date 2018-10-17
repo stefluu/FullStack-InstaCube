@@ -47,8 +47,8 @@
   color: black;
 }
 
-#user-info h3:first-of-type {
-  font-weight: bold;
+#user-info h3:last-of-type {
+  font-weight: normal;
 }
 
 .user-edit-modal button{
@@ -56,10 +56,14 @@
   border-radius: 5px;
   width: 100px;
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 7px;
   background: white;
   color: black;
-  right: 40px;
+  right: 30px;
+  border: 1px gainsboro solid;
+  text-align: center;
+  // margin-bottom: 0px;
+  margin-top: 6px;
 }
 
 #showpage-username{
@@ -67,12 +71,13 @@
   color: black;
   font-weight: 300;
   font-size: 30px;
+  border: none;
 }
 
 .user-edit-modal i {
   position: relative;
-  right: 45px;
-  bottom: 10px;
+  right: 37px;
+  bottom: 7px;
 }
 
 .posts-followers-following{

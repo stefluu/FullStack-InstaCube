@@ -5,21 +5,20 @@
   align-items: flex-start;
 }
 
+
 .profile-tile-container{
   display: flex;
   justify-content: center;
   margin: 50px;
-  margin-top: 10px;
-}
-
-.profile-ul {
-  display:flex;
-  flex-direction: row;
+  margin-top: 20px;
 }
 
 .profile-posts{
   display: flex;
   list-style: none;
+  flex-flow: row wrap;
+  width: 1200px;
+  margin-left: 250px;
 }
 
 

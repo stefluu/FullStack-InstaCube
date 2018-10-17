@@ -11,9 +11,10 @@ class Show extends React.Component {
   };
 
   render(){
-    let idStart = window.location.hash.search(/[0-9]/);
-    let userProfileId = parseInt(window.location.hash.slice(idStart))
-    let profileOwner = this.props.users[userProfileId]
+    // let idStart = window.location.hash.search(/[0-9]/);
+    // let userProfileId = parseInt(window.location.hash.slice(idStart));
+    let profileOwner = this.props.users[this.props.userId];
+    // debugger;
     return(
       <div>
         <NavBarContainer />
@@ -59,10 +60,10 @@ class Show extends React.Component {
             <ul className="profile-ul">
               <section className="profile-posts">
                 {Object.values(this.props.images).filter(image => (
-                  (image.user_id === this.props.userProfileId)
+                  (image.user_id === this.props.userId)
                 )).map(image => (
                   <li>
-                    <ProfileTile image={image} />
+                    <ProfileTile image={image} onClick={() => this.props.toggleModal()}/>
                   </li>
                 ))}
               </section>

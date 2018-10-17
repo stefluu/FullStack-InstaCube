@@ -12,7 +12,7 @@ class ModalWindow extends React.Component {
     //   modal: this.props.modal,
     //   logout: () => dispatch(logout().bind(this.state))
     // }
-    console.log(this.props);
+    // console.log(this.props);
   }
   // componentDidMount(){
   //   this.setState = {
@@ -22,7 +22,7 @@ class ModalWindow extends React.Component {
   // }
 
   render(){
-    console.log(this.props);
+    // console.log(this.props);
     return(
       <div className="modal-window">
         <li>Change Password</li>

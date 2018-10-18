@@ -11,9 +11,10 @@ class Show extends React.Component {
   };
 
   render(){
+    // debugger
     // let idStart = window.location.hash.search(/[0-9]/);
     // let userProfileId = parseInt(window.location.hash.slice(idStart));
-    let profileOwner = this.props.users[this.props.userId];
+    let profileOwner = this.props.users[parseInt(this.props.userId)];
 
     if (!profileOwner) return null;
 
@@ -32,7 +33,7 @@ class Show extends React.Component {
 
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
 
-                <i class="fas fa-circle-notch" onClick={() => this.props.openModal('logout')}></i>
+                <i className="fas fa-circle-notch" onClick={() => this.props.openModal('logout')}></i>
               </section>
 
               <section className="posts-followers-following">
@@ -51,18 +52,18 @@ class Show extends React.Component {
 
           <section className="posts-igtv-saved-tagged">
             <ul className="middle-tabs">
-              <li><i class="fas fa-th"></i> POSTS</li>
-              <li><i class="far fa-square"></i> IGTV</li>
-              <li><i class="far fa-bookmark"></i> SAVED</li>
-              <li><i class="fas fa-user-tag"></i> TAGGED</li>
+              <li><i className="fas fa-th"></i> POSTS</li>
+              <li><i className="far fa-square"></i> IGTV</li>
+              <li><i className="far fa-bookmark"></i> SAVED</li>
+              <li><i className="fas fa-user-tag"></i> TAGGED</li>
             </ul>
           </section>
 
           <div className="profile-tile-container">
             <ul className="profile-ul">
               <section className="profile-posts">
-                {Object.values(this.props.images).filter(image => (
-                  (image.user_id === this.props.userId)
+                {this.props.images.filter(image => (
+                  (image.user_id == this.props.userId)
                 )).map(image => (
                   <li>
                     <ProfileTileContainer image={image} openModal={ this.props.openModal}/>

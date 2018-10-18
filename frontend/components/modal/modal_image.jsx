@@ -13,12 +13,14 @@ class ModalImage extends React.Component {
   render(){
     return(
       <div className="modal-image">
-        <div className="modal-image-container">
-          <img className="profile-tile" src = {this.props.image.photo_url}/>
-        </div>
+        <img className="profile-tile"
+          src = {this.props.image.photo_url}
+          onClick={e => e.stopPropagation()}/>
       </div>
     )
   };
 };
 
 export default withRouter(ModalImage);
+
+//stop prop on img so that its the only thing that keeps the modal propogating. 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar'
-import IndexPosts from './post'
+import IndexPosts from './post_container'
 
 
 class IndexContainer extends React.Component{
@@ -12,6 +12,7 @@ class IndexContainer extends React.Component{
   componentDidMount(){
     this.props.fetchImages();
     this.props.fetchUsers();
+    this.props.fetchUserLikes();
     // this.props.clearSessionErrors();
   }
 
@@ -23,7 +24,7 @@ class IndexContainer extends React.Component{
           <ul>
             <section className="post">
                 {Object.values(this.props.images).map(image => (
-                <li>
+                <li key={image.id}>
                   <IndexPosts image={image} users={this.props.users}/>
                 </li>
               ))}

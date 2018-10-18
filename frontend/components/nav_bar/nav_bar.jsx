@@ -52,6 +52,6 @@ export default connect(mstp, null)(withRouter(navBar));
 //
 // <div className="searchBar">
 //   <input placeholder="Search" />
-//   <i class="fas fa-search"></i>
+//   <i className="fas fa-search"></i>
 // </div>
 //

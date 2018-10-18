@@ -19,6 +19,8 @@
 @images.each do |image|
   json.set! image.id do
     json.extract! image, :id, :caption, :date, :user_id
-    json.photo_url url_for(image.photo)
+    if image.photo.attached?
+      json.photo_url url_for(image.photo)
+    end
   end
 end

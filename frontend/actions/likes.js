@@ -1,24 +1,32 @@
-
+import * as APIUtil from '../util/likes_api_util';
 
 export const LIKE_IMAGE = "LIKE_IMAGE";
 export const UNLIKE_IMAGE = "UNLIKE_IMAGE";
+export const FETCH_CURRENT_USER_LIKES = "FETCH_CURRENT_USER_LIKES";
 // export const TOGGLE_LIKE = "TOGGLE_LIKE";
 
-export const likeImage = () => {
+export const likeImage = (imageId) => {
   return{
     type: LIKE_IMAGE,
-    like: true,
-    likeCount: 1
+    likeStatus: true
   };
 };
 
 export const unlikeImage = (imageId) => {
   return{
     type: UNLIKE_IMAGE,
-    like: false,
-    likeCount: 1
+    likeState: false
   };
 };
+
+
+export const fetchUserLikes = () => {
+  return dispatch => {
+    return APIUtil.fetchUserLikes().then(likes =>{
+      return dispatch(fetchCurrentUserLikes(likes));
+    })
+  }
+}
 
 // export const toggleLike = (imageId) => {
 //   return{
@@ -26,3 +34,9 @@ export const unlikeImage = (imageId) => {
 //     imageId
 //   }
 // }
+const fetchCurrentUserLikes = (likes) => {
+  return{
+    type: FETCH_CURRENT_USER_LIKES,
+    likes
+  }
+}

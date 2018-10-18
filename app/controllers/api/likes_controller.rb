@@ -2,6 +2,10 @@ class Api::LikesController < ApplicationController
 
   before_action :require_login
 
+  def index
+    @likes = Like.all
+  end
+
   def create
     @like = Like.new
     @like.img_id = params[:img_id]

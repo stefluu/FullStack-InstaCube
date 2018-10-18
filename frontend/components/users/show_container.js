@@ -4,15 +4,18 @@ import Show from './show';
 import { openModal } from '../../actions/modal_actions';
 import { fetchImages } from '../../actions/images';
 import { fetchUsers } from '../../actions/users';
+import { withRouter } from 'react-router-dom';
 
-const mstp = (state) => {
+
+const mstp = (state, ownProps) => {
   return{
     // users: state.entities.users,
     // currentUserId: state.session.currentUserId,
     // currentUser: (state.entities.users)[state.session.currentUserId],
-    images: state.entities.images,
+    images: Object.values(state.entities.images),
     users: state.entities.users,
-    userId: (parseInt(window.location.hash.slice(window.location.hash.search(/[0-9]/))))
+    userId: ownProps.match.params.userId
+    // userId: (parseInt(window.location.hash.slice(window.location.hash.search(/[0-9]/))))
   };
 };
 
@@ -26,4 +29,4 @@ const mdtp = (dispatch) => {
 
 
 
-export default connect(mstp, mdtp)(Show)
+export default withRouter(connect(mstp, mdtp)(Show))

@@ -15,3 +15,10 @@ export const unlikeImage = (imageId, likeId) => {
     data: { imageId, likeId }
   });
 };
+
+export const fetchUserLikes = () => {
+  return $.ajax({
+    url: 'api/likes',
+    method: 'GET'
+  });
+};

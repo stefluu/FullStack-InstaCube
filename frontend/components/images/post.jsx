@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LikesContainer from '../likes/likes_container'
 
 const IndexPosts = props => {
   let userId = props.image.user_id;
@@ -7,7 +8,7 @@ const IndexPosts = props => {
   let user = users[userId];
   let username = user.username
   return(
-    <div>
+    <div className="entire-post">
       <section className="postheader">
         <Link to={`/users/${userId}`}>{username}</Link>
       </section>
@@ -18,13 +19,24 @@ const IndexPosts = props => {
 
       <section className="post-icons">
         <i className="far fa-heart"></i>
-        <i class="fa fa-comment-o" aria-hidden="true"></i>
+        <i class="far fa-comment"></i>
         <i class="fa fa-upload" aria-hidden="true"></i>
       </section>
+      <div className="under-icons">
+        <section className="post-likes">
+          <LikesContainer image={props.image} />
+        </section>
 
-      <section className="post-likes"/>
-      <section className="comments"/>
-      <input className="addcommentbox" type="text" placeholder="Add a comment..."></input>
+        <section className="comments">
+          <ul className="comment-li">
+            <li>comment1 gafghjdfojo;jkfo;s</li>
+            <li>comment2 kafjodfjof</li>
+            <li>comment3 fdgkahidfjlajfl</li>
+          </ul>
+        </section>
+        <hr/>
+        <input className="addcommentbox" type="text" placeholder="Add a comment..."></input>
+      </div>
     </div>
   )
 }

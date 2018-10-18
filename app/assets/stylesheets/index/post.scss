@@ -1,4 +1,9 @@
 
+.entire-post{
+  // max-width: 614px;
+  // max-height: 909px;
+}
+
 .postheader{
   height: 60px;
   font-weight: bold;
@@ -16,17 +21,43 @@
 
 .post-icons{
   height: 60px;
+  color: gray;
+  font-size: 15px;
+}
+
+.under-icons{
+  margin: 17px;
+  font-family: helvetica;
 }
 
 .post-likes{
   height: 40px;
+  color: black;
 }
 
+
 .comments{
-  height: 250px;
+  height: 100px;
+}
+
+
+.comment-li li{
+  margin: 0px;
+  border: none;
+}
+
+.comment-li li:first-of-type {
+  margin: 0px;
+  border: none;
+}
+
+hr {
+  width: 95%;
+  color: gainsboro;
 }
 
 .addcommentbox{
+  padding: 5px;
   width: 640px;
-  height: 60px;
+  height: 20px;
 }

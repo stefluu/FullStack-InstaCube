@@ -25,9 +25,9 @@ class Show extends React.Component {
           <div className="usershow-top">
             <section id="usershow-avatar"></section>
 
-            <section id="user-info">
+            <section className="user-info">
               <section className="user-edit-modal">
-                <h4 id="showpage-username"> {profileOwner.username} </h4>
+                <h4 className="showpage-username"> {profileOwner.username} </h4>
                 <button>Edit Profile</button>
 
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>

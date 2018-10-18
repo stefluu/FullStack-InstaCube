@@ -11,6 +11,7 @@ class Api::LikesController < ApplicationController
       flash[:errors] = @like.errors.full_messages
     end
     render 'api/images/show'
+
   end
 
   def destroy

@@ -26,11 +26,16 @@
   margin-top: 25px;
 }
 
-#user-info{
+.user-info{
   margin: 60px;
   text-align: left;
   color: black;
   margin-left: 0px;
+}
+
+.showpage-username{
+  font-size: 32px;
+  font-family: helvetica;
 }
 
 .user-edit-modal{
@@ -41,6 +46,7 @@
   flex-direction: row;
   right: 50px;
 }
+
 
 #user-info h3{
   font-size: 15px;
@@ -54,7 +60,7 @@
 .user-edit-modal button{
   position:relative;
   border-radius: 5px;
-  width: 100px;
+  min-width: 100px;
   font-weight: bold;
   margin-left: 7px;
   background: white;
@@ -66,12 +72,15 @@
   margin-top: 6px;
 }
 
-#showpage-username{
+.showpage-username{
   float: left;
   color: black;
   font-weight: 300;
   font-size: 30px;
   border: none;
+  margin-top: 0px;
+  margin-left: 47px;
+  margin-right: 40px;
 }
 
 .user-edit-modal i {
@@ -104,6 +113,7 @@
 
 .displayname-bio{
   margin-top: 20px;
+  font-size:14px;
 }
 
 .displayname-bio h3:first-of-type{

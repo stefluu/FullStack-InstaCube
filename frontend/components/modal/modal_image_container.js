@@ -7,15 +7,15 @@ import { fetchImage } from '../../actions/images';
 
 const mstp = (state) => {
   return {
-    formType: 'image-click'
+    formType: 'image-click',
+    image: state.entities.images[state.ui.imageId]
   };
 };
 
 const mdtp = (dispatch) => {
   return{
-    fetchImage: (id) => dispatch(fetchImage(id)),
     closeModal: () => dispatch(closeModal())
   };
 };
 
-export default connect(null, mdtp)(ModalImage);
+export default connect(mstp, mdtp)(ModalImage);

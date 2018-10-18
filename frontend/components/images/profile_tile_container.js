@@ -1,19 +1,20 @@
 
 import { connect } from 'react-redux';
 import React from 'react';
-import { fetchImage } from '../../actions/images';
+import { getImageId } from "../../actions/images";
 import ProfileTile from './profile_tile';
 
-const mstp = (state) => {
+const mstp = (state, ownProps) => {
   return {
-    image: state.image
+    image: ownProps.image,
+    openModal: ownProps.openModal
   };
 };
 
 const mdtp = (dispatch) => {
   return {
-    fetchImage: (id) => dispatch(fetchImage(id)),
+    getImageId: (id) => dispatch(getImageId(id))
   };
 };
 
-export default connect(null, mdtp)(ProfileTile);
+export default connect(mstp, mdtp)(ProfileTile);

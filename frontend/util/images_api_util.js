@@ -13,3 +13,11 @@ export const fetchImage = (id) => {
     data: { id }
   });
 };
+
+export const passImageId = (image) => {
+  return $.ajax({
+    url: `api/images/${image.id}`,
+    method: 'GET',
+    data: { image }
+  });
+};

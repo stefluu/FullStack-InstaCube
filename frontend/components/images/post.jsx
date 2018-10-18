@@ -13,7 +13,15 @@ const IndexPosts = props => {
       </section>
 
       <img className="image-post" src = {props.image.photo_url}/>
-      <section className="post-icons"/>
+
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
+
+      <section className="post-icons">
+        <i className="far fa-heart"></i>
+        <i class="fa fa-comment-o" aria-hidden="true"></i>
+        <i class="fa fa-upload" aria-hidden="true"></i>
+      </section>
+
       <section className="post-likes"/>
       <section className="comments"/>
       <input className="addcommentbox" type="text" placeholder="Add a comment..."></input>

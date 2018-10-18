@@ -2,24 +2,24 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import ModalWindowContainer from './modal_window_container';
-import ModalImageContainer from './modal_image_container';
+import ModalImageWindowContainer from './modal_image_window_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
   }
+
   let component;
   switch (modal) {
     case 'logout':
       component = <ModalWindowContainer />;
       break;
     case 'image-click':
-      component = <ModalImageContainer />;
+      component = <ModalImageWindowContainer />;
       break;
     default:
-      return null;
+      component = null;
   }
-
   return (
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -31,7 +31,8 @@ function Modal({modal, closeModal}) {
 
 const mapStateToProps = state => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    imageId: state.imageId
   };
 };
 

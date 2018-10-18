@@ -18,7 +18,7 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
   return{
-    openModal: () => dispatch(openModal()),
+    openModal: (formType) => dispatch(openModal(formType)),
     fetchImages: () => dispatch(fetchImages()),
     fetchUsers: () => dispatch(fetchUsers())
   };

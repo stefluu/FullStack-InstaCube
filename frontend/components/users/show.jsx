@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar';
-import ProfileTile from '../images/profile_tile';
+import ProfileTileContainer from '../images/profile_tile_container';
 
 class Show extends React.Component {
 
@@ -32,7 +32,7 @@ class Show extends React.Component {
 
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
 
-                <i class="fas fa-circle-notch" onClick={() => this.props.openModal()}></i>
+                <i class="fas fa-circle-notch" onClick={() => this.props.openModal('logout')}></i>
               </section>
 
               <section className="posts-followers-following">
@@ -65,7 +65,7 @@ class Show extends React.Component {
                   (image.user_id === this.props.userId)
                 )).map(image => (
                   <li>
-                    <ProfileTile image={image} openModal={ this.props.openModal}/>
+                    <ProfileTileContainer image={image} openModal={ this.props.openModal}/>
                   </li>
                 ))}
               </section>

@@ -9,49 +9,11 @@ class IndexPosts extends React.Component{
   constructor(props){
     super(props)
   }
-  //
-  // componentDidMount(){
-  //   this.props.fetchUserLikes();
-  // }
 
-    // let currentUserLikes = Object.values(this.props.likes);
-    // let currentUserLikesImages = currentUserLikes.map((like) =>
-    //   (
-    //     like.img_id
-    //   ))
-    // let heart = (currentUserLikesImages.includes(this.props.image.id)) ?
-    //   (<i
-    //   className="fas fa-heart"
-    //   onClick={() => console.log('liked')}></i>
-    // ) : (
-    //   (<i
-    //   className="far fa-heart"
-    //   onClick={() => console.log("unlike")}></i>
-    // ));
-
-    //   let currentUserLikesImages = currentUserLikes.map((like) => (
-    //     like.user_id)
-    //
-    // )
-    //   let currentUserLikesImages = currentUserLikes.map((like) => (
-    //   like.user_id);
-    //
-    //   if (currentUserLikesImages.includes(imageId)){
-    //     // heart = "fas"
-    //     heart =
-    //     <i
-    //       className="fas fa-heart"
-    //       onClick={() => console.log('liked')}></i>
-    //   } else {
-    //     // heart = "far"
-    //     heart =
-    //     <i
-    //       className="far fa-heart"
-    //       onClick={() => console.log("unlike")}></i>
-    //   }
-    // })
-
-
+  componentDidMount(){
+    this.props.fetchLikes();
+    debugger
+  }
 
   render(){
     let imageId = this.props.image.id
@@ -73,7 +35,7 @@ class IndexPosts extends React.Component{
     // console.log(currentLike)
     let heart = (currentUserLikesImages.includes(this.props.image.id)) ?
       (<i
-      className="fas fa-heart"
+      className="fas fa-heart" id="redHeart"
       onClick={() => this.props.unlikeImage(currentLike.id)}></i>
     ) : (
       (
@@ -82,10 +44,13 @@ class IndexPosts extends React.Component{
       onClick={() => this.props.likeImage({img_id: imageId})}></i>
     ));
 
+
     return(
       <div className="entire-post">
         <section className="postheader">
-          <Link to={`/users/${userId}`}>{username}</Link>
+          <img className="standin-avatar-post" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" />
+          <a className="username-post-link" href={`/users/${userId}`}>{username}</a>
+          <h5>San Francisco, CA</h5>
         </section>
 
         <img className="image-post" src = {this.props.image.photo_url}/>
@@ -102,16 +67,19 @@ class IndexPosts extends React.Component{
         </section>
         <div className="under-icons">
           <section className="post-likes">
-            <h4 className="likes">_ likes</h4>
+            <h4 className="likes">6 likes</h4>
           </section>
+
+          <h5>{this.props.image.date}</h5>
 
           <section className="comments">
             <ul className="comment-li">
-              <li>hello_pup This is great!</li>
-              <li>hihihi This is a comment!</li>
-              <li>Im_aUser This is another comment!</li>
+              <li><span>hello_pup</span> This is great!</li>
+              <li><span>hihihi</span> This is a comment!</li>
+              <li><span>Im_aUser</span> This is another comment!</li>
             </ul>
           </section>
+
           <hr/>
           <input className="addcommentbox" type="text" placeholder="Add a comment..."></input>
         </div>

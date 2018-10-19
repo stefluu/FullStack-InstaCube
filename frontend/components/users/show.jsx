@@ -15,16 +15,17 @@ class Show extends React.Component {
     // let idStart = window.location.hash.search(/[0-9]/);
     // let userProfileId = parseInt(window.location.hash.slice(idStart));
     let profileOwner = this.props.users[parseInt(this.props.userId)];
-
     if (!profileOwner) return null;
-
     return(
       <div>
         <NavBarContainer />
 
         <div className="entire-show-container">
           <div className="usershow-top">
-            <section id="usershow-avatar"></section>
+            <section id="usershow-avatar">
+              <img src={profileOwner.avatar_url}/>
+            </section>
+              <img className="standin-avatar" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" />
 
             <section className="user-info">
               <section className="user-edit-modal">

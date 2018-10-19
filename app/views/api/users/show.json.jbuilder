@@ -10,3 +10,9 @@
   # json.extract! @user :bio, :username, :display_name
   json.photo_url url_for(image.photo)
 end
+
+# json.set! @user.avatar_url do
+#   json.avatar_url url_for(@user.avatar)
+# end
+
+json.avatar_url url_for(@user.avatar)

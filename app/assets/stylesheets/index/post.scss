@@ -5,7 +5,7 @@
 }
 
 .postheader{
-  height: 60px;
+  height: 30px;
   font-weight: bold;
   font-family: helvetica;
   font-size: 14px;
@@ -60,4 +60,41 @@ hr {
   padding: 5px;
   width: 640px;
   height: 20px;
+}
+
+#redHeart{
+  color:red;
+}
+
+.standin-avatar-post{
+    height: 30px;
+    width: auto;
+    position: relative;
+    top: 2px;
+    left: 13px;
+  }
+
+.postheader{
+  margin-top:10px;
+}
+
+.username-post-link{
+  font-weight: bold;
+  font-size: 16px;
+  bottom: 18px;
+  position: relative;
+  left: 28px;
+}
+
+.postheader h5{
+  font-size: 14px;
+  position: relative;
+  font-weight: normal;
+  bottom: 40px;
+  left: 60px;
+  padding-bottom:0px;
+}
+
+span{
+  font-weight: bold;
 }

@@ -43,8 +43,10 @@ class IndexPosts extends React.Component{
       onClick={() => this.props.likeImage({img_id: imageId})}></i>
     ));
 
-
+    if (!username) return null; 
     return(
+
+
       <div className="entire-post">
         <section className="postheader">
           <img className="standin-avatar-post" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" />

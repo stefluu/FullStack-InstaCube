@@ -8,6 +8,7 @@ class Show extends React.Component {
   componentDidMount(){
     this.props.fetchImages();
     this.props.fetchUsers();
+    this.props.fetchLikes();
   };
 
   render(){

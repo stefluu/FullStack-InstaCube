@@ -5,6 +5,7 @@ import { openModal } from '../../actions/modal_actions';
 import { fetchImages } from '../../actions/images';
 import { fetchUsers } from '../../actions/users';
 import { withRouter } from 'react-router-dom';
+import { fetchUserLikes } from '../../actions/likes';
 
 
 const mstp = (state, ownProps) => {
@@ -21,6 +22,7 @@ const mstp = (state, ownProps) => {
 
 const mdtp = (dispatch) => {
   return{
+    fetchLikes: () => dispatch(fetchUserLikes()),
     openModal: (formType) => dispatch(openModal(formType)),
     fetchImages: () => dispatch(fetchImages()),
     fetchUsers: () => dispatch(fetchUsers())

@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { likeImage, unlikeImages, fetchUserLikes } from '../../actions/likes';
-import ModalImageWindowContainer from './modal_image_window_container';
+import { likeImage, unlikeImage, fetchUserLikes } from '../../actions/likes';
+import modalImageWindowContainer from './modal_image_window_container';
 
 
 const mstp = (state) => {
@@ -22,4 +22,4 @@ const mdtp = (dispatch) => {
   };
 };
 
-export default connect(mstp, mdtp)(ModalImageWindowContainer);
+export default connect(mstp, mdtp)(modalImageWindowContainer);

@@ -2,7 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import ModalWindowContainer from './modal_window_container';
-import ModalImageWindowContainer from './modal_image_window_container';
+import ModalImageWindowContainer from './modal_image_window_container_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {

@@ -18,8 +18,8 @@ const mdtp = (dispatch) => {
   return {
     fetchUsers: () => dispatch(fetchUsers()),
     fetchLikes: () => dispatch(fetchUserLikes()),
-    likeImage: (imageId) => dispatch(likeImage(imageId)),
-    unlikeImage: (imageId) => dispatch(unlikeImage(imageId))
+    likeImage: (like) => dispatch(likeImage(like)),
+    unlikeImage: (like) => dispatch(unlikeImage(like))
   };
 };
 

@@ -9,28 +9,79 @@ class IndexPosts extends React.Component{
   constructor(props){
     super(props)
   }
+  //
+  // componentDidMount(){
+  //   this.props.fetchUserLikes();
+  // }
 
-  componentDidMount(){
-    this.props.fetchUsers();
-  }
+    // let currentUserLikes = Object.values(this.props.likes);
+    // let currentUserLikesImages = currentUserLikes.map((like) =>
+    //   (
+    //     like.img_id
+    //   ))
+    // let heart = (currentUserLikesImages.includes(this.props.image.id)) ?
+    //   (<i
+    //   className="fas fa-heart"
+    //   onClick={() => console.log('liked')}></i>
+    // ) : (
+    //   (<i
+    //   className="far fa-heart"
+    //   onClick={() => console.log("unlike")}></i>
+    // ));
+
+    //   let currentUserLikesImages = currentUserLikes.map((like) => (
+    //     like.user_id)
+    //
+    // )
+    //   let currentUserLikesImages = currentUserLikes.map((like) => (
+    //   like.user_id);
+    //
+    //   if (currentUserLikesImages.includes(imageId)){
+    //     // heart = "fas"
+    //     heart =
+    //     <i
+    //       className="fas fa-heart"
+    //       onClick={() => console.log('liked')}></i>
+    //   } else {
+    //     // heart = "far"
+    //     heart =
+    //     <i
+    //       className="far fa-heart"
+    //       onClick={() => console.log("unlike")}></i>
+    //   }
+    // })
+
 
 
   render(){
-    console.log(this.props.image)
-    let heart;
-    // let currentUser = users[this.state.session.currentUserId];
-    let currentUserKeys = Object.keys(this.props.currentUser);
-
-    if (currentUserKeys.includes(this.props.image.id)){
-      heart = <i className="fas fa-heart"></i>
-    } else {
-      heart = <i className="far fa-heart"></i>
-    }
-
+    let imageId = this.props.image.id
     let userId = this.props.image.user_id;
     let users = this.props.users;
     let user = users[this.props.image.user_id];
     let username = user.username
+
+    let currentUserLikes = Object.values(this.props.likes);
+    let currentUserLikesImages = currentUserLikes.map((like) =>
+      (
+        like.img_id
+      ))
+
+    let currentLike;
+    if (currentUserLikesImages.includes(this.props.image.id)){
+      currentLike = currentUserLikes[currentUserLikesImages.indexOf(this.props.image.id)]
+    }
+    // console.log(currentLike)
+    let heart = (currentUserLikesImages.includes(this.props.image.id)) ?
+      (<i
+      className="fas fa-heart"
+      onClick={() => this.props.unlikeImage(currentLike.id)}></i>
+    ) : (
+      (
+        <i
+      className="far fa-heart"
+      onClick={() => this.props.likeImage({img_id: imageId})}></i>
+    ));
+
     return(
       <div className="entire-post">
         <section className="postheader">
@@ -42,9 +93,9 @@ class IndexPosts extends React.Component{
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
 
         <section className="post-icons">
-          <section className="like-button" >
-            {heart}
-          </section>
+
+          {heart}
+
 
           <i className="far fa-comment"></i>
           <i className="fa fa-upload" aria-hidden="true"></i>
@@ -56,9 +107,9 @@ class IndexPosts extends React.Component{
 
           <section className="comments">
             <ul className="comment-li">
-              <li>comment1 gafghjdfojo;jkfo;s</li>
-              <li>comment2 kafjodfjof</li>
-              <li>comment3 fdgkahidfjlajfl</li>
+              <li>hello_pup This is great!</li>
+              <li>hihihi This is a comment!</li>
+              <li>Im_aUser This is another comment!</li>
             </ul>
           </section>
           <hr/>
@@ -72,3 +123,14 @@ class IndexPosts extends React.Component{
 export default IndexPosts;
 
 // <LikesContainer image={this.props.image} />
+
+// (this.props.likeImage({img_id: imageId, user_id: this.props.currentUser.id}))}>
+
+
+// <section className="like-button" onClick={() => this.toggleLike()
+// }>
+// </section>
+
+// <i
+//   className="far fa-heart"
+//   onClick={() => this.toggleLike()}></i>

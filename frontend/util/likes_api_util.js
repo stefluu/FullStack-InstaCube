@@ -1,18 +1,18 @@
 
 
-export const likeImage = (imageId) => {
+export const likeImage = (like) => {
   return $.ajax({
-    url: `api/images/${image_id}/likes`,
+    url: 'api/likes',
     method: 'POST',
-    data: { imageId }
+    data: { like }
   });
 };
 
-export const unlikeImage = (imageId, likeId) => {
+export const unlikeImage = (likeId) => {
   return $.ajax({
-    url: `api/images/${image_id}/likes/${likeId}`,
+    url: `api/likes/${likeId}`,
     method: 'DELETE',
-    data: { imageId, likeId }
+    data: { likeId }
   });
 };
 

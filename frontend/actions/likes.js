@@ -5,20 +5,22 @@ export const UNLIKE_IMAGE = "UNLIKE_IMAGE";
 export const FETCH_CURRENT_USER_LIKES = "FETCH_CURRENT_USER_LIKES";
 // export const TOGGLE_LIKE = "TOGGLE_LIKE";
 
-export const likeImage = (imageId) => {
-  return{
-    type: LIKE_IMAGE,
-    likeStatus: true
+
+export const likeImage = (like) => {
+  return dispatch => {
+    return APIUtil.likeImage(like).then((like) => {
+      return dispatch(likeAnImage(like));
+    });
   };
 };
 
-export const unlikeImage = (imageId) => {
-  return{
-    type: UNLIKE_IMAGE,
-    likeState: false
+export const unlikeImage = (likeId) => {
+  return dispatch => {
+    return APIUtil.unlikeImage(likeId).then((likeId) => {
+      return dispatch(unlikeAnImage(likeId));
+    });
   };
 };
-
 
 export const fetchUserLikes = () => {
   return dispatch => {
@@ -38,5 +40,19 @@ const fetchCurrentUserLikes = (likes) => {
   return{
     type: FETCH_CURRENT_USER_LIKES,
     likes
-  }
-}
+  };
+};
+
+const likeAnImage = (like) => {
+  return{
+    type: LIKE_IMAGE,
+    like
+  };
+};
+
+const unlikeAnImage = (likeId) => {
+  return{
+    type: UNLIKE_IMAGE,
+    likeId
+  };
+};

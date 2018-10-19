@@ -19,6 +19,7 @@ class IndexPosts extends React.Component{
     let userId = this.props.image.user_id;
     let users = this.props.users;
     let user = users[this.props.image.user_id];
+    if (!user) return null;
     let username = user.username
 
     let currentUserLikes = Object.values(this.props.likes);
@@ -43,7 +44,7 @@ class IndexPosts extends React.Component{
       onClick={() => this.props.likeImage({img_id: imageId})}></i>
     ));
 
-    if (!username) return null; 
+    if (!username) return null;
     return(
 
 

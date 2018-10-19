@@ -17,7 +17,9 @@ class IndexContainer extends React.Component{
   }
 
   render(){
+    if(!this.props.users) return null;
     return(
+
       <div id="images-index">
         <Route exact path='/index' component={NavBarContainer} />
         <div className="news-feed">

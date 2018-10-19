@@ -45,7 +45,7 @@ class Show extends React.Component {
 
               <section className="displayname-bio">
                 <h3>{profileOwner.display_name}</h3>
-                <h3>{profileOwner.bio}</h3>
+                <h3 id="bio">{profileOwner.bio}</h3>
               </section>
 
             </section>
@@ -66,7 +66,7 @@ class Show extends React.Component {
                 {this.props.images.filter(image => (
                   (image.user_id == this.props.userId)
                 )).map(image => (
-                  <li>
+                  <li key={image.id}>
                     <ProfileTileContainer image={image} openModal={ this.props.openModal}/>
                   </li>
                 ))}

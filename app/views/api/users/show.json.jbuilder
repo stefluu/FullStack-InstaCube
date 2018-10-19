@@ -15,4 +15,4 @@ end
 #   json.avatar_url url_for(@user.avatar)
 # end
 
-json.avatar_url url_for(@user.avatar)
+# json.avatar_url url_for(@user.avatar)

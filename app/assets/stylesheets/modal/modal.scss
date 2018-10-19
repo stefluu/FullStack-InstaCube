@@ -28,6 +28,11 @@
  width: 400px;
  bottom: 600px;
  border-radius: 20px;
+ margin: auto;
+
+  position: absolute;
+  left: 660px;
+  top: 500px;
 }
 
 .modal-window li{
@@ -45,14 +50,15 @@
 
 .entire-modal-image-window{
   // max-width: 932px;
-  max-height: 597px;
+  // max-height: 597px;
   display: block;
   margin: auto;
   margin-top: 190px;
   background: white;
   width: 932px;
   // width: auto;
-  height: 597px;
+  // height: 597px;
+  height:auto;
 }
 
 .entire-modal-image-window img{

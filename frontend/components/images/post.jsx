@@ -12,7 +12,6 @@ class IndexPosts extends React.Component{
 
   componentDidMount(){
     this.props.fetchLikes();
-    debugger
   }
 
   render(){
@@ -49,7 +48,7 @@ class IndexPosts extends React.Component{
       <div className="entire-post">
         <section className="postheader">
           <img className="standin-avatar-post" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" />
-          <a className="username-post-link" href={`/users/${userId}`}>{username}</a>
+          <a className="username-post-link" href={`/#/users/${userId}`}>{username}</a>
           <h5>San Francisco, CA</h5>
         </section>
 

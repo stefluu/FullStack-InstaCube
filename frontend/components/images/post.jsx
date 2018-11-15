@@ -86,6 +86,13 @@ class IndexPosts extends React.Component{
       onClick={() => this.props.likeImage({img_id: imageId})}></i>
     ));
 
+    let likeCount = 0;
+    for (let i = 0; i < allLikes.length; i++) {
+      if (allLikes[i].img_id === imageId){
+        likeCount += 1
+      }
+    }
+
     if (!username) return null;
     return(
 
@@ -111,7 +118,7 @@ class IndexPosts extends React.Component{
         </section>
         <div className="under-icons">
           <section className="post-likes">
-            <h4 className="likes">6 likes</h4>
+            <h4 className="likes">{likeCount} likes</h4>
           </section>
 
           <h5>{this.props.image.date}</h5>

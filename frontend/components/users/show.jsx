@@ -17,6 +17,14 @@ class Show extends React.Component {
     // let userProfileId = parseInt(window.location.hash.slice(idStart));
     let profileOwner = this.props.users[parseInt(this.props.userId)];
     if (!profileOwner) return null;
+
+    let profileOwnerPosts = 
+      this.props.images.filter(image => (
+      (image.user_id == this.props.userId)
+    ))
+      
+    let postCount = profileOwnerPosts.length;
+
     return(
       <div>
         <NavBarContainer />
@@ -39,7 +47,7 @@ class Show extends React.Component {
               </section>
 
               <section className="posts-followers-following">
-                <li><span>6</span> posts</li>
+                <li><span>{postCount}</span> posts</li>
                 <li><span>73</span> followers</li>
                 <li><span>181</span> following</li>
               </section>

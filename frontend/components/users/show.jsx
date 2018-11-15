@@ -12,7 +12,6 @@ class Show extends React.Component {
   };
 
   render(){
-    // debugger
     // let idStart = window.location.hash.search(/[0-9]/);
     // let userProfileId = parseInt(window.location.hash.slice(idStart));
     let profileOwner = this.props.users[parseInt(this.props.userId)];
@@ -23,7 +22,18 @@ class Show extends React.Component {
       (image.user_id == this.props.userId)
     ))
       
+    // debugger
     let postCount = profileOwnerPosts.length;
+    
+
+    let editOrFollowButton;
+    let currentUserProf = Object.values(currentUser)[0].id === profileOwner.id
+        
+    if (currentUserProf){
+      editOrFollowButton = <button>Edit Profile</button>;
+    } else {
+      editOrFollowButton = <button id="follow-button">Follow</button>;
+    }
 
     return(
       <div>
@@ -39,7 +49,8 @@ class Show extends React.Component {
             <section className="user-info">
               <section className="user-edit-modal">
                 <h4 className="showpage-username"> {profileOwner.username} </h4>
-                <button>Edit Profile</button>
+                {/* <button>Edit Profile</button> */}
+                {editOrFollowButton}
 
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
 

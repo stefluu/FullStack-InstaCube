@@ -25,6 +25,14 @@
    vertical-align: baseline;
  }
 
+ button :hover{
+   cursor: pointer;
+ }
+
+ i :hover{
+   cursor: pointer;
+ }
+
  #root{
    height: 100%;
  }

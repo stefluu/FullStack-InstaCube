@@ -21,22 +21,64 @@ class IndexPosts extends React.Component{
     let user = users[this.props.image.user_id];
     if (!user) return null;
     let username = user.username
+    // let allLikes = this.props.likes
 
-    let currentUserLikes = Object.values(this.props.likes);
-    let currentUserLikesImages = currentUserLikes.map((like) =>
-      (
-        like.img_id
-      ))
+    // let currentUserLikedImages = allLikes[this.props.currentUserId]
+    
+    // if(!currentUserLikedImages){
+    //   currentUserLikedImages = [];
+    // }
 
-    let currentLike;
-    if (currentUserLikesImages.includes(this.props.image.id)){
-      currentLike = currentUserLikes[currentUserLikesImages.indexOf(this.props.image.id)]
+    // let currentLike;
+    // if (currentUserLikedImages.includes(imageId)){
+    //   currentLike = allLikes[userId]
+    // }
+  
+  
+
+    // let heart = 
+    //   (currentUserLikedImages.includes(imageId)) ?
+    //     (<i
+    //   className="fas fa-heart" id="redHeart"
+    //   onClick={() => this.props.unlikeImage(currentLike.id)}></i>
+    // ) : (
+    //   (
+    //     <i
+    //   className="far fa-heart"
+    //   onClick={() => this.props.likeImage({img_id: imageId})}></i>
+    // ));
+
+    // let allLikes = Object.values(this.props.likes);
+    // let currentUserLikes = allLikes.map((like) =>
+    //   (
+    //     like.img_id
+    //   ))
+
+    let allLikes = Object.values(this.props.likes);
+    let currentUserLikes = [];
+
+    for(let i = 0; i < allLikes.length; i++){
+      if(allLikes[i].user_id === this.props.currentUserId &&
+          (!currentUserLikes.includes(allLikes[i].img_id))
+        ){
+        currentUserLikes.push(allLikes[i].img_id)
+      }
+    }
+    
+
+    let currentLikeId;
+    if (currentUserLikes.includes(imageId)){
+      // currentLike = this.props.likes[currentUserLikes.indexOf(imageId)]
+      let likesKeys = Object.keys(this.props.likes)
+      currentLikeId = likesKeys[currentUserLikes.indexOf(imageId)];
+      currentLikeId = parseInt(currentLikeId);
+
     }
     // console.log(currentLike)
-    let heart = (currentUserLikesImages.includes(this.props.image.id)) ?
+    let heart = (currentUserLikes.includes(imageId)) ?
       (<i
       className="fas fa-heart" id="redHeart"
-      onClick={() => this.props.unlikeImage(currentLike.id)}></i>
+      onClick={() => this.props.unlikeImage(currentLikeId)}></i>
     ) : (
       (
         <i

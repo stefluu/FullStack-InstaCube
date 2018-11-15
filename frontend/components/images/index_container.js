@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import IndexContainer from './index';
 import { fetchImages } from '../../actions/images';
 import { fetchUsers } from '../../actions/users';
-import { fetchUserLikes } from '../../actions/likes';
+import { fetchAllLikes } from '../../actions/likes';
 // import { clearSessionErrors } from '../../actions/session'
 
 
@@ -21,7 +21,7 @@ const mdtp = (dispatch) => {
   return{
     fetchImages: () => dispatch(fetchImages()),
     fetchUsers: () => dispatch(fetchUsers()),
-    fetchUserLikes: () => dispatch(fetchUserLikes())
+    fetchAllLikes: () => dispatch(fetchAllLikes())
     // clearSessionErrors: () => dispatch(clearSessionErrors())
   };
 };

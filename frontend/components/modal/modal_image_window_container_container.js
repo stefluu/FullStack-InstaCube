@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { likeImage, unlikeImage, fetchUserLikes } from '../../actions/likes';
+import { likeImage, unlikeImage, fetchAllLikes } from '../../actions/likes';
 import modalImageWindowContainer from './modal_image_window_container';
 
 
@@ -16,7 +16,7 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
   return {
-    fetchLikes: () => dispatch(fetchUserLikes()),
+    fetchLikes: () => dispatch(fetchAllLikes()),
     likeImage: (like) => dispatch(likeImage(like)),
     unlikeImage: (like) => dispatch(unlikeImage(like))
   };

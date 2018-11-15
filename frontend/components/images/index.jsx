@@ -12,7 +12,7 @@ class IndexContainer extends React.Component{
   componentDidMount(){
     this.props.fetchImages();
     this.props.fetchUsers();
-    this.props.fetchUserLikes();
+    this.props.fetchAllLikes();
     // this.props.clearSessionErrors();
   }
 

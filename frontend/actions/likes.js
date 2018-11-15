@@ -2,7 +2,7 @@ import * as APIUtil from '../util/likes_api_util';
 
 export const LIKE_IMAGE = "LIKE_IMAGE";
 export const UNLIKE_IMAGE = "UNLIKE_IMAGE";
-export const FETCH_CURRENT_USER_LIKES = "FETCH_CURRENT_USER_LIKES";
+export const FETCH_LIKES = "FETCH_LIKES";
 // export const TOGGLE_LIKE = "TOGGLE_LIKE";
 
 
@@ -16,16 +16,16 @@ export const likeImage = (like) => {
 
 export const unlikeImage = (likeId) => {
   return dispatch => {
-    return APIUtil.unlikeImage(likeId).then((likeId) => {
-      return dispatch(unlikeAnImage(likeId));
+    return APIUtil.unlikeImage(likeId).then((like) => {
+      return dispatch(unlikeAnImage(like));
     });
   };
 };
 
-export const fetchUserLikes = () => {
+export const fetchAllLikes = () => {
   return dispatch => {
-    return APIUtil.fetchUserLikes().then(likes =>{
-      return dispatch(fetchCurrentUserLikes(likes));
+    return APIUtil.fetchAllLikes().then(likes =>{
+      return dispatch(fetchLikes(likes));
     })
   }
 }
@@ -36,9 +36,9 @@ export const fetchUserLikes = () => {
 //     imageId
 //   }
 // }
-const fetchCurrentUserLikes = (likes) => {
+const fetchLikes = (likes) => {
   return{
-    type: FETCH_CURRENT_USER_LIKES,
+    type: FETCH_LIKES,
     likes
   };
 };
@@ -50,9 +50,9 @@ const likeAnImage = (like) => {
   };
 };
 
-const unlikeAnImage = (likeId) => {
+const unlikeAnImage = (like) => {
   return{
     type: UNLIKE_IMAGE,
-    likeId
+    like
   };
 };

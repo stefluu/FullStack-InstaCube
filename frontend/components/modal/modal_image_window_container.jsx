@@ -12,33 +12,71 @@ class modalImageWindowContainer extends React.Component {
     if (!currentUser) return null;
 
 
-    let currentUserLikes;
-    if (!this.props.likes){
-      currentUserLikes = {};
-    } else {
-      currentUserLikes = Object.values(this.props.likes);
-    }
-    // let currentUserLikes = Object.values(this.props.likes);
-    let currentUserLikesImages = []
-    for(let i=0; i < currentUserLikes.length; i++){
-      currentUserLikesImages.push(currentUserLikes[i].img_id)
-    }
-    // console.log(this.props)
-    let currentLike;
-    if (currentUserLikesImages.includes(this.props.imageId)){
-      currentLike = currentUserLikes[currentUserLikesImages.indexOf(this.props.imageId)]
+    // let currentUserLikes;
+    // if (!this.props.likes){
+    //   currentUserLikes = {};
+    // } else {
+    //   currentUserLikes = Object.values(this.props.likes);
+    // }
+    // // let currentUserLikes = Object.values(this.props.likes);
+    // let currentUserLikesImages = []
+    // for(let i=0; i < currentUserLikes.length; i++){
+    //   currentUserLikesImages.push(currentUserLikes[i].img_id)
+    // }
+    // // console.log(this.props)
+    // let currentLike;
+    // if (currentUserLikesImages.includes(this.props.imageId)){
+    //   currentLike = currentUserLikes[currentUserLikesImages.indexOf(this.props.imageId)]
+    // }
+
+    // let heart = (currentUserLikesImages.includes(this.props.imageId)) ?
+    //   (<i
+    //   className="fas fa-heart" id="redHeart"
+    //   onClick={() => this.props.unlikeImage(currentLike.id)}></i>
+    // ) : (
+    //   (
+    //     <i
+    //   className="far fa-heart"
+    //   onClick={() => this.props.likeImage({img_id: this.props.imageId, user_id: this.props.currentUser.id})}></i>
+    // ));
+
+    let allLikes = Object.values(this.props.likes);
+    let currentUserLikes = [];
+
+    for (let i = 0; i < allLikes.length; i++) {
+      if (allLikes[i].user_id === this.props.currentUserId &&
+        (!currentUserLikes.includes(allLikes[i].img_id))
+      ) {
+        currentUserLikes.push(allLikes[i].img_id)
+      }
     }
 
-    let heart = (currentUserLikesImages.includes(this.props.imageId)) ?
+
+    let currentLikeId;
+    if (currentUserLikes.includes(this.props.imageId)) {
+      let likesKeys = Object.keys(this.props.likes)
+      currentLikeId = likesKeys[currentUserLikes.indexOf(this.props.imageId)];
+      currentLikeId = parseInt(currentLikeId);
+
+    }
+    // console.log(currentLike)
+    let heart = (currentUserLikes.includes(this.props.imageId)) ?
       (<i
-      className="fas fa-heart" id="redHeart"
-      onClick={() => this.props.unlikeImage(currentLike.id)}></i>
-    ) : (
-      (
-        <i
-      className="far fa-heart"
-      onClick={() => this.props.likeImage({img_id: this.props.imageId, user_id: this.props.currentUser.id})}></i>
-    ));
+        className="fas fa-heart" id="redHeart"
+        onClick={() => this.props.unlikeImage(currentLikeId)}></i>
+      ) : (
+        (
+          <i
+            className="far fa-heart"
+            onClick={() => this.props.likeImage({ img_id: this.props.imageId })}></i>
+        ));
+
+    let likeCount = 0;
+    for (let i = 0; i < allLikes.length; i++) {
+      if (allLikes[i].img_id === this.props.imageId) {
+        likeCount += 1
+      }
+    }
 
     return(
       <div className="entire-modal-image-window"
@@ -62,7 +100,7 @@ class modalImageWindowContainer extends React.Component {
 
                 <i className="far fa-comment"></i>
                 <i className="far fa-bookmark"></i>
-                <h4>1 like</h4>
+                <h4>{likeCount} like</h4>
                 <h4>NOVEMBER 6</h4>
                 <input className="addcommentbox" type="text" placeholder="Add a comment..."></input>
             </section>

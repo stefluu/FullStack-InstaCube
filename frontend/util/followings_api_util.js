@@ -15,10 +15,10 @@ export const unfollow = (followingId) => {
     });
 };
 
-export const fetchCurrentUserFollows = (currentUserId) => {
+export const fetchFollows = () => {
     return $.ajax({
-        url: `api/users/${currentUserId}/followings`,
+        url: 'api/followings',
         method: 'GET',
-        data: { followings }
+        // data: { currentUserId }
     });
 };

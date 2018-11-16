@@ -3,7 +3,7 @@ class Api::FollowingsController < ApplicationController
   before_action :require_login
 
   def index
-    @followings = Follow.all
+    @followings = Following.all
   end
 
   def create
@@ -15,13 +15,13 @@ class Api::FollowingsController < ApplicationController
       flash[:errors] = @following.errors.full_messages
     end
 
-    render 'api/users/show'
+    render 'api/followings/show'
   end
 
   def destroy
-    @following = Follow.find(params[:id])
+    @following = Following.find(params[:id])
     @following.destroy
-    render 'api/users/show'
+    render 'api/followings/show'
   end
 
   private

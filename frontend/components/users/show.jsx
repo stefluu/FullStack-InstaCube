@@ -9,11 +9,12 @@ class Show extends React.Component {
     this.props.fetchImages();
     this.props.fetchUsers();
     this.props.fetchLikes();
+    let currentUserId = Object.values(currentUser)[0].id;
+    this.props.fetchFollows();
   };
 
   render(){
-    // let idStart = window.location.hash.search(/[0-9]/);
-    // let userProfileId = parseInt(window.location.hash.slice(idStart));
+  
     let profileOwner = this.props.users[parseInt(this.props.userId)];
     if (!profileOwner) return null;
 
@@ -21,19 +22,59 @@ class Show extends React.Component {
       this.props.images.filter(image => (
       (image.user_id == this.props.userId)
     ))
-      
-    // debugger
-    let postCount = profileOwnerPosts.length;
+    
+    //follow/unfollow
+    let editOrFollowButton;
+    let currentUserId = Object.values(currentUser)[0].id;
+    let isCurrentUserProf = currentUserId === profileOwner.id
+   
+    const allFollows = Object.values(this.props.followings);
+    const currentUserFollows = [];
     
 
-    let editOrFollowButton;
-    let currentUserProf = Object.values(currentUser)[0].id === profileOwner.id
-        
-    if (currentUserProf){
-      editOrFollowButton = <button>Edit Profile</button>;
-    } else {
-      editOrFollowButton = <button id="follow-button">Follow</button>;
+    for (let i = 0; i < allFollows.length; i++) {
+      if ((allFollows[i].user_id === currentUserId) &&
+        (!currentUserFollows.includes(allFollows[i].follower_id))
+      ) {
+        currentUserFollows.push(allFollows[i].follower_id)
+      }
     }
+
+    let potentialFollowDeletion;
+    if (currentUserFollows.includes(this.props.userId)) {
+      // currentLike = this.props.likes[currentUserFollows.indexOf(imageId)]
+      let followsKeys = Object.keys(this.props.followings)
+      potentialFollowDeletion = followsKeys[currentUserFollows.indexOf(this.props.userId)];
+      potentialFollowDeletion = parseInt(potentialFollowDeletion);
+    }
+    
+    // console.log(currentUserFollows)
+    // console.log(this.props.userId)
+    // debugger
+
+    if (isCurrentUserProf){
+      editOrFollowButton = <button>Edit Profile</button>;
+    } else if(currentUserFollows.includes(this.props.userId)){
+      editOrFollowButton =
+        <button
+          // id="follow-button"
+          onClick={() =>
+            this.props.unfollow(potentialFollowDeletion)}
+        >Following
+      </button>;
+    } else {
+      editOrFollowButton = 
+      <button 
+        id="follow-button"
+        onClick={() => 
+          this.props.follow({ follower_id: this.props.userId })}
+      >Follow
+      </button>;
+    }
+
+    //top portion: post count/followers/following
+    //post Count
+    let postCount = profileOwnerPosts.length;
 
     return(
       <div>

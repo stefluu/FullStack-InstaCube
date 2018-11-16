@@ -2,7 +2,7 @@ import * as APIUtil from '../util/followings_api_util';
 
 export const FOLLOW = "FOLLOW";
 export const UNFOLLOW = "UNFOLLOW";
-export const FETCH_CURRENT_USER_FOLLOWS = "FETCH_CURRENT_USER_FOLLOWS";
+export const FETCH_FOLLOWS = "FETCH_FOLLOWS";
 
 export const follow = (following) => {
     return dispatch => {
@@ -20,10 +20,10 @@ export const unfollow = (followingId) => {
     };
 };
 
-export const fetchCurrentUserFollows = (currentUserId) => {
+export const fetchFollows = () => {
     return dispatch => {
-        return APIUtil.fetchCurrentUserFollows(currentUserId).then(followings => {
-            return dispatch(fetchFollows(followings));
+        return APIUtil.fetchFollows().then(followings => {
+            return dispatch(fetchAllFollows(followings));
         });
     };
 };
@@ -44,9 +44,9 @@ const unfollowUser = (following) => {
     };
 };
 
-const fetchFollows = (followings) => {
+const fetchAllFollows = (followings) => {
     return{
-        type: FETCH_CURRENT_USER_FOLLOWS,
+        type: FETCH_FOLLOWS,
         followings
     };
 };

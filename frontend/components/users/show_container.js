@@ -6,6 +6,7 @@ import { fetchImages } from '../../actions/images';
 import { fetchUsers } from '../../actions/users';
 import { withRouter } from 'react-router-dom';
 import { fetchAllLikes } from '../../actions/likes';
+import { follow, unfollow, fetchFollows } from '../../actions/followings';
 
 
 const mstp = (state, ownProps) => {
@@ -15,7 +16,8 @@ const mstp = (state, ownProps) => {
     // currentUser: (state.entities.users)[state.session.currentUserId],
     images: Object.values(state.entities.images),
     users: state.entities.users,
-    userId: ownProps.match.params.userId
+    userId: parseInt(ownProps.match.params.userId),
+    followings: state.entities.followings
     // userId: (parseInt(window.location.hash.slice(window.location.hash.search(/[0-9]/))))
   };
 };
@@ -25,7 +27,10 @@ const mdtp = (dispatch) => {
     fetchLikes: () => dispatch(fetchAllLikes()),
     openModal: (formType) => dispatch(openModal(formType)),
     fetchImages: () => dispatch(fetchImages()),
-    fetchUsers: () => dispatch(fetchUsers())
+    fetchUsers: () => dispatch(fetchUsers()),
+    follow: (following) => dispatch(follow(following)),
+    unfollow: (followingId) => dispatch(unfollow(followingId)),
+    fetchFollows: () => dispatch(fetchFollows())
   };
 };
 

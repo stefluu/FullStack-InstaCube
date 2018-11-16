@@ -54,8 +54,8 @@ class IndexPosts extends React.Component{
     //     like.img_id
     //   ))
 
-    let allLikes = Object.values(this.props.likes);
-    let currentUserLikes = [];
+    const allLikes = Object.values(this.props.likes);
+    const currentUserLikes = [];
 
     for(let i = 0; i < allLikes.length; i++){
       if(allLikes[i].user_id === this.props.currentUserId &&

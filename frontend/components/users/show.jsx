@@ -15,7 +15,7 @@ class Show extends React.Component {
 
   render(){
   
-    let profileOwner = this.props.users[parseInt(this.props.userId)];
+    let profileOwner = this.props.users[this.props.userId];
     if (!profileOwner) return null;
 
     let profileOwnerPosts = 
@@ -76,6 +76,26 @@ class Show extends React.Component {
     //post Count
     let postCount = profileOwnerPosts.length;
 
+    //followers/following
+    let followerCount = 0;
+    let followingCount = 0;
+
+    for(let followingId in this.props.followings){
+      if(this.props.userId === this.props.followings[followingId].user_id){
+        if(this.props.userId === currentUserId){
+          followingCount += 1
+        } else {
+          followerCount += 1
+        }
+      } else if (this.props.userId === this.props.followings[followingId].follower_id){
+        if (this.props.follower_id === currentUserId) {
+          followingCount += 1
+        } else {
+          followerCount += 1
+        }
+      }
+    }
+
     return(
       <div>
         <NavBarContainer />
@@ -100,8 +120,8 @@ class Show extends React.Component {
 
               <section className="posts-followers-following">
                 <li><span>{postCount}</span> posts</li>
-                <li><span>73</span> followers</li>
-                <li><span>181</span> following</li>
+                <li><span>{followerCount}</span> followers</li>
+                <li><span>{followingCount}</span> following</li>
               </section>
 
               <section className="displayname-bio">

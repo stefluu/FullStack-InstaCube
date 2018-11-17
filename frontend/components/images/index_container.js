@@ -4,6 +4,8 @@ import IndexContainer from './index';
 import { fetchImages } from '../../actions/images';
 import { fetchUsers } from '../../actions/users';
 import { fetchAllLikes } from '../../actions/likes';
+import { fetchFollows } from "../../actions/followings";
+
 // import { clearSessionErrors } from '../../actions/session'
 
 
@@ -13,7 +15,8 @@ const mstp = (state) => {
     currentUserId: state.session.currentUserId,
     images:state.entities.images,
     users: state.entities.users,
-    likes: state.entities.likes
+    likes: state.entities.likes,
+    followings: state.entities.followings
   };
 };
 
@@ -21,7 +24,8 @@ const mdtp = (dispatch) => {
   return{
     fetchImages: () => dispatch(fetchImages()),
     fetchUsers: () => dispatch(fetchUsers()),
-    fetchAllLikes: () => dispatch(fetchAllLikes())
+    fetchAllLikes: () => dispatch(fetchAllLikes()),
+    fetchFollows: () => dispatch(fetchFollows())
     // clearSessionErrors: () => dispatch(clearSessionErrors())
   };
 };

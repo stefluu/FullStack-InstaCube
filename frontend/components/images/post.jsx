@@ -29,6 +29,7 @@ class IndexPosts extends React.Component{
     if (!user) return null;
     let username = user.username
     
+    //Likes
     const allLikes = Object.values(this.props.likes);
     const currentUserLikes = [];
 
@@ -55,7 +56,7 @@ class IndexPosts extends React.Component{
     ) : (
       (
         <i
-      className="far fa-heart"
+      className="far fa-heart" id="clearHeart"
       onClick={() => this.props.likeImage({img_id: imageId})}></i>
     ));
 
@@ -66,8 +67,17 @@ class IndexPosts extends React.Component{
       }
     }
 
+    let date = new Date(this.props.image.date);
+    let dateMonth = date.getMonth();
+    let dateDay = date.getDate();
+    let dateYear = date.getFullYear();
+    let currentDate = new Date();
+
+
+
+
     if (!username) return null;
-    
+
     return(
 
 
@@ -95,7 +105,7 @@ class IndexPosts extends React.Component{
             <h4 className="likes">{likeCount} likes</h4>
           </section>
 
-          <h5>{this.props.image.date}</h5>
+          {/* <h5>{this.props.image.date}</h5> */}
 
           <section className="comments">
             <Comments
@@ -104,7 +114,9 @@ class IndexPosts extends React.Component{
               users={this.props.users} />
           </section>
 
-          <hr/>
+          <h5>{this.props.image.date}</h5>
+
+          <hr id="lineundercomments"/>
           <form
             onSubmit={() =>
               this.props.comment({ body: this.state.body, img_id: imageId }, imageId)}>

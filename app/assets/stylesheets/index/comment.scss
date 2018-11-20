@@ -1,0 +1,32 @@
+
+// .comment-li{
+//     margin-bottom: 2px;
+// }
+
+.addcommentbox{
+  padding: 5px;
+  width: 640px;
+  height: 20px;
+  font-size: 14px;
+}
+
+.comment-li li{
+  margin-bottom: 7px;
+  border: none;
+  font-size: 14px;
+}
+
+.comment-li li:first-of-type {
+  margin-top: 20px;
+  border: none;
+  color: rgb(153, 153, 153);
+  font-weight: 500;
+}
+
+// .comment-li li:last-of-type {
+//     margin-bottom: 15px;
+// }
+
+#lineundercomments{
+    margin-top: 15px;
+}

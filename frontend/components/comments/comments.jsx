@@ -19,26 +19,21 @@ class Comments extends React.Component {
 
     // console.log(imageComments.slice(-4))
 
-    let commentBox = imageComments.length > 4 ? (
-        <ul className="comment-li">
-            <li>Load more comments</li>
-            {(imageComments.slice(-4)).map(comment => (
-                <li key={comment.id}>
-                    <span>{(this.props.users[comment.user_id]).username} </span>
-                    {comment.body}
-                </li>
-            ))}
+    let commentBox = imageComments.length > 4 ? 
+        (<ul className="comment-li">
+          <li>Load more comments</li>
+          {imageComments.slice(-4).map(comment => <li key={comment.id}>
+              <span>{this.props.users[comment.user_id].username} </span>
+              {comment.body}
+            </li>)}
         </ul>
-    ) : (
+            ) : (
         <ul className="comment-li">
-            {imageComments.map(comment => (
-                <li key={comment.id}>
-                    <span>{(this.props.users[comment.user_id]).username} </span>
-                    {comment.body}
-                </li>
-            ))}
-        </ul>
-    )
+          {imageComments.map(comment => <li key={comment.id}>
+              <span>{this.props.users[comment.user_id].username} </span>
+              {comment.body}
+            </li>)}
+        </ul>)
 
     return (
       <div>

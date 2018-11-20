@@ -69,8 +69,17 @@
 
 .navBar-right Link, i {
   font-size: 25px;
-  padding: 15px;
+  padding: 15px 7px 15px 7px;
   color: gray;
+}
+
+#redHeart{
+  color:red;
+  margin-left: 10px;
+}
+
+#clearHeart{
+  margin-left: 10px;
 }
 
 h2 {

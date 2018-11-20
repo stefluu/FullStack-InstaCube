@@ -1,17 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LikesContainer from '../likes/likes_container';
+import { runInThisContext } from 'vm';
 
 
 
 // const IndexPosts = this.props => {
 class IndexPosts extends React.Component{
   constructor(props){
-    super(props)
+    super(props);
+    this.state = {
+      body: ""
+    };
+    // this.img_id = "";
   }
 
   componentDidMount(){
     this.props.fetchLikes();
+    this.props.fetchComments(this.props.image.id)
   }
 
   render(){
@@ -21,39 +27,7 @@ class IndexPosts extends React.Component{
     let user = users[this.props.image.user_id];
     if (!user) return null;
     let username = user.username
-    // let allLikes = this.props.likes
-
-    // let currentUserLikedImages = allLikes[this.props.currentUserId]
     
-    // if(!currentUserLikedImages){
-    //   currentUserLikedImages = [];
-    // }
-
-    // let currentLike;
-    // if (currentUserLikedImages.includes(imageId)){
-    //   currentLike = allLikes[userId]
-    // }
-  
-  
-
-    // let heart = 
-    //   (currentUserLikedImages.includes(imageId)) ?
-    //     (<i
-    //   className="fas fa-heart" id="redHeart"
-    //   onClick={() => this.props.unlikeImage(currentLike.id)}></i>
-    // ) : (
-    //   (
-    //     <i
-    //   className="far fa-heart"
-    //   onClick={() => this.props.likeImage({img_id: imageId})}></i>
-    // ));
-
-    // let allLikes = Object.values(this.props.likes);
-    // let currentUserLikes = allLikes.map((like) =>
-    //   (
-    //     like.img_id
-    //   ))
-
     const allLikes = Object.values(this.props.likes);
     const currentUserLikes = [];
 
@@ -68,13 +42,11 @@ class IndexPosts extends React.Component{
 
     let currentLikeId;
     if (currentUserLikes.includes(imageId)){
-      // currentLike = this.props.likes[currentUserLikes.indexOf(imageId)]
       let likesKeys = Object.keys(this.props.likes)
       currentLikeId = likesKeys[currentUserLikes.indexOf(imageId)];
       currentLikeId = parseInt(currentLikeId);
 
     }
-    // console.log(currentLike)
     let heart = (currentUserLikes.includes(imageId)) ?
       (<i
       className="fas fa-heart" id="redHeart"
@@ -125,14 +97,27 @@ class IndexPosts extends React.Component{
 
           <section className="comments">
             <ul className="comment-li">
-              <li><span>hello_pup</span> This is great!</li>
+              {Object.values(this.props.comments).map(comment => (
+                <li><span>{(this.props.users[comment.user_id]).username}</span>
+                  {comment.body}
+                </li>
+              ))}
+              {/* <li><span>hello_pup</span> This is great!</li>
               <li><span>hihihi</span> This is a comment!</li>
-              <li><span>Im_aUser</span> This is another comment!</li>
+              <li><span>Im_aUser</span> This is another comment!</li> */}
             </ul>
           </section>
 
           <hr/>
-          <input className="addcommentbox" type="text" placeholder="Add a comment..."></input>
+          <form
+            onSubmit={() => this.props.comment({ body: this.state.body, img_id: imageId }, imageId)}>
+            <input className="addcommentbox" 
+                type="text" 
+                placeholder="Add a comment..."
+                onChange={(e) => this.setState({ body: e.target.value})}>
+            </input>
+          </form>
+
         </div>
       </div>
     )

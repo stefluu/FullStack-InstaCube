@@ -1,23 +1,23 @@
-export const comment = (comment, imageId) => {
+export const comment = (comment) => {
     return $.ajax({
-        url: `api/images/${imageId}/comments`,
+        url: 'api/comments',
         method: 'POST',
-        data: { comment, imageId }
+        data: { comment }
     });
 };
 
-export const uncomment = (commentId, imageId) => {
+export const uncomment = (commentId) => {
     return $.ajax({
-        url: `api/images/${imageId}/comments/${commentId}`,
+        url: `api/comments/${commentId}`,
         method: 'DELETE',
-        data: { commentId, imageId }
+        data: { commentId }
     });
 };
 
-export const fetchComments = (imageId) => {
+export const fetchComments = () => {
     return $.ajax({
-        url: `api/images/${imageId}/comments`,
+        url: 'api/comments',
         method: 'GET',
-        data: { imageId }
+        // data: { imageId }
     });
 };

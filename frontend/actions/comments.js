@@ -5,25 +5,25 @@ export const COMMENT = 'COMMENT';
 export const UNCOMMENT = 'UNCOMMENT';
 export const FETCH_COMMENTS = 'FETCH_COMMENTS';
 
-export const comment = (comment, imageId) => {
+export const comment = (comment) => {
     return dispatch => {
-        return APIUtil.comment(comment, imageId).then(comment => {
+        return APIUtil.comment(comment).then(comment => {
             return dispatch(commentOnPost(comment));
         });
     };
 };
 
-export const uncomment = (comment, imageId) => {
+export const uncomment = (comment) => {
     return dispatch => {
-        return APIUtil.uncomment(comment, imageId).then(comment => {
+        return APIUtil.uncomment(comment).then(comment => {
             return dispatch(uncommentOnPost(comment));
         });
     };
 };
 
-export const fetchComments = (imageId) => {
+export const fetchComments = () => {
     return dispatch => {
-        return APIUtil.fetchComments(imageId).then(comments => {
+        return APIUtil.fetchComments().then(comments => {
             return dispatch(fetchAllComments(comments));
         });
     };

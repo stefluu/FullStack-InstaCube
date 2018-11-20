@@ -17,7 +17,7 @@ class IndexPosts extends React.Component{
 
   componentDidMount(){
     this.props.fetchLikes();
-    this.props.fetchComments(this.props.image.id)
+    this.props.fetchComments();
   }
 
   render(){
@@ -98,7 +98,8 @@ class IndexPosts extends React.Component{
           <section className="comments">
             <ul className="comment-li">
               {Object.values(this.props.comments).map(comment => (
-                <li><span>{(this.props.users[comment.user_id]).username}</span>
+                <li key={comment.id}>
+                  <span>{(this.props.users[comment.user_id]).username} </span>
                   {comment.body}
                 </li>
               ))}
@@ -110,7 +111,8 @@ class IndexPosts extends React.Component{
 
           <hr/>
           <form
-            onSubmit={() => this.props.comment({ body: this.state.body, img_id: imageId }, imageId)}>
+            onSubmit={() =>
+              this.props.comment({ body: this.state.body, img_id: imageId }, imageId)}>
             <input className="addcommentbox" 
                 type="text" 
                 placeholder="Add a comment..."

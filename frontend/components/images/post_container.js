@@ -23,7 +23,7 @@ const mdtp = (dispatch) => {
     likeImage: (like) => dispatch(likeImage(like)),
     unlikeImage: (like) => dispatch(unlikeImage(like)),
     comment: (userComment, imageId) => dispatch(comment(userComment, imageId)),
-    fetchComments: (imageId) => dispatch(fetchComments(imageId))
+    fetchComments: () => dispatch(fetchComments())
   };
 };
 

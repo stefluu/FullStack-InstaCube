@@ -69,13 +69,20 @@ class IndexPosts extends React.Component{
 
     let date = new Date(this.props.image.date);
     let dateMonth = date.getMonth();
+    let monthStr;
     let dateDay = date.getDate();
     let dateYear = date.getFullYear();
     let currentDate = new Date();
 
+    const months = 
+      ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-
-
+    date = (currentDate.getFullYear() === dateYear) ? (
+      `${months[dateMonth]} ${dateDay}`
+    ) : (
+      `${months[dateMonth]} ${dateDay}, ${dateYear}`
+    )
+  
     if (!username) return null;
 
     return(
@@ -85,7 +92,7 @@ class IndexPosts extends React.Component{
         <section className="postheader">
           <img className="standin-avatar-post" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" />
           <a className="username-post-link" href={`/#/users/${userId}`}>{username}</a>
-          <h5>San Francisco, CA</h5>
+          <h5 className="postLocation">San Francisco, CA</h5>
         </section>
 
         <img className="image-post" src = {this.props.image.photo_url}/>
@@ -114,7 +121,8 @@ class IndexPosts extends React.Component{
               users={this.props.users} />
           </section>
 
-          <h5>{this.props.image.date}</h5>
+          {/* <h5>{this.props.image.date}</h5> */}
+          <h5 id="postDate">{date}</h5>
 
           <hr id="lineundercomments"/>
           <form

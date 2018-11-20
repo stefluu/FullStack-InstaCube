@@ -59,6 +59,10 @@
 //   font-weight: 500;
 // }
 
+#postDate{
+  color: rgb(153, 153, 153);
+}
+
 hr {
   width: 95%;
   color: gainsboro;
@@ -84,7 +88,16 @@ hr {
   left: 28px;
 }
 
-.postheader h5{
+// .postheader h5{
+//   font-size: 14px;
+//   position: relative;
+//   font-weight: normal;
+//   bottom: 40px;
+//   left: 60px;
+//   padding-bottom:0px;
+// }
+
+.postLocation{
   font-size: 14px;
   position: relative;
   font-weight: normal;

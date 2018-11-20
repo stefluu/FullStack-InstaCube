@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LikesContainer from '../likes/likes_container';
 import { runInThisContext } from 'vm';
+import Comments from '../comments/comments';
 
 
 
@@ -66,6 +67,7 @@ class IndexPosts extends React.Component{
     }
 
     if (!username) return null;
+    
     return(
 
 
@@ -96,17 +98,10 @@ class IndexPosts extends React.Component{
           <h5>{this.props.image.date}</h5>
 
           <section className="comments">
-            <ul className="comment-li">
-              {Object.values(this.props.comments).map(comment => (
-                <li key={comment.id}>
-                  <span>{(this.props.users[comment.user_id]).username} </span>
-                  {comment.body}
-                </li>
-              ))}
-              {/* <li><span>hello_pup</span> This is great!</li>
-              <li><span>hihihi</span> This is a comment!</li>
-              <li><span>Im_aUser</span> This is another comment!</li> */}
-            </ul>
+            <Comments
+              imageId={imageId} 
+              comments={this.props.comments} 
+              users={this.props.users} />
           </section>
 
           <hr/>

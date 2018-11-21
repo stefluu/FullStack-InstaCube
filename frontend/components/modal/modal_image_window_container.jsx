@@ -18,7 +18,7 @@ class modalImageWindowContainer extends React.Component {
   }
 
   handleSubmit(e) {
-    // e.preventDefault();
+    e.preventDefault();
     let imageId = this.props.imageId;
     let commentBody = this.state.body;
     this.props.comment({ body: commentBody, img_id: imageId });
@@ -101,7 +101,7 @@ class modalImageWindowContainer extends React.Component {
             <h4 id="modalLikeCount">{likeCount} like</h4>
             <h6 id="modalDate">NOVEMBER 6</h6>
 
-            <form onSubmit={() => this.handleSubmit()}>
+            <form onSubmit={(e) => this.handleSubmit(e)}>
               <input className="addcommentbox" type="text" placeholder="Add a comment..." 
                   onChange={e => this.setState(
                     { body: e.target.value }

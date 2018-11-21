@@ -5,14 +5,26 @@ import Comments from '../comments/comments';
 
 class modalImageWindowContainer extends React.Component {
   constructor(props){
-    super(props)
-  }
+    super(props);
+    this.state ={
+      body: ""
+    };
+  };
 
   componentDidMount(){
     this.props.fetchComments();
     this.props.fetchUsers();
     this.props.fetchImages();
   }
+
+  handleSubmit(e) {
+    // e.preventDefault();
+    let imageId = this.props.imageId;
+    let commentBody = this.state.body;
+    this.props.comment({ body: commentBody, img_id: imageId });
+    this.setState({ body: "" });
+    //this set state isnt working to claer the input
+  };
 
   render(){
     if (!currentUser) return null;
@@ -57,8 +69,7 @@ class modalImageWindowContainer extends React.Component {
 
     let username = this.props.users[this.props.currentUserId].username
 
-    return(
-      <div className="entire-modal-image-window" onClick={e => e.stopPropagation()}>
+    return <div className="entire-modal-image-window" onClick={e => e.stopPropagation()}>
         {/* <div className="modal-image-everything"> */}
         <ModalImageContainer />
 
@@ -68,7 +79,7 @@ class modalImageWindowContainer extends React.Component {
           </div>
           <hr />
           <p className="caption">
-          <b> {username} </b>
+            <b> {username} </b>
             {this.props.images[this.props.imageId].caption}
           </p>
           <div className="modalComments">
@@ -89,12 +100,18 @@ class modalImageWindowContainer extends React.Component {
             <i className="far fa-bookmark" />
             <h4 id="modalLikeCount">{likeCount} like</h4>
             <h6 id="modalDate">NOVEMBER 6</h6>
-            <input className="addcommentbox" type="text" placeholder="Add a comment..." />
+
+            <form onSubmit={() => this.handleSubmit()}>
+              <input className="addcommentbox" type="text" placeholder="Add a comment..." 
+                  onChange={e => this.setState(
+                    { body: e.target.value }
+                  )}/>
+            </form>
+
           </section>
         </aside>
         {/* </div> */}
-      </div>
-    )
+      </div>;
   }
 }
 

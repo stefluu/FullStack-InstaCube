@@ -6,6 +6,7 @@ import modalImageWindowContainer from './modal_image_window_container';
 import { fetchComments } from '../../actions/comments';
 import { fetchUsers } from '../../actions/users';
 import { fetchImages } from '../../actions/images';
+import { comment } from '../../actions/comments';
 
 
 const mstp = (state) => {
@@ -26,7 +27,8 @@ const mdtp = (dispatch) => {
     unlikeImage: (like) => dispatch(unlikeImage(like)),
     fetchUsers: () => dispatch(fetchUsers()),
     fetchComments: () => dispatch(fetchComments()),
-    fetchImages: () => dispatch(fetchImages())
+    fetchImages: () => dispatch(fetchImages()),
+    comment: (userComment) => dispatch(comment(userComment))
 
   };
 };

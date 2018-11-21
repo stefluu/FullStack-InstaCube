@@ -21,7 +21,7 @@ class Comments extends React.Component {
 
     let commentBox = imageComments.length > 4 ? 
         (<ul className="comment-li">
-          <li>Load more comments</li>
+          <li className="loadMoreComments">Load more comments</li>
           {imageComments.slice(-4).map(comment => <li key={comment.id}>
               <span>{this.props.users[comment.user_id].username} </span>
               {comment.body}

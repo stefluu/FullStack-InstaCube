@@ -21,6 +21,15 @@ class IndexPosts extends React.Component{
     this.props.fetchComments();
   }
 
+  handleSubmit(e){
+    // e.preventDefault();
+    let imageId = this.props.image.id;
+    let commentBody = this.state.body;
+    this.props.comment({ body: commentBody, img_id: imageId }, imageId);
+    this.setState({body: ""});
+    //this set state isnt working to claer the input
+  };
+
   render(){
     let imageId = this.props.image.id
     let userId = this.props.image.user_id;
@@ -110,6 +119,8 @@ class IndexPosts extends React.Component{
             <h4 className="likes">{likeCount} likes</h4>
           </section>
 
+        <p><b>{username}</b> {this.props.image.caption}</p>
+
           {/* <h5>{this.props.image.date}</h5> */}
 
           <section className="comments">
@@ -120,7 +131,7 @@ class IndexPosts extends React.Component{
           <h5 id="postDate">{date}</h5>
 
           <hr id="lineundercomments" />
-          <form onSubmit={() => this.props.comment({ body: this.state.body, img_id: imageId }, imageId)}>
+          <form onSubmit={() => this.handleSubmit()}>
             <input className="addcommentbox" type="text" placeholder="Add a comment..." onChange={e => this.setState(
                   { body: e.target.value }
                 )} />

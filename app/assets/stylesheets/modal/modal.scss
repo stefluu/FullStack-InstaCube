@@ -27,18 +27,24 @@ justify-content: center;
 .entire-modal-image-window{
   display: flex;
   flex-direction: row;
+  min-width: 867px;
+  min-height: 597px;
 }
 
 .modal-image {
   // max-height: 597px;
   // max-width: 597px;
+  // height: auto;
 }
 
 .modal-image img {
-  max-height: 597px;
-  max-width: 597px;
-  height: auto;
-  width: auto;
+  // max-height: 597px;
+  // max-width: 597px;
+  // height: auto;
+  // width: auto;
+  height: 597px;
+  width: 597px;
+  object-fit: cover;
 }
 
 .modal-image-window-aside{

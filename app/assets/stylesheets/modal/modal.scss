@@ -26,15 +26,7 @@ justify-content: center;
 
 .entire-modal-image-window{
   display: flex;
-  // display: inline-block;
-//   // position: relative;
-  // justify-content: center;
-//   // align-items: center;
   flex-direction: row;
-
-  // max-height: 597px;
-  // max-width: 597px;
-//   margin: auto;
 }
 
 .modal-image {
@@ -45,8 +37,6 @@ justify-content: center;
 .modal-image img {
   max-height: 597px;
   max-width: 597px;
-  // height: 597px;
-  // width: 597px;
   height: auto;
   width: auto;
 }
@@ -54,7 +44,14 @@ justify-content: center;
 .modal-image-window-aside{
   background: white;
   width:270px;
-  height: 400px;
+  height: auto;
+  font-family: helvetica;
+  font-size: 14px;
+  padding: 20px;
+}
+
+.caption{
+  font-size: 14px;
 }
 
 

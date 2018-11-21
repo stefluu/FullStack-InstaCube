@@ -1,44 +1,21 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ModalImageContainer from './modal_image_container';
+import Comments from '../comments/comments';
 
 class modalImageWindowContainer extends React.Component {
   constructor(props){
     super(props)
   }
 
+  componentDidMount(){
+    this.props.fetchComments();
+    this.props.fetchUsers();
+    this.props.fetchImages();
+  }
 
   render(){
     if (!currentUser) return null;
-
-
-    // let currentUserLikes;
-    // if (!this.props.likes){
-    //   currentUserLikes = {};
-    // } else {
-    //   currentUserLikes = Object.values(this.props.likes);
-    // }
-    // // let currentUserLikes = Object.values(this.props.likes);
-    // let currentUserLikesImages = []
-    // for(let i=0; i < currentUserLikes.length; i++){
-    //   currentUserLikesImages.push(currentUserLikes[i].img_id)
-    // }
-    // // console.log(this.props)
-    // let currentLike;
-    // if (currentUserLikesImages.includes(this.props.imageId)){
-    //   currentLike = currentUserLikes[currentUserLikesImages.indexOf(this.props.imageId)]
-    // }
-
-    // let heart = (currentUserLikesImages.includes(this.props.imageId)) ?
-    //   (<i
-    //   className="fas fa-heart" id="redHeart"
-    //   onClick={() => this.props.unlikeImage(currentLike.id)}></i>
-    // ) : (
-    //   (
-    //     <i
-    //   className="far fa-heart"
-    //   onClick={() => this.props.likeImage({img_id: this.props.imageId, user_id: this.props.currentUser.id})}></i>
-    // ));
 
     let allLikes = Object.values(this.props.likes);
     let currentUserLikes = [];
@@ -59,7 +36,7 @@ class modalImageWindowContainer extends React.Component {
       currentLikeId = parseInt(currentLikeId);
 
     }
-    // console.log(currentLike)
+
     let heart = (currentUserLikes.includes(this.props.imageId)) ?
       (<i
         className="fas fa-heart" id="redHeart"
@@ -87,11 +64,17 @@ class modalImageWindowContainer extends React.Component {
 
           <aside className="modal-image-window-aside">
 
+          <hr />
+            <p className="caption">{this.props.images[this.props.imageId].caption} </p>
 
-            <ul>
+            <Comments 
+              imageId={this.props.imageId} 
+              comments={this.props.comments} 
+              users={this.props.users}/>
+            {/* <ul>
               <li><span>hey_itsStef</span>  nice!</li>
               <li><span>its_aUser</span>  this is cute!</li>
-            </ul>
+            </ul> */}
 
             <section className="modal-window-bottom">
               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>

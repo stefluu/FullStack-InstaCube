@@ -39,12 +39,12 @@ class modalImageWindowContainer extends React.Component {
 
     let heart = (currentUserLikes.includes(this.props.imageId)) ?
       (<i
-        className="fas fa-heart" id="redHeart"
+        className="fas fa-heart" id="redHeartModal"
         onClick={() => this.props.unlikeImage(currentLikeId)}></i>
       ) : (
         (
           <i
-            className="far fa-heart"
+            className="far fa-heart" id="clearHeartModal"
             onClick={() => this.props.likeImage({ img_id: this.props.imageId })}></i>
         ));
 
@@ -55,41 +55,44 @@ class modalImageWindowContainer extends React.Component {
       }
     }
 
+    let username = this.props.users[this.props.currentUserId].username
+
     return(
-      <div className="entire-modal-image-window"
-            onClick={e => e.stopPropagation()}>
+      <div className="entire-modal-image-window" onClick={e => e.stopPropagation()}>
         {/* <div className="modal-image-everything"> */}
-          <ModalImageContainer />
+        <ModalImageContainer />
 
-
-          <aside className="modal-image-window-aside">
-
+        <aside className="modal-image-window-aside">
+          <div id="aside-top">
+            <b>{username}</b>
+          </div>
           <hr />
-            <p className="caption">{this.props.images[this.props.imageId].caption} </p>
-
-            <Comments 
-              imageId={this.props.imageId} 
-              comments={this.props.comments} 
-              users={this.props.users}/>
-            {/* <ul>
+          <p className="caption">
+          <b> {username} </b>
+            {this.props.images[this.props.imageId].caption}
+          </p>
+          <div className="modalComments">
+            <Comments imageId={this.props.imageId} comments={this.props.comments} users={this.props.users} />
+          </div>
+          {/* <ul>
               <li><span>hey_itsStef</span>  nice!</li>
               <li><span>its_aUser</span>  this is cute!</li>
             </ul> */}
 
-            <section className="modal-window-bottom">
-              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
+          <section className="modal-window-bottom">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
 
-              {heart}
+            {heart}
 
-                <i className="far fa-comment"></i>
-                <i className="far fa-bookmark"></i>
-                <h4>{likeCount} like</h4>
-                <h4>NOVEMBER 6</h4>
-                <input className="addcommentbox" type="text" placeholder="Add a comment..."></input>
-            </section>
-          </aside>
-      {/* </div> */}
-
+            <i className="far fa-comment" />
+            <i className="fa fa-upload" aria-hidden="true" />
+            <i className="far fa-bookmark" />
+            <h4 id="modalLikeCount">{likeCount} like</h4>
+            <h6 id="modalDate">NOVEMBER 6</h6>
+            <input className="addcommentbox" type="text" placeholder="Add a comment..." />
+          </section>
+        </aside>
+        {/* </div> */}
       </div>
     )
   }

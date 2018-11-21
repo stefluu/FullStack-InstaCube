@@ -45,13 +45,53 @@ justify-content: center;
   background: white;
   width:270px;
   height: auto;
+  max-height: 577px;
   font-family: helvetica;
   font-size: 14px;
   padding: 20px;
+  padding-bottom: 0px;
+}
+
+#aside-top{
+  height: 50px;
+  width: auto;
+  display:flex;
+  align-items: center;
+  // justify-content: center;
+}
+
+.captionUsername{
+  font-weight: bold;
 }
 
 .caption{
   font-size: 14px;
+  margin-top: 15px;
+}
+
+.modalComments{
+  height: 310px;
+}
+
+#redHeartModal, #clearHeartModal{
+  padding-left: 0px;
+}
+
+#redHeartModal{
+  color: red;
+}
+
+#modalLikeCount{
+  margin: 0px;
+}
+
+#modalDate{
+  color: gray;
+  margin-top: 10px;
+}
+
+.modal-window-bottom i:last-of-type{
+  padding-left: 133px;
 }
 
 

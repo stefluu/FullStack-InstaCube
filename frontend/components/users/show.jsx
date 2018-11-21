@@ -53,7 +53,15 @@ class Show extends React.Component {
     // debugger
 
     if (isCurrentUserProf){
-      editOrFollowButton = <button>Edit Profile</button>;
+      editOrFollowButton = 
+      <div>
+        <button id="editProfButton">
+          Edit Profile
+        </button>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
+  
+        <i id="edit-icon" className="fas fa-circle-notch" onClick={() => this.props.openModal('logout')}></i>
+      </div>
     } else if(currentUserFollows.includes(this.props.userId)){
       editOrFollowButton =
         <button
@@ -113,9 +121,9 @@ class Show extends React.Component {
                 {/* <button>Edit Profile</button> */}
                 {editOrFollowButton}
 
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
+                {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
 
-                <i className="fas fa-circle-notch" onClick={() => this.props.openModal('logout')}></i>
+                <i className="fas fa-circle-notch" onClick={() => this.props.openModal('logout')}></i> */}
               </section>
 
               <section className="posts-followers-following">

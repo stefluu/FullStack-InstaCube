@@ -85,27 +85,25 @@ class IndexPosts extends React.Component{
   
     if (!username) return null;
 
-    return(
-
-
-      <div className="entire-post">
+    return <div className="entire-post">
         <section className="postheader">
           <img className="standin-avatar-post" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" />
-          <a className="username-post-link" href={`/#/users/${userId}`}>{username}</a>
+          <a className="username-post-link" href={`/#/users/${userId}`}>
+            {username}
+          </a>
           <h5 className="postLocation">San Francisco, CA</h5>
         </section>
 
-        <img className="image-post" src = {this.props.image.photo_url}/>
+        <img className="image-post" src={this.props.image.photo_url} />
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
 
         <section className="post-icons">
-
           {heart}
 
-
-          <i className="far fa-comment"></i>
-          <i className="fa fa-upload" aria-hidden="true"></i>
+          <i className="far fa-comment" />
+          <i className="fa fa-upload" aria-hidden="true" />
+          <i className="far fa-bookmark" />
         </section>
         <div className="under-icons">
           <section className="post-likes">
@@ -115,29 +113,20 @@ class IndexPosts extends React.Component{
           {/* <h5>{this.props.image.date}</h5> */}
 
           <section className="comments">
-            <Comments
-              imageId={imageId} 
-              comments={this.props.comments} 
-              users={this.props.users} />
+            <Comments imageId={imageId} comments={this.props.comments} users={this.props.users} />
           </section>
 
           {/* <h5>{this.props.image.date}</h5> */}
           <h5 id="postDate">{date}</h5>
 
-          <hr id="lineundercomments"/>
-          <form
-            onSubmit={() =>
-              this.props.comment({ body: this.state.body, img_id: imageId }, imageId)}>
-            <input className="addcommentbox" 
-                type="text" 
-                placeholder="Add a comment..."
-                onChange={(e) => this.setState({ body: e.target.value})}>
-            </input>
+          <hr id="lineundercomments" />
+          <form onSubmit={() => this.props.comment({ body: this.state.body, img_id: imageId }, imageId)}>
+            <input className="addcommentbox" type="text" placeholder="Add a comment..." onChange={e => this.setState(
+                  { body: e.target.value }
+                )} />
           </form>
-
         </div>
-      </div>
-    )
+      </div>;
   }
 }
 

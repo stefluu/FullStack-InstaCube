@@ -81,7 +81,7 @@ class modalImageWindowContainer extends React.Component {
     return(
       <div className="entire-modal-image-window"
             onClick={e => e.stopPropagation()}>
-        <div className="modal-image-everything">
+        {/* <div className="modal-image-everything"> */}
           <ModalImageContainer />
 
 
@@ -105,7 +105,7 @@ class modalImageWindowContainer extends React.Component {
                 <input className="addcommentbox" type="text" placeholder="Add a comment..."></input>
             </section>
           </aside>
-      </div>
+      {/* </div> */}
 
       </div>
     )

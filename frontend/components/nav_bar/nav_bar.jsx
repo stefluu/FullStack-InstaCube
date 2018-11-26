@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Search from '../search/search_container';
 
 // import LoginContainer from '../session/login_container';
 //
@@ -25,7 +26,8 @@ class navBar extends React.Component{
 
         </section>
 
-        <input type="text" placeholder="Search.." />
+        {/* <input type="text" placeholder="Search.." /> */}
+        <Search />
 
         <section className="navBar-right">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>

@@ -16,6 +16,7 @@ class Show extends React.Component {
   render(){
   
     let profileOwner = this.props.users[this.props.userId];
+    // debugger
     if (!profileOwner) return null;
 
     let profileOwnerPosts = 
@@ -55,7 +56,9 @@ class Show extends React.Component {
     if (isCurrentUserProf){
       editOrFollowButton = 
       <div>
-        <button id="editProfButton">
+        <button id="editProfButton"
+                // onClick={() => this.props.updateUser}
+        >
           Edit Profile
         </button>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
@@ -103,7 +106,7 @@ class Show extends React.Component {
         }
       }
     }
-
+    
     return(
       <div>
         <NavBarContainer />
@@ -113,7 +116,7 @@ class Show extends React.Component {
             <section id="usershow-avatar">
               <img src={profileOwner.avatar_url}/>
             </section>
-              <img className="standin-avatar" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" />
+              {/* <img className="standin-avatar" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" /> */}
 
             <section className="user-info">
               <section className="user-edit-modal">

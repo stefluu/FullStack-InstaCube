@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Show from './show';
 import { openModal } from '../../actions/modal_actions';
 import { fetchImages } from '../../actions/images';
-import { fetchUsers } from '../../actions/users';
+import { fetchUsers, updateUser } from '../../actions/users';
 import { withRouter } from 'react-router-dom';
 import { fetchAllLikes } from '../../actions/likes';
 import { follow, unfollow, fetchFollows } from '../../actions/followings';
@@ -30,7 +30,8 @@ const mdtp = (dispatch) => {
     fetchUsers: () => dispatch(fetchUsers()),
     follow: (following) => dispatch(follow(following)),
     unfollow: (followingId) => dispatch(unfollow(followingId)),
-    fetchFollows: () => dispatch(fetchFollows())
+    fetchFollows: () => dispatch(fetchFollows()),
+    updateUser: (user) => dispatch(updateUser(user))
   };
 };
 

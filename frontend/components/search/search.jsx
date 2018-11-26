@@ -18,6 +18,8 @@ class Search extends React.Component {
     handleQuery(e){
         // e.preventDefault();
         this.setState({query: e.target.value})
+        let searchBar = document.getElementById("search-dropdown");
+        searchBar.classList.remove("hidden");
     }
     
 
@@ -44,6 +46,7 @@ class Search extends React.Component {
             }
         }
     }
+    
 
     return (
     <div>
@@ -52,11 +55,12 @@ class Search extends React.Component {
             id="searchbar"
             placeholder="Search" 
             onChange={(e)=> this.handleQuery(e)}/>
-            
-            <ul className="search-dropdown">
+
+            <ul id= "search-dropdown"
+                className="search-dropdown hidden">
                 {matchingUsers.map(user => (
                     <li key={user.id}>
-                        {user.username}
+                        <a href={`/#/users/${user.id}`}>{user.username}</a>
                     </li>
                 ))}
             </ul>

@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import SearchResult from './search_result_container';
 
 class Search extends React.Component {
 
@@ -60,7 +61,7 @@ class Search extends React.Component {
                 className="search-dropdown hidden">
                 {matchingUsers.map(user => (
                     <li key={user.id}>
-                        <a href={`/#/users/${user.id}`}>{user.username}</a>
+                        <SearchResult user={user} />
                     </li>
                 ))}
             </ul>

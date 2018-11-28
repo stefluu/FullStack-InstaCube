@@ -22,11 +22,11 @@ class IndexPosts extends React.Component{
   }
 
   handleSubmit(e){
-    // e.preventDefault();
+    e.preventDefault();
     let imageId = this.props.image.id;
     let commentBody = this.state.body;
-    this.props.comment({ body: commentBody, img_id: imageId }, imageId);
-    this.setState({body: ""});
+    this.props.comment({ body: commentBody, img_id: imageId }, imageId).then(() => 
+      this.setState({ body: "" }));
     //this set state isnt working to claer the input
   };
 

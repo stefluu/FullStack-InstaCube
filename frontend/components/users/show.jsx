@@ -13,6 +13,10 @@ class Show extends React.Component {
     this.props.fetchFollows();
   };
 
+  goToUpdate(){
+    this.props.history.push('/account/edit')
+  }
+
   render(){
   
     let profileOwner = this.props.users[this.props.userId];
@@ -57,9 +61,9 @@ class Show extends React.Component {
       editOrFollowButton = 
       <div>
         <button id="editProfButton"
-                // onClick={() => this.props.updateUser}
-        >
-          Edit Profile
+                onClick={() => 
+                  this.goToUpdate()} 
+        >Edit Profile
         </button>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
   

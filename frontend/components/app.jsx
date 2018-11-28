@@ -8,6 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginContainer from './session/login_container';
 import UserShowContainer from './users/show_container';
 import Modal from '../components/modal/modal';
+import UpdateUser from '../components/users/update';
 
 const App = () => (
   <div>
@@ -17,6 +18,7 @@ const App = () => (
       <ProtectedRoute exact path="/index" component={IndexContainer} />
       <Route exact path="/login" component={LoginContainer} />
       <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
+      <ProtectedRoute exact path="/account/edit" component={UpdateUser} />
       <Route exact path="/" component={Splash} />
       <Redirect to='/' />
     </Switch>

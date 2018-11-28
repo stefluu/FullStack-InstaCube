@@ -14,7 +14,7 @@ class SearchResult extends React.Component {
       <div className="searchresult">
          <a href={`/#/users/${user.id}`}>
             <p>{user.username}</p>
-            <p>{user.full_name}</p>
+            <p>{user.display_name}</p>
         </a>
       </div>
     )

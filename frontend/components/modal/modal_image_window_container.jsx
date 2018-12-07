@@ -102,7 +102,7 @@ class modalImageWindowContainer extends React.Component {
             <h6 id="modalDate">NOVEMBER 6</h6>
 
             <form onSubmit={(e) => this.handleSubmit(e)}>
-              <input className="addcommentbox" type="text" placeholder="Add a comment..." 
+              <input className="addcommentbox" type="text" value={this.state.body} placeholder="Add a comment..." 
                   onChange={e => this.setState(
                     { body: e.target.value }
                   )}/>

@@ -131,8 +131,8 @@ class IndexPosts extends React.Component{
           <h5 id="postDate">{date}</h5>
 
           <hr id="lineundercomments" />
-          <form onSubmit={() => this.handleSubmit()}>
-            <input className="addcommentbox" type="text" placeholder="Add a comment..." onChange={e => this.setState(
+          <form onSubmit={(e) => this.handleSubmit(e)}>
+            <input className="addcommentbox" type="text" placeholder="Add a comment..." value={this.state.body} onChange={e => this.setState(
                   { body: e.target.value }
                 )} />
           </form>

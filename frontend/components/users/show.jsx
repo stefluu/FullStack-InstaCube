@@ -61,8 +61,8 @@ class Show extends React.Component {
       editOrFollowButton = 
       <div>
         <button id="editProfButton"
-                onClick={() => 
-                  this.goToUpdate()} 
+                // onClick={() => 
+                //   this.goToUpdate()} 
         >Edit Profile
         </button>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>
@@ -118,9 +118,9 @@ class Show extends React.Component {
         <div className="entire-show-container">
           <div className="usershow-top">
             <section id="usershow-avatar">
-              <img src={profileOwner.avatar_url}/>
+              {/* <img src={profileOwner.avatar_url}/> */}
+              <img className="standin-avatar" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" />
             </section>
-              {/* <img className="standin-avatar" src="https://s3-us-west-1.amazonaws.com/instacube-dev/Screen+Shot+2018-10-17+at+11.53.21+PM.png" /> */}
 
             <section className="user-info">
               <section className="user-edit-modal">

@@ -55,7 +55,7 @@ class Search extends React.Component {
             <input type="text" 
             id="searchbar"
             placeholder="Search" 
-            // onChange={(e)=> this.handleQuery(e)}
+            onChange={(e)=> this.handleQuery(e)}
             />
 
             <ul id= "search-dropdown"

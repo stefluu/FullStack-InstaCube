@@ -58,22 +58,22 @@
   width: 199px;
   position: absolute;
   left: 48.5%;
+  margin: auto;
+  padding: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto; //scroll
+  max-height: 150px;
+  min-height: 30px;
+  height: auto;
 }
 
 .hidden{
   display: none;
 }
 
-#search-dropdown li {
-  position: relative;
-  width: 207px;
-  height: 27px;
-}
 
-.searchresult{
-  font-size: 14px;
-  height: 27px;
-}
+
+
 //
 // .search input {
 //   text-indent: 30px;

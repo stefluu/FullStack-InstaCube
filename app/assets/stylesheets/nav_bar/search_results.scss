@@ -1,0 +1,22 @@
+
+#search-dropdown li {
+  position: relative;
+  width: 170px;
+  height: 27px;
+  border-bottom: 1px solid gainsboro;
+  padding: 10px;
+}
+
+#search-dropdown li:last-of-type{
+  border-bottom: none;
+}
+
+.searchresult{
+  font-size: 14px;
+  height: 27px;
+  text-align: left;
+}
+
+.searchresult p:first-of-type{
+    font-weight: bold;
+}

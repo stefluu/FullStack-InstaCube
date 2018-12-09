@@ -17,11 +17,25 @@ class Search extends React.Component {
     };
 
     handleQuery(e){
-        // e.preventDefault();
-        this.setState({query: e.target.value})
+        e.preventDefault();
+        debugger
+        this.setState({query: e.target.value});
         let searchBar = document.getElementById("search-dropdown");
-        searchBar.classList.remove("hidden");
+        
+        if (this.state.query == "") {
+            searchBar.classList.add("hidden");
+        } else {
+            searchBar.classList.remove("hidden");
+        }
     }
+
+    // clearQuery(){
+    //     // e.preventDefault();
+    //     if (this.state.query == ""){
+    //         let searchBar = document.getElementById("search-dropdown");
+            
+    //     }
+    // }
     
 
   render() {
@@ -45,7 +59,7 @@ class Search extends React.Component {
             //     console.log(users[i]);
             //     matchingUsers.push(users[i]);
             }
-        }
+        } 
     }
     
 

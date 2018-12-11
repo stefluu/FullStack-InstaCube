@@ -29,15 +29,6 @@ class Search extends React.Component {
         }
     }
 
-    // clearQuery(){
-    //     // e.preventDefault();
-    //     if (this.state.query == ""){
-    //         let searchBar = document.getElementById("search-dropdown");
-            
-    //     }
-    // }
-    
-
   render() {
     const matchingUsers = [];
     let users = Object.values(this.props.users);

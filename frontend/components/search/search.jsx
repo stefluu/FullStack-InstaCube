@@ -13,7 +13,6 @@ class Search extends React.Component {
     
     componentDidMount(){
         this.props.fetchUsers();
-        // console.log("hi")
     };
 
     handleQuery(e, value){

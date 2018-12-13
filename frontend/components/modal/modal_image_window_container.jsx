@@ -85,10 +85,6 @@ class modalImageWindowContainer extends React.Component {
           <div className="modalComments">
             <Comments imageId={this.props.imageId} comments={this.props.comments} users={this.props.users} />
           </div>
-          {/* <ul>
-              <li><span>hey_itsStef</span>  nice!</li>
-              <li><span>its_aUser</span>  this is cute!</li>
-            </ul> */}
 
           <section className="modal-window-bottom">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />

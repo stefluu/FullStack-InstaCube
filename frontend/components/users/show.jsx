@@ -20,7 +20,6 @@ class Show extends React.Component {
   render(){
   
     let profileOwner = this.props.users[this.props.userId];
-    // debugger
     if (!profileOwner) return null;
 
     let profileOwnerPosts = 
@@ -53,16 +52,13 @@ class Show extends React.Component {
       potentialFollowDeletion = parseInt(potentialFollowDeletion);
     }
     
-    // console.log(currentUserFollows)
-    // console.log(this.props.userId)
-    // debugger
 
     if (isCurrentUserProf){
       editOrFollowButton = 
       <div>
         <button id="editProfButton"
-                // onClick={() => 
-                //   this.goToUpdate()} 
+                onClick={() => 
+                  this.goToUpdate()} 
         >Edit Profile
         </button>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"></link>

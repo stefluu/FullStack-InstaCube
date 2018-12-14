@@ -1,0 +1,41 @@
+// .entireUpdatePage{
+//     background: #fafafa;
+//     height: 100%;
+//     width: 100%;
+// }
+
+.updateForm{
+    border: 1px solid black;
+    // background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.updateCenterBox{
+    display: flex;
+    align-content: center;
+    justify-content:center;
+    flex-direction: row;
+    border: 1px solid black;
+    margin-top: 50px;
+    height: 695px;
+}
+
+.updateSidebar{
+    border: 1px solid black;
+}
+
+.updateInputFields{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.updateInputFields input{
+    border: 1px solid gainsboro;
+    color: black;
+    width: 350px;
+    margin: 10px;
+}

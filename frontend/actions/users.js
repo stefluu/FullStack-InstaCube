@@ -11,9 +11,9 @@ export const fetchUsers = () => {
   };
 };
 
-export const updateUser = (userId) => {
+export const updateUser = (user) => {
   return dispatch => {
-    return APIUtil.updateUser(userId).then(user => {
+    return APIUtil.updateUser(user).then(user => {
       return dispatch(updateAUser(user))
     });
   };

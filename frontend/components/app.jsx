@@ -8,7 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginContainer from './session/login_container';
 import UserShowContainer from './users/show_container';
 import Modal from '../components/modal/modal';
-import UpdateUser from '../components/users/update';
+import UpdateUser from '../components/users/update_container';
 
 const App = () => (
   <div>

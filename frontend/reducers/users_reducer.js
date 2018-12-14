@@ -15,7 +15,8 @@ const usersReducer = (state = {}, action) => {
     case FETCH_USERS:
       return merge({}, state, action.users);
     case UPDATE_USER:
-      return merge({}, state[action.user.id], action.user)
+      // return merge({}, state[action.user.id], action.user)
+      return merge({}, state, {[action.user.id]: action.user})
     default:
       return state;
   }

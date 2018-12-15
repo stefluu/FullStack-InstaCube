@@ -8,9 +8,11 @@
     border: 1px solid black;
     // background: red;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     // align-items: center;
     text-align: center;
+    flex-direction: column;
+    margin: auto;
 }
 
 .updateCenterBox{
@@ -19,10 +21,12 @@
     justify-content:center;
     flex-direction: row;
     border: 1px solid black;
+    margin: auto;
     margin-top: 50px;
     height: 695px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
 }
 
 .updateSidebar{
@@ -34,9 +38,12 @@
     align-content: center;
     flex-direction: column;
     border: 1px solid black;
-    padding: 10px 50px 50px 20px;
-    justify-content: space-around;
-    
+    padding: 50px;
+    // justify-content: space-around;
+}
+
+.updateInputFields:first-of-type{
+    padding-bottom: 30px;
 }
 
 .updateInputFields input{
@@ -44,4 +51,18 @@
     color: black;
     width: 350px;
     margin: 10px;
+}
+
+.updateInputFields:last-of-type label{
+    text-align: center;
+}
+
+// #firstUpdateInput{
+//     margin-top: 65px;
+// }
+
+.updateInputFields button{
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }

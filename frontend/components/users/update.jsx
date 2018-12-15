@@ -41,61 +41,69 @@ class Update extends React.Component {
   
   render() {
     // debugger
-    return( 
-    <div className="entireUpdatePage">
-      <NavBarContainer />
-      <div className="updateCenterBox">
-        <aside className="updateSidebar">
-          <ul>
-            <li>
-              Edit Profile
-            </li>
+    return <div className="entireUpdatePage">
+        <NavBarContainer />
+        <div className="updateCenterBox">
+          <aside className="updateSidebar">
+            <ul>
+              <li>Edit Profile</li>
 
-            {/* <li>
+              {/* <li>
               Change Password
             </li> */}
-          </ul>
-        </aside>
+            </ul>
+          </aside>
           <form className="updateForm">
-          <ul className="updateInputFields">
-          <label>Name
-            <input type="text" value={this.state.display_name} onChange={this.handleUpdate("display_name")} />
-          </label>
+            <div>
+              <ul className="updateInputFields">
+                <label>
+                  Name
+                  <input type="text" id="firstUpdateInput" value={this.state.display_name} onChange={this.handleUpdate("display_name")} />
+                </label>
 
-          <label>Username
-            <input type="text" value={this.state.username} onChange={this.handleUpdate("username")} />
-          </label>
+                <label>
+                  Username
+                  <input type="text" value={this.state.username} onChange={this.handleUpdate("username")} />
+                </label>
 
-            <label>Bio
-              <input type="text" value={this.state.bio} onChange={this.handleUpdate("bio")} />
-            </label>
+                <label>
+                  Bio
+                  <input type="text" value={this.state.bio} onChange={this.handleUpdate("bio")} />
+                </label>
 
-            <label>Email
-              <input type="text" value={this.state.email} onChange={this.handleUpdate("email")} />
-            </label>
+                <label>
+                  Email
+                  <input type="text" value={this.state.email} onChange={this.handleUpdate("email")} />
+                </label>
 
-            <button onClick={this.handleSubmit.bind(this)}>Submit</button>
+                <button onClick={this.handleSubmit.bind(this)}>
+                  Submit
+                </button>
+              </ul>
+            </div>
 
-            <label>Old Password
-              <input type="password" onChange={this.handlePasswordChange("oldPassword")} />
-            </label>
+            <div>
+              <ul className="updateInputFields">
+                <label>Old Password</label>
 
-            <label>New Password
-              <input type="password" onChange={this.handlePasswordChange("newPassword")}/>
-            </label>
+                <input type="password" onChange={this.handlePasswordChange("oldPassword")} />
 
-            <label>Confirm Password
-              <input type="password" onChange={this.handlePasswordChange("confirmPassword")} />
-            </label>
+                <label>New Password</label>
+                  <input type="password" onChange={this.handlePasswordChange("newPassword")} />
 
-            <button onClick={this.handleSubmitPasswordChange.bind(this)}>Change Password</button>
-          </ul>
+                <label>Confirm Password</label>
+                  <input type="password" onChange={this.handlePasswordChange("confirmPassword")} />
 
-
+                <button
+                  onClick={this.handleSubmitPasswordChange.bind(this)}
+                >
+                  Change Password
+                </button>
+              </ul>
+            </div>
           </form>
         </div>
-      </div>
-    );
+      </div>;
   }
 }
 

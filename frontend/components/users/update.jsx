@@ -3,12 +3,17 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import NavBarContainer from "../nav_bar/nav_bar";
+import { merge } from "lodash";
 
 
 class Update extends React.Component {
   constructor(props){
     super(props);
-    this.state = Object.values(currentUser)[0];
+    this.state = merge(
+      {}, 
+      Object.values(currentUser)[0], 
+      {oldPassword: "", newPassword: "", confirmPassword: ""}
+    );
   };
 
   handleUpdate(type){
@@ -18,10 +23,21 @@ class Update extends React.Component {
     };
   };
 
+  handlePasswordChange(type){
+    return (e) => {
+      this.setState({[type]: e.target.value})
+    };
+  };
+
   handleSubmit(e){
     e.preventDefault();
     this.props.updateUser(this.state);
   }
+
+  handleSubmitPasswordChange(e){
+    e.preventDefault();
+   
+  };
   
   render() {
     // debugger
@@ -35,9 +51,9 @@ class Update extends React.Component {
               Edit Profile
             </li>
 
-            <li>
+            {/* <li>
               Change Password
-            </li>
+            </li> */}
           </ul>
         </aside>
           <form className="updateForm">
@@ -59,7 +75,22 @@ class Update extends React.Component {
             </label>
 
             <button onClick={this.handleSubmit.bind(this)}>Submit</button>
+
+            <label>Old Password
+              <input type="password" onChange={this.handlePasswordChange("oldPassword")} />
+            </label>
+
+            <label>New Password
+              <input type="password" onChange={this.handlePasswordChange("newPassword")}/>
+            </label>
+
+            <label>Confirm Password
+              <input type="password" onChange={this.handlePasswordChange("confirmPassword")} />
+            </label>
+
+            <button onClick={this.handleSubmitPasswordChange.bind(this)}>Change Password</button>
           </ul>
+
 
           </form>
         </div>

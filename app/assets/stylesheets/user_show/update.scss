@@ -5,7 +5,7 @@
 // }
 
 .updateForm{
-    border: 1px solid black;
+    // border: 1px solid black;
     // background: red;
     display: flex;
     justify-content: space-around;
@@ -13,6 +13,12 @@
     text-align: center;
     flex-direction: column;
     margin: auto;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.updateForm input{
+    font-weight: normal;
 }
 
 .updateCenterBox{
@@ -20,30 +26,37 @@
     align-content: center;
     justify-content:center;
     flex-direction: row;
-    border: 1px solid black;
+    border: 1px solid gainsboro;
     margin: auto;
     margin-top: 50px;
     height: 695px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     width: 70%;
+    background: white;
 }
 
 .updateSidebar{
-    border: 1px solid black;
+    border: 1px solid gainsboro;
+    padding: 15px 20px 70px 20px;
+    font-weight: bold;
 }
 
 .updateInputFields{
     display: flex;
-    align-content: center;
+    align-items: center;
     flex-direction: column;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding: 50px;
     // justify-content: space-around;
 }
 
 .updateInputFields:first-of-type{
     padding-bottom: 30px;
+}
+
+.updateInputFields:first-of-type input{
+    margin-left: 35px;
 }
 
 .updateInputFields input{

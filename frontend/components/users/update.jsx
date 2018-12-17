@@ -9,11 +9,12 @@ import { merge } from "lodash";
 class Update extends React.Component {
   constructor(props){
     super(props);
-    this.state = merge(
-      {}, 
-      Object.values(currentUser)[0], 
-      {oldPassword: "", newPassword: "", confirmPassword: ""}
-    );
+    this.state = Object.values(currentUser)[0];
+    // this.state = merge(
+    //   {}, 
+    //   Object.values(currentUser)[0], 
+    //   {oldPassword: "", newPassword: "", confirmPassword: ""}
+    // );
   };
 
   handleUpdate(type){
@@ -32,6 +33,7 @@ class Update extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.props.updateUser(this.state);
+    console.log(this.state)
   }
 
   handleSubmitPasswordChange(e){
@@ -57,22 +59,22 @@ class Update extends React.Component {
             <div>
               <ul className="updateInputFields">
                 <label>
-                  Name
+                  Name  
                   <input type="text" id="firstUpdateInput" value={this.state.display_name} onChange={this.handleUpdate("display_name")} />
                 </label>
 
                 <label>
-                  Username
+                  Username  
                   <input type="text" value={this.state.username} onChange={this.handleUpdate("username")} />
                 </label>
 
                 <label>
-                  Bio
+                  Bio 
                   <input type="text" value={this.state.bio} onChange={this.handleUpdate("bio")} />
                 </label>
 
                 <label>
-                  Email
+                  Email 
                   <input type="text" value={this.state.email} onChange={this.handleUpdate("email")} />
                 </label>
 

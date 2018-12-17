@@ -1,3 +1,4 @@
+require "byebug"
 class Api::UsersController < ApplicationController
 
   def index
@@ -30,10 +31,11 @@ class Api::UsersController < ApplicationController
   end
 
   def update
+    debugger
     @user = current_user
     if @user && @user.update_attributes(user_params)
       @user.save!
-      render 'api/users/show'
+      render 'api/users/update'
     else
       require_login
     end

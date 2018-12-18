@@ -9,12 +9,12 @@ import { merge } from "lodash";
 class Update extends React.Component {
   constructor(props){
     super(props);
-    this.state = Object.values(currentUser)[0];
-    // this.state = merge(
-    //   {}, 
-    //   Object.values(currentUser)[0], 
-    //   {oldPassword: "", newPassword: "", confirmPassword: ""}
-    // );
+    // this.state = Object.values(currentUser)[0];
+    this.state = merge(
+      {}, 
+      Object.values(currentUser)[0], 
+      {oldPassword: "", newPassword: "", confirmPassword: ""}
+    );
   };
 
   handleUpdate(type){
@@ -24,9 +24,12 @@ class Update extends React.Component {
     };
   };
 
-  handlePasswordChange(type){
+  updatePassword(variable){
     return (e) => {
-      this.setState({[type]: e.target.value})
+      // this.setState({[type]: e.target.value})
+      let updatedVar = {variable};
+      updatedVar = e.target.value;
+      console.log(updatedVar);
     };
   };
 
@@ -36,13 +39,14 @@ class Update extends React.Component {
     console.log(this.state)
   }
 
-  handleSubmitPasswordChange(e){
+  handlePasswordChange(e){
     e.preventDefault();
-   
+    let userCheck = merge({}, this.state, {password: oldPassword} )
+    debugger
+    // if(this.props.checkLogin(userCheck))
   };
   
   render() {
-    // debugger
     return <div className="entireUpdatePage">
         <NavBarContainer />
         <div className="updateCenterBox">
@@ -88,16 +92,16 @@ class Update extends React.Component {
               <ul className="updateInputFields">
                 <label>Old Password</label>
 
-                <input type="password" onChange={this.handlePasswordChange("oldPassword")} />
+                <input type="password" onChange={this.updatePassword(oldPassword)} />
 
                 <label>New Password</label>
-                  <input type="password" onChange={this.handlePasswordChange("newPassword")} />
+                  <input type="password" onChange={this.updatePassword(newPassword)} />
 
                 <label>Confirm Password</label>
-                  <input type="password" onChange={this.handlePasswordChange("confirmPassword")} />
+                  <input type="password" onChange={this.updatePassword(confirmPassword)} />
 
                 <button
-                  onClick={this.handleSubmitPasswordChange.bind(this)}
+                  onClick={this.handlePasswordChange.bind(this)}
                 >
                   Change Password
                 </button>

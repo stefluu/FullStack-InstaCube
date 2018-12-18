@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Update from './update';
-import { updateUser } from '../../actions/users';
+import { updateUser, checkLogin } from '../../actions/users';
 import { withRouter } from "react-router-dom";
 
 
@@ -13,7 +13,8 @@ import { withRouter } from "react-router-dom";
 
 const mdtp = (dispatch) => {
     return {
-        updateUser: (user) => dispatch(updateUser(user))
+        updateUser: (user) => dispatch(updateUser(user)),
+        checkLogin: (user) => dispatch(checkLogin(user))
     };
 };
 

@@ -24,12 +24,12 @@ class Update extends React.Component {
     };
   };
 
-  updatePassword(variable){
+  updatePassword(type){
     return (e) => {
-      // this.setState({[type]: e.target.value})
-      let updatedVar = {variable};
-      updatedVar = e.target.value;
-      console.log(updatedVar);
+      this.setState({[type]: e.target.value})
+      // let updatedVar = {variable};
+      // updatedVar = e.target.value;
+      // console.log(updatedVar);
     };
   };
 
@@ -92,13 +92,13 @@ class Update extends React.Component {
               <ul className="updateInputFields">
                 <label>Old Password</label>
 
-                <input type="password" onChange={this.updatePassword(oldPassword)} />
+                <input type="password" onChange={this.updatePassword("oldPassword")} />
 
                 <label>New Password</label>
-                  <input type="password" onChange={this.updatePassword(newPassword)} />
+                  <input type="password" onChange={this.updatePassword("newPassword")} />
 
                 <label>Confirm Password</label>
-                  <input type="password" onChange={this.updatePassword(confirmPassword)} />
+                  <input type="password" onChange={this.updatePassword("confirmPassword")} />
 
                 <button
                   onClick={this.handlePasswordChange.bind(this)}

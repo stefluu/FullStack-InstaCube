@@ -35,6 +35,7 @@ const updateAUser = (user) => {
   };
 };
 export const checkLogin = (user) => {
+  debugger
   return login(user)
       .then(() => {
         return true;

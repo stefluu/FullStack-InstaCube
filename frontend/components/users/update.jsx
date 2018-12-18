@@ -40,10 +40,27 @@ class Update extends React.Component {
   }
 
   handlePasswordChange(e){
-    e.preventDefault();
-    let userCheck = merge({}, this.state, {password: oldPassword} )
+    // e.preventDefault();
+    // let userCheck = merge(
+    //   {}, 
+    //   Object.values(currentUser)[0], 
+    //   {password: this.state.oldPassword}
+    // );
     debugger
-    // if(this.props.checkLogin(userCheck))
+    let userCheck = {
+      username: Object.values(currentUser)[0].username, 
+      password: this.state.oldPassword
+    }
+    // if(this.props.checkLogin(userCheck)){
+    //   console.log("hi")
+    // }
+    if(this.state.newPassword === this.state.confirmPassword){
+      this.props.login(userCheck).then(() => {
+        this.props.updateUser(
+          {username: Object.values(currentUser)[0].username, 
+           password: this.state.newPassword})
+      });
+    }
   };
   
   render() {

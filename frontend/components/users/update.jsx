@@ -90,7 +90,7 @@ class Update extends React.Component {
 
                 </li>
                 <li>
-                    <input type="text" id="firstUpdateInput" value={this.state.display_name} onChange={this.handleUpdate("display_name")} />
+                    <input type="text" value={this.state.display_name} onChange={this.handleUpdate("display_name")} />
 
    
                     <input type="text" value={this.state.username} onChange={this.handleUpdate("username")} />

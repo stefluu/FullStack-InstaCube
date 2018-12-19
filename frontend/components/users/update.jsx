@@ -54,12 +54,14 @@ class Update extends React.Component {
     // if(this.props.checkLogin(userCheck)){
     //   console.log("hi")
     // }
-    if(this.state.newPassword === this.state.confirmPassword){
-      this.props.login(userCheck).then(() => {
-        this.props.updateUser(
-          {username: Object.values(currentUser)[0].username, 
-           password: this.state.newPassword})
-      });
+    if(this.state.newPassword.length >= 6){
+      if(this.state.newPassword === this.state.confirmPassword){
+        this.props.login(userCheck).then(() => {
+          this.props.updateUser(
+            {username: Object.values(currentUser)[0].username, 
+             password: this.state.newPassword})
+        });
+      }
     }
   };
   
@@ -69,6 +71,7 @@ class Update extends React.Component {
         <div className="updateCenterBox">
           <aside className="updateSidebar">
             <ul>
+              <li id="updateVerticalLine"></li>
               <li>Edit Profile</li>
 
               {/* <li>
@@ -91,7 +94,7 @@ class Update extends React.Component {
 
                 <label>
                   Bio 
-                  <input type="text" value={this.state.bio} onChange={this.handleUpdate("bio")} />
+                  <textarea id="updateBioBox" type="text" value={this.state.bio} onChange={this.handleUpdate("bio")} />
                 </label>
 
                 <label>

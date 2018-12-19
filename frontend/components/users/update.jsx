@@ -71,7 +71,7 @@ class Update extends React.Component {
         <div className="updateCenterBox">
           <aside className="updateSidebar">
             <ul>
-              <li id="updateVerticalLine"></li>
+              <li id="updateVerticalLine" />
               <li>Edit Profile</li>
 
               {/* <li>
@@ -82,47 +82,44 @@ class Update extends React.Component {
           <form className="updateForm">
             <div>
               <ul className="updateInputFields">
-                <label>
-                  Name  
-                  <input type="text" id="firstUpdateInput" value={this.state.display_name} onChange={this.handleUpdate("display_name")} />
-                </label>
+                <li id="updateLabels">
+                  <label>Name</label>
+                  <label>Username</label>
+                  <label>Bio</label>
+                  <label>Email</label>
 
-                <label>
-                  Username  
-                  <input type="text" value={this.state.username} onChange={this.handleUpdate("username")} />
-                </label>
+                </li>
+                <li>
+                    <input type="text" id="firstUpdateInput" value={this.state.display_name} onChange={this.handleUpdate("display_name")} />
 
-                <label>
-                  Bio 
-                  <textarea id="updateBioBox" type="text" value={this.state.bio} onChange={this.handleUpdate("bio")} />
-                </label>
+   
+                    <input type="text" value={this.state.username} onChange={this.handleUpdate("username")} />
 
-                <label>
-                  Email 
-                  <input type="text" value={this.state.email} onChange={this.handleUpdate("email")} />
-                </label>
+                    <textarea id="updateBioBox" type="text" value={this.state.bio} onChange={this.handleUpdate("bio")} />
 
-                <button onClick={this.handleSubmit.bind(this)}>
-                  Submit
-                </button>
+                    <input type="text" value={this.state.email} onChange={this.handleUpdate("email")} />
+                </li>
+
               </ul>
+              <button onClick={this.handleSubmit.bind(this)}>
+                Submit
+              </button>
+
             </div>
 
             <div>
-              <ul className="updateInputFields">
+              <ul id="updateInputFields2">
                 <label>Old Password</label>
 
                 <input type="password" onChange={this.updatePassword("oldPassword")} />
 
                 <label>New Password</label>
-                  <input type="password" onChange={this.updatePassword("newPassword")} />
+                <input type="password" onChange={this.updatePassword("newPassword")} />
 
                 <label>Confirm Password</label>
-                  <input type="password" onChange={this.updatePassword("confirmPassword")} />
+                <input type="password" onChange={this.updatePassword("confirmPassword")} />
 
-                <button
-                  onClick={this.handlePasswordChange.bind(this)}
-                >
+                <button onClick={this.handlePasswordChange.bind(this)}>
                   Change Password
                 </button>
               </ul>

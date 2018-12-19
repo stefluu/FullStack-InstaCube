@@ -10,10 +10,10 @@
 }
 
 #updateVerticalLine{
-    height:35px;
+    height:45px;
     width: 0px;
-    border: 1.5px solid black;
-    margin-right: 10px;
+    border: 1px solid black;
+    margin-right: 30px;
 }
 
 .updateSidebar li:last-of-type{
@@ -25,12 +25,13 @@
     // background: red;
     display: flex;
     justify-content: space-around;
-    // align-items: center;
+    align-items: center;
     text-align: center;
     flex-direction: column;
     margin: auto;
     margin-top: 20px;
     font-weight: bold;
+    width: 495px;
 }
 
 .updateForm input{
@@ -54,7 +55,7 @@
     height: 695px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    width: 70%;
+    width: 50%;
     background: white;
 }
 
@@ -62,6 +63,7 @@
     border: 1px solid gainsboro;
     padding: 0px 20px 70px 0px;
     font-weight: bold;
+    width: 180px;
 }
 
 .updateInputFields{
@@ -73,8 +75,21 @@
     // justify-content: space-around;
 }
 
+#updateLabels{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+#updateLabels label{
+    // margin-top: 15px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
 .updateInputFields:first-of-type{
     padding-bottom: 30px;
+    flex-direction: row;
 }
 
 .updateInputFields:first-of-type input{
@@ -84,7 +99,7 @@
 .updateInputFields input {
     border: 1px solid gainsboro;
     color: black;
-    width: 350px;
+    width: 333px;
     margin: 10px;
 }
 
@@ -109,4 +124,20 @@
     border: 1px solid gainsboro;
     margin-left: 35px;
     font-weight: normal;
+}
+
+#updateInputFields2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // border: 1px solid black;
+    padding: 50px;
+    // justify-content: space-around;
+}
+
+#updateInputFields2 input {
+    border: 1px solid gainsboro;
+    color: black;
+    width: 333px;
+    margin: 10px;
 }

@@ -88,11 +88,6 @@
     text-align: right;
 }
 
-// .updateInputs{
-//     display:flex;
-//     justify-content: flex-start;
-// }
-
 .updateInputFields{
     padding-bottom: 30px;
     flex-direction: row;
@@ -128,8 +123,7 @@
     overflow-x: hidden;
     min-width: 358px;
     border: 1px solid gainsboro;
-    // margin-left: 35px;
-    margin: 10px;
+    margin-left: 35px;
     font-weight: normal;
 }
 

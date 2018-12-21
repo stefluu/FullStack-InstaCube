@@ -29,7 +29,7 @@ class Update extends React.Component {
       this.setState({[type]: e.target.value})
       // let updatedVar = {variable};
       // updatedVar = e.target.value;
-      // console.log(updatedVar);
+
     };
   };
 
@@ -73,10 +73,6 @@ class Update extends React.Component {
             <ul>
               <li id="updateVerticalLine" />
               <li>Edit Profile</li>
-
-              {/* <li>
-              Change Password
-            </li> */}
             </ul>
           </aside>
           <form className="updateForm">

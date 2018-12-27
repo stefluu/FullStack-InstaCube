@@ -18,7 +18,7 @@ user2 = User.create(username: "Look_up_Look_down", full_name: "Nature", display_
 
 user3 = User.create(username: "letsExplore", full_name: "Stefanie", display_name: "Stefanie.", bio: "Hi there! Welcome to my page!", email: "stef@testing.com", password: "123456")
 
-user4 = User.create(username: "WinterisComing", full_name: "Jack Frost", display_name: "Jack Frost", bio: "You know nothing, John Snow.", email: "winter@testing.com", password: "123456")
+user4 = User.create(username: "WinterIsComing", full_name: "Jack Frost", display_name: "Jack Frost", bio: "You know nothing, John Snow.", email: "winter@testing.com", password: "123456")
 
 user5 = User.create(username: "Ocean+Sky", full_name: "Land Sea", display_name: "Land + Sea", bio: "If only Ocean Beach was warm enough to swim", email: "oceansky@testing.com", password: "123456")
 
@@ -140,7 +140,8 @@ image24 = Image.create!(user_id: user3.id, date: Date.parse("2018-7-18"), captio
 image24.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/plane.jpg"), filename: "plane.jpg")
 
 
-##WinterIsComing
+
+#WinterIsComing
 
 # winterwindow
 image25 = Image.create!(user_id: user4.id, date: Date.parse("2018-12-31"), caption: "Winter is Coming.")
@@ -164,14 +165,27 @@ image27.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 
 
+#Ocean+Sky
 
-image10 = Image.create!(user_id: user2.id, date: Date.parse("2018-7-16"), caption: "I love the beach.")
-# beach
+# rippledclouds
+image28 = Image.create!(user_id: user5.id, date: Date.parse("2018-7-13"), caption: "This was an amazing sight and a beautiful day.")
+image28.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/rippledclouds.jpg"), filename: "rippledclouds.jpg")
 
-image10.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/V5p3a5bTiKq5rqv5iSQ6ibVU"), filename: "beach.jpeg")
+# dolores
+image29 = Image.create!(user_id: user5.id, date: Date.parse("2018-8-4"), caption: "Pretty day at Dolores.")
+image29.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/dolores.jpg"), filename: "dolores.jpg")
 
+# beach.jpg
+image29 = Image.create!(user_id: user5.id, date: Date.parse("2018-8-14"), caption: "Found this cave by a swing.")
+image29.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/beach.jpg"), filename: "beach.jpg")
 
+# sandfootprints
+image30 = Image.create!(user_id: user5.id, date: Date.parse("2018-9-20"), caption: "Chilly walk on the beach")
+image30.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/sandfootprints.jpg"), filename: "sandfootprints.jpg")
 
+# beach.jpeg
+image31 = Image.create!(user_id: user5.id, date: Date.parse("2018-11-7"), caption: "Definitely looks colder than it was.")
+image31.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/V5p3a5bTiKq5rqv5iSQ6ibVU"), filename: "beach.jpeg")
 
 
 

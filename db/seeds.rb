@@ -34,7 +34,7 @@ image1.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/Q
 
 # black and white
 image2 = Image.create!(user_id: dummyUser.id, date: Date.parse("2017-11-29"))
-image2.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/FGQw45pkJp77uR2Q3geNPTtG"), filename: "blackwhitephoto.jpeg")
+image2.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/blackwhitephoto.jpeg"), filename: "blackwhitephoto.jpeg")
 
 # flower
 image3 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-1-12"), caption: "I grew this!")

@@ -41,7 +41,7 @@ image3 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-1-12"), cap
 image3.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/kQevcka5GnL3EJ3QiRJ8L6vq"), filename: "flower.jpg")
 
 # wheat
-image4 = Image.create!(user_id: dummyUser.id, date: Date.parse("2017-7-29"), caption: "Windswept Wheat")
+image4 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-7-29"), caption: "Windswept Wheat")
 image4.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/wheat.jpg"), filename: "wheat.jpg")
 
 # grassreading
@@ -49,45 +49,71 @@ image5 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-8-10"), cap
 image5.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/grnBCYkcm5q8GydPgqhzmPLz"), filename: "grassreading.jpeg")
 
 # bluewheat
-image6 = Image.create!(user_id: dummyUser.id, date: Date.parse("2017-8-11"), caption: "Wheat against the sky.")
+image6 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-8-11"), caption: "Wheat against the sky.")
 image6.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/bluewheat.jpg"), filename: "bluewheat.jpg")
 
 # redflower
 image7 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-3-12"), caption: "Look how red this flower is!")
 image7.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/redflower.jpg"), filename: "redflower.jpg")
 
-
 # sunset
-image8 = Image.create!(user_id: user2.id, date: Date.parse("2018-4-16"), caption: "Nature's paintings")
+image8 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-4-16"), caption: "Nature's paintings")
 image8.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/i1bW6ZFnHoYug3UgtPpkVULo"), filename: "sunset.jpg")
 
 
 #ChristopherSturm
 
-image9 = Image.create!(user_id: user1.id, date: Date.parse("2018-1-23"), caption: "Light Blue")
 # beetle
-
+image9 = Image.create!(user_id: user1.id, date: Date.parse("2017-1-23"), caption: "Light Blue")
 image9.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/r135x1tWpJg41uzwfAV8wuf1"), filename: "beetle.jpg")
 
-image10 = Image.create!(user_id: user1.id, date: Date.parse("2018-4-19"), caption: "Lavender")
 # purplecup
-
+image10 = Image.create!(user_id: user1.id, date: Date.parse("2017-10-19"), caption: "Lavender")
 image10.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/BnjBZvvtydWxCZv16aF3Phrn"), filename: "purplecup.jpg")
 
-image11 = Image.create!(user_id: user1.id, date: Date.parse("2018-5-10"), caption: "These are ferns")
 # leaf
-
+image11 = Image.create!(user_id: user1.id, date: Date.parse("2018-1-10"), caption: "These are ferns")
 image11.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/zPGYXZtWP3nzeR8YEHViJFZd"), filename: "leaf.jpg")
 
-image12 = Image.create!(user_id: user1.id, date: Date.parse("2017-10-27"), caption: "My friend made this")
 # fooddrizzle
-
+image12 = Image.create!(user_id: user1.id, date: Date.parse("2018-5-27"), caption: "Try this place out")
 image12.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/rZ8EeNxdinFm7tCuRczMY4gU"), filename: "fooddrizzle.jpg")
 
-image13 = Image.create!(user_id: user1.id, date: Date.parse("2018-2-2"), caption: "Deviled Eggs")
 # deviledeggs
-
+image13 = Image.create!(user_id: user1.id, date: Date.parse("2018-7-19"), caption: "Deviled Eggs")
 image13.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YBySc5daH9i3cfpV2A3MjYFs"), filename: "deviledeggs.jpeg")
+
+
+##LookUp LookDown
+
+# redleaf
+image14 = Image.create!(user_id: user2.id, date: Date.parse("2017-10-2"), caption: "Fall colors")
+image14.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/redleaf.jpeg"), filename: "redleaf.jpeg")
+
+# treebranches
+image15 = Image.create!(user_id: user2.id, date: Date.parse("2017-11-5"), caption: "No more leaves.")
+image15.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/treebranches.jpg"), filename: "treebranches.jpg")
+
+#trees
+image16 = Image.create!(user_id: user2.id, date: Date.parse("2017-11-27"), caption: "It's becoming fall!")
+image16.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YnND9ndgBcbPFnK5rgdJxrt2"), filename: "trees.jpg")
+
+#fall_leaf
+image17 = Image.create!(user_id: user2.id, date: Date.parse("2018-9-28"), caption: "Autumn is here again!")
+image17.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/fall_leaf.jpg"), filename: "fall_leaf.jpg")
+
+#uncurling
+image18 = Image.create!(user_id: user2.id, date: Date.parse("2018-10-20"), caption: "A picture from earlier this year! It grew back!")
+image18.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/uncurling.jpg"), filename: "uncurling.jpg")
+
+# redleaf2
+image19 = Image.create!(user_id: user2.id, date: Date.parse("2018-10-30"), caption: "Another red leaf!")
+image19.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/redleaf2.jpeg"), filename: "redleaf2.jpeg")
+
+# dandelion
+image20 = Image.create!(user_id: user3.id, date: Date.parse("2018-12-30"), caption: "Make a wish!")
+image20.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/SpyB33FLBsAufbCTXwkext1h"), filename: "dandelion.jpeg")
+
 
 
 
@@ -100,19 +126,12 @@ image10.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 
 
-image12 = Image.create!(user_id: user2.id, date: Date.parse("2017-9-20"), caption: "It's becoming fall!")
-#trees
 
-image12.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YnND9ndgBcbPFnK5rgdJxrt2"), filename: "trees.jpg")
 
 image13 = Image.create!(user_id: user3.id, date: Date.parse("2018-3-15"), caption: "Sparklers for my friend's wedding")
 #sparklers
 
 image13.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YeFGKAE7Hz11a92Vng5r8Ppq"), filename: "sparklers.jpg")
 
-image14 = Image.create!(user_id: user3.id, date: Date.parse("2018-8-28"), caption: "Make a wish!")
-# dandelion
-
-image14.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/SpyB33FLBsAufbCTXwkext1h"), filename: "dandelion.jpeg")
 
 

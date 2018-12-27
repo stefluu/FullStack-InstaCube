@@ -10,13 +10,21 @@ User.destroy_all
 Image.destroy_all
 
 
-dummyUser = User.create(username:"demo_user", full_name: "Stef L", email: "stef@testing.com", password: "123456")
+dummyUser = User.create(username:"demo_user", full_name: "DemoUser",, display_name: "Demo User", bio: "Hi. Welcome to InstaCube!", email: "demo@testing.com", password: "123456")
 
-user1 = User.create(username: "CS.Photography", full_name: "Christopher", display_name: "Photographer in Oakland", bio: "Film and Digital photography", email: "chris@testing.com", password: "123456")
+user1 = User.create(username: "CS.Photography", full_name: "Christopher", display_name: "Christopher Sturm", bio: "Film and Digital photography- csturmphoto.com", email: "chris@testing.com", password: "123456")
 
-user2 = User.create(username: "NatureIsBeautiful", full_name: "Nature", bio: "Go Exploring!", email: "nature@testing.com", password: "123456")
+user2 = User.create(username: "Look_up_Look_down", full_name: "Nature", display_name: "Nature", bio: "Look all around!", email: "nature@testing.com", password: "123456")
 
-user3 = User.create(username: "hey_itsStef", full_name: "Stefanie", display_name: "Stefanie.", bio: "Hi there! Welcome to my page!", email: "stef@stef.com", password: "123456")
+user3 = User.create(username: "letsExplore", full_name: "Stefanie", display_name: "Stefanie.", bio: "Hi there! Welcome to my page!", email: "stef@testing.com", password: "123456")
+
+user4 = User.create(username: "WinterisComing", full_name: "Jack Frost", display_name: "Jack Frost", bio: "You know nothing, John Snow.", email: "winter@testing.com", password: "123456")
+
+user5 = User.create(username: "Ocean+Sky", full_name: "Land Sea", display_name: "Land + Sea", bio: "If only Ocean Beach was warm enough to swim", email: "oceansky@testing.com", password: "123456")
+
+user6 = User.create(username: "TAGI", full_name: "Tagi", display_name: "Tagi", bio: "Peep!", email: "tagi@testing.com", password: "123456")
+
+user7 = User.create(username: "FoodnStuff", full_name: "Food", display_name: "FOOD", bio: "All the foods.", email: "food@testing.com", password: "123456")
 
 image1 = Image.create!(user_id: dummyUser.id, date: Date.parse("2017-11-16"), caption: "Hi, I'm Tagi!")
 # tagi

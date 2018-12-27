@@ -87,27 +87,27 @@ image13.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 ##LookUp LookDown
 
 # redleaf
-image14 = Image.create!(user_id: user2.id, date: Date.parse("2017-10-2"), caption: "Fall colors")
+image14 = Image.create!(user_id: user3.id, date: Date.parse("2017-10-2"), caption: "Fall colors")
 image14.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/redleaf.jpeg"), filename: "redleaf.jpeg")
 
 # treebranches
-image15 = Image.create!(user_id: user2.id, date: Date.parse("2017-11-5"), caption: "No more leaves.")
+image15 = Image.create!(user_id: user3.id, date: Date.parse("2017-11-5"), caption: "No more leaves.")
 image15.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/treebranches.jpg"), filename: "treebranches.jpg")
 
 #trees
-image16 = Image.create!(user_id: user2.id, date: Date.parse("2017-11-27"), caption: "It's becoming fall!")
+image16 = Image.create!(user_id: user3.id, date: Date.parse("2017-11-27"), caption: "It's becoming fall!")
 image16.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YnND9ndgBcbPFnK5rgdJxrt2"), filename: "trees.jpg")
 
 #fall_leaf
-image17 = Image.create!(user_id: user2.id, date: Date.parse("2018-9-28"), caption: "Autumn is here again!")
+image17 = Image.create!(user_id: user3.id, date: Date.parse("2018-9-28"), caption: "Autumn is here again!")
 image17.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/fall_leaf.jpg"), filename: "fall_leaf.jpg")
 
 #uncurling
-image18 = Image.create!(user_id: user2.id, date: Date.parse("2018-10-20"), caption: "A picture from earlier this year! It grew back!")
+image18 = Image.create!(user_id: user3.id, date: Date.parse("2018-10-20"), caption: "A picture from earlier this year! It grew back!")
 image18.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/uncurling.jpg"), filename: "uncurling.jpg")
 
 # redleaf2
-image19 = Image.create!(user_id: user2.id, date: Date.parse("2018-10-30"), caption: "Another red leaf!")
+image19 = Image.create!(user_id: user3.id, date: Date.parse("2018-10-30"), caption: "Another red leaf!")
 image19.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/redleaf2.jpeg"), filename: "redleaf2.jpeg")
 
 # dandelion
@@ -116,7 +116,28 @@ image20.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 
 
+#letsExplore
 
+#sparklers
+image21 = Image.create!(user_id: user4.id, date: Date.parse("2017-12-2"), caption: "Sparklers for my friend's wedding")
+image21.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YeFGKAE7Hz11a92Vng5r8Ppq"), filename: "sparklers.jpg")
+
+
+# paintthetown
+image22 = Image.create!(user_id: user4.id, date: Date.parse("2018-2-23"), caption: "Paint the town. No parking.")
+image22.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/paintthetown.jpg"), filename: "paintthetown.jpg")
+
+# ferry
+image23 = Image.create!(user_id: user4.id, date: Date.parse("2018-4-19"), caption: "Sit and talk a while.")
+image23.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/ferry.jpg"), filename: "ferry.jpg")
+
+# lightfence
+image24 = Image.create!(user_id: user4.id, date: Date.parse("2018-5-26"), caption: "Glow.")
+image24.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/lightfence.jpg"), filename: "lightfence.jpg")
+
+# plane
+image24 = Image.create!(user_id: user4.id, date: Date.parse("2018-7-18"), caption: "Travel when you can.")
+image24.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/plane.jpg"), filename: "plane.jpg")
 
 
 image10 = Image.create!(user_id: user2.id, date: Date.parse("2018-7-16"), caption: "I love the beach.")
@@ -128,10 +149,6 @@ image10.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 
 
-image13 = Image.create!(user_id: user3.id, date: Date.parse("2018-3-15"), caption: "Sparklers for my friend's wedding")
-#sparklers
-
-image13.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YeFGKAE7Hz11a92Vng5r8Ppq"), filename: "sparklers.jpg")
 
 
 

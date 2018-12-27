@@ -202,3 +202,30 @@ image33.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 # tagiturned
 image34 = Image.create!(user_id: user6.id, date: Date.parse("2018-7-25"), caption: "Peep...?")
 image34.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/tagiturned.jpg"), filename: "tagiturned.jpg")
+
+
+#FoodnStuff
+
+# thanksgiving
+image35 = Image.create!(user_id: user7.id, date: Date.parse("2017-11-23"), caption: "Family Thanksgiving! :)")
+image35.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/thanksgiving.jpg"), filename: "thanksgiving.jpg")
+
+# pasta
+image36 = Image.create!(user_id: user7.id, date: Date.parse("2018-1-28"), caption: "Made baked ziti tonight!")
+image36.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/pasta.jpg"), filename: "pasta.jpg")
+
+# hkcafe
+image37 = Image.create!(user_id: user7.id, date: Date.parse("2018-3-5"), caption: "Baked dishes at HK cafes are bomb!")
+image37.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/hk+cafe.jpg"), filename: "hk+cafe.jpg")
+
+# donuts
+image38 = Image.create!(user_id: user7.id, date: Date.parse("2018-8-21"), caption: "From when I went to Portland!")
+image38.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/donuts.jpg"), filename: "donuts.jpg")
+
+# tomato
+image39 = Image.create!(user_id: user7.id, date: Date.parse("2018-9-28"), caption: "Farmers' Market tomatoes.")
+image39.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/tomato.jpg"), filename: "tomato.jpg")
+
+# matcha
+image40 = Image.create!(user_id: user7.id, date: Date.parse("2018-11-27"), caption: "Mmm Matcha....")
+image40.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/matcha.jpg"), filename: "matcha.jpg")

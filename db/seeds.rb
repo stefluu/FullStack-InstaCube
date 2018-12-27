@@ -10,7 +10,7 @@ User.destroy_all
 Image.destroy_all
 
 
-dummyUser = User.create(username:"demo_user", full_name: "DemoUser",, display_name: "Demo User", bio: "Hi. Welcome to InstaCube!", email: "demo@testing.com", password: "123456")
+dummyUser = User.create(username:"demo_user", full_name: "DemoUser", display_name: "Demo User", bio: "Hi. Welcome to InstaCube!", email: "demo@testing.com", password: "123456")
 
 user1 = User.create(username: "CS.Photography", full_name: "Christopher", display_name: "Christopher Sturm", bio: "Film and Digital photography- csturmphoto.com", email: "chris@testing.com", password: "123456")
 

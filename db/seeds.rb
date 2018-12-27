@@ -189,5 +189,16 @@ image31.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 
 
+#Tagi
 
+# tagiscreaming
+image32 = Image.create!(user_id: user6.id, date: Date.parse("2018-6-7"), caption: "Mom! Listen to me mom!")
+image32.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/tagiscreaming.jpg"), filename: "tagiscreaming.jpg")
 
+# tagitoiletpaper
+image33 = Image.create!(user_id: user6.id, date: Date.parse("2018-7-7"), caption: "What's in here? Let me check again.")
+image33.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/tagitoiletpaper.jpg"), filename: "tagitoiletpaper.jpg")
+
+# tagiturned
+image34 = Image.create!(user_id: user6.id, date: Date.parse("2018-7-25"), caption: "Peep...?")
+image34.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/tagiturned.jpg"), filename: "tagiturned.jpg")

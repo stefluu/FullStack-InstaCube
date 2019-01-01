@@ -6,11 +6,11 @@ import { login } from '../../actions/session';
 
 
 
-// const mstp = (state) => {
-//     return{
-//         currentUser: state.currentUser
-//     };
-// };
+const mstp = (state) => {
+    return{
+        currentUser: state.entities.users[parseInt(state.session.currentUserId)]
+    };
+};
 
 const mdtp = (dispatch) => {
     return {
@@ -21,4 +21,4 @@ const mdtp = (dispatch) => {
 };
 
 
-export default withRouter(connect(null, mdtp)(Update));
+export default withRouter(connect(mstp, mdtp)(Update));

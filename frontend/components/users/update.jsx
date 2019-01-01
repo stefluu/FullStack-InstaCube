@@ -36,7 +36,6 @@ class Update extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.props.updateUser(this.state);
-    console.log(this.state)
   }
 
   handlePasswordChange(e){
@@ -46,7 +45,6 @@ class Update extends React.Component {
     //   Object.values(currentUser)[0], 
     //   {password: this.state.oldPassword}
     // );
-    debugger
     let userCheck = {
       username: Object.values(currentUser)[0].username, 
       password: this.state.oldPassword
@@ -66,6 +64,7 @@ class Update extends React.Component {
   };
   
   render() {
+    debugger
     return <div className="entireUpdatePage">
         <NavBarContainer />
         <div className="updateCenterBox">

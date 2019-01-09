@@ -9,7 +9,7 @@ class Show extends React.Component {
     this.props.fetchImages();
     this.props.fetchUsers();
     this.props.fetchLikes();
-    let currentUserId = Object.values(currentUser)[0].id;
+    // let currentUserId = Object.values(currentUser)[0].id;
     this.props.fetchFollows();
   };
 

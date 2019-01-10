@@ -16,12 +16,12 @@ class Search extends React.Component {
     };
 
     handleQuery(e, value){
+        console.log(this.state.query)
         e.preventDefault();
         this.setState({query: e.target.value});
         let searchBar = document.getElementById("search-dropdown");
         
         if (e.target.value === "") {
-            
             searchBar.classList.add("hidden");
         } else {
             searchBar.classList.remove("hidden");

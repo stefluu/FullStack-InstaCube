@@ -35,23 +35,36 @@ class Show extends React.Component {
     
    
     const allFollows = Object.values(this.props.followings);
-    const currentUserFollows = [];
+    const currentUserFollowersIds = [];
+    const currentUsersFollows = [];
     
 
     for (let i = 0; i < allFollows.length; i++) {
+
+      if (allFollows[i].user_id === currentUserId){
+        currentUsersFollows.push(allFollows[i]);
+      }
+
       if ((allFollows[i].user_id === currentUserId) &&
-        (!currentUserFollows.includes(allFollows[i].follower_id))
+        (!currentUserFollowersIds.includes(allFollows[i].follower_id))
       ) {
-        currentUserFollows.push(allFollows[i].follower_id)
+        currentUserFollowersIds.push(allFollows[i].follower_id);
       }
     }
 
     let potentialFollowDeletion;
-    if (currentUserFollows.includes(this.props.userId)) {
-      // currentLike = this.props.likes[currentUserFollows.indexOf(imageId)]
-      let followsKeys = Object.keys(this.props.followings)
-      potentialFollowDeletion = followsKeys[currentUserFollows.indexOf(this.props.userId)];
-      potentialFollowDeletion = parseInt(potentialFollowDeletion);
+    if (currentUserFollowersIds.includes(this.props.userId)) {
+      // currentLike = this.props.likes[currentUserFollowersIds.indexOf(imageId)]
+      for(let i = 0; i < currentUsersFollows.length; i++){
+        if ((currentUsersFollows[i].user_id === currentUserId) && 
+          (currentUsersFollows[i].follower_id === this.props.userId)){
+            potentialFollowDeletion = currentUsersFollows[i].id
+          }
+      }
+      // let followsKeys = Object.keys(currentUsersFollows)
+      // debugger
+      // potentialFollowDeletion = followsKeys[currentUserFollowersIds.indexOf(this.props.userId)];
+      // potentialFollowDeletion = parseInt(potentialFollowDeletion);
     }
     
 
@@ -67,7 +80,7 @@ class Show extends React.Component {
   
         <i id="edit-icon" className="fas fa-circle-notch" onClick={() => this.props.openModal('logout')}></i>
       </div>
-    } else if(currentUserFollows.includes(this.props.userId)){
+    } else if(currentUserFollowersIds.includes(this.props.userId)){
       editOrFollowButton =
         <button
           // id="follow-button"

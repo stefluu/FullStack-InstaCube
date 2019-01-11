@@ -29,17 +29,17 @@ class Show extends React.Component {
     
     //follow/unfollow
     let editOrFollowButton;
-    // let currentUserId = Object.values(currentUser)[0].id;
-    let currentUserId = this.props.userId;
+    let currentUserId = Object.keys(currentUser)[0];
+    // let currentUserId = this.props.userId;
     let isCurrentUserProf = (currentUserId === profileOwner.id)
-    // debugger
+    debugger
    
     const allFollows = Object.values(this.props.followings);
     const currentUserFollows = [];
     
 
     for (let i = 0; i < allFollows.length; i++) {
-      if ((allFollows[i].user_id === currentUserId) &&
+      if ((allFollows[i].user_id === parseInt(currentUserId)) &&
         (!currentUserFollows.includes(allFollows[i].follower_id))
       ) {
         currentUserFollows.push(allFollows[i].follower_id)

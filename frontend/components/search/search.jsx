@@ -15,6 +15,17 @@ class Search extends React.Component {
         this.props.fetchUsers();
     };
 
+    // componentWillMount(){
+    //     this.setState({ query: "" });
+    // }
+
+    clearQuery(e){
+        debugger
+        e.preventDefault();
+        this.setState({ query: "" });
+        this.addHidden();
+    }
+
     handleQuery(e, value){
         console.log(this.state.query)
         e.preventDefault();
@@ -26,6 +37,12 @@ class Search extends React.Component {
         } else {
             searchBar.classList.remove("hidden");
         }
+    }
+
+    addHidden(e) {
+        let searchBar = document.getElementById("search-dropdown");
+        searchBar.classList.add("hidden");
+        this.setState({ query: "" });
     }
 
   render() {
@@ -49,7 +66,9 @@ class Search extends React.Component {
             //     console.log(users[i]);
             //     matchingUsers.push(users[i]);
             }
-        } 
+        // } else {
+            
+        }
     }
     
 
@@ -58,14 +77,17 @@ class Search extends React.Component {
         <div className="complete-searchbar">
             <input type="text" 
             id="searchbar"
-            placeholder="Search" 
+            placeholder="Search"
+            value={this.state.query}
+            onClick={(e) => this.clearQuery(e)}
             onChange={(e)=> this.handleQuery(e)}
             />
 
             <ul id= "search-dropdown"
                 className="search-dropdown hidden">
                 {matchingUsers.map(user => (
-                    <li key={user.id}>
+                    <li key={user.id}
+                        onClick={(e) => this.addHidden(e)}>
                         <SearchResult user={user} />
                     </li>
                 ))}

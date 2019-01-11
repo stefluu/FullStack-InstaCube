@@ -8,10 +8,10 @@ class SearchResult extends React.Component {
     };
 
 
-    addHidden(e){
-      let searchBar = document.getElementById("search-dropdown");
-      searchBar.classList.add("hidden");
-    }
+    // addHidden(e){
+    //   let searchBar = document.getElementById("search-dropdown");
+    //   searchBar.classList.add("hidden");
+    // }
 
   render() {
       let user = this.props.user;
@@ -19,7 +19,7 @@ class SearchResult extends React.Component {
     return (
       <div className="searchresult">
          <a href={`/#/users/${user.id}`}
-            onClick={(e) => this.addHidden(e)}
+            // onClick={(e) => this.addHidden(e)}
           >
             <p>{user.username}</p>
             <p>{user.display_name}</p>

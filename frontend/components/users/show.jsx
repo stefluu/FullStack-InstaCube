@@ -29,7 +29,7 @@ class Show extends React.Component {
     
     //follow/unfollow
     let editOrFollowButton;
-    let currentUserId = parseInt(Object.keys(currentUser)[0]);
+    let currentUserId = parseInt(Object.keys(this.props.currentUser)[0]);
     // let currentUserId = this.props.userId;
     let isCurrentUserProf = (currentUserId === profileOwner.id)
     

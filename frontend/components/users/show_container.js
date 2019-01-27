@@ -13,7 +13,7 @@ const mstp = (state, ownProps) => {
   return{
     // users: state.entities.users,
     // currentUserId: state.session.currentUserId,
-    // currentUser: (state.entities.users)[state.session.currentUserId],
+    currentUser: (state.entities.users)[state.session.currentUserId],
     images: Object.values(state.entities.images),
     users: state.entities.users,
     userId: parseInt(ownProps.match.params.userId),

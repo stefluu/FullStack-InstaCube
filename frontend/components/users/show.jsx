@@ -9,7 +9,7 @@ class Show extends React.Component {
     this.props.fetchImages();
     this.props.fetchUsers();
     this.props.fetchLikes();
-    // let currentUserId = Object.values(currentUser)[0].id;
+    // let currentUserId = Object.keys(currentUser)[0].id;
     this.props.fetchFollows();
   };
 
@@ -29,9 +29,13 @@ class Show extends React.Component {
     
     //follow/unfollow
     let editOrFollowButton;
-    let currentUserId = parseInt(Object.keys(this.props.currentUser)[0]);
+    // let currentUserId = parseInt(Object.keys(currentUser));
+    let currentUserId = this.props.currentUser.id;
+
+    
     // let currentUserId = this.props.userId;
     let isCurrentUserProf = (currentUserId === profileOwner.id)
+    
     
    
     const allFollows = Object.values(this.props.followings);

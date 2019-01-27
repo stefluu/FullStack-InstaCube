@@ -20,6 +20,7 @@ const mstp = (state, ownProps) => {
     followings: state.entities.followings
     // userId: (parseInt(window.location.hash.slice(window.location.hash.search(/[0-9]/))))
   };
+  
 };
 
 const mdtp = (dispatch) => {

@@ -69,19 +69,19 @@ image9.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/b
 
 # purplecup
 image10 = Image.create!(user_id: user1.id, date: Date.parse("2017-10-19"), caption: "Lavender")
-image10.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/BnjBZvvtydWxCZv16aF3Phrn"), filename: "purplecup.jpg")
+image10.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/purplecup.jpg"), filename: "purplecup.jpg")
 
 # leaf
 image11 = Image.create!(user_id: user1.id, date: Date.parse("2018-1-10"), caption: "These are ferns")
-image11.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/zPGYXZtWP3nzeR8YEHViJFZd"), filename: "leaf.jpg")
+image11.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/leaf.jpg"), filename: "leaf.jpg")
 
 # fooddrizzle
 image12 = Image.create!(user_id: user1.id, date: Date.parse("2018-5-27"), caption: "Try this place out")
-image12.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/rZ8EeNxdinFm7tCuRczMY4gU"), filename: "fooddrizzle.jpg")
+image12.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/fooddrizzle.jpg"), filename: "fooddrizzle.jpg")
 
 # deviledeggs
 image13 = Image.create!(user_id: user1.id, date: Date.parse("2018-7-19"), caption: "Deviled Eggs")
-image13.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YBySc5daH9i3cfpV2A3MjYFs"), filename: "deviledeggs.jpeg")
+image13.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/deviledeggs.jpeg"), filename: "deviledeggs.jpeg")
 
 
 ##LookUp LookDown
@@ -96,7 +96,7 @@ image15.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 #trees
 image16 = Image.create!(user_id: user2.id, date: Date.parse("2017-11-27"), caption: "It's becoming fall!")
-image16.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YnND9ndgBcbPFnK5rgdJxrt2"), filename: "trees.jpg")
+image16.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/trees.jpg"), filename: "trees.jpg")
 
 #fall_leaf
 image17 = Image.create!(user_id: user2.id, date: Date.parse("2018-9-28"), caption: "Autumn is here again!")
@@ -112,7 +112,7 @@ image19.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 # dandelion
 image20 = Image.create!(user_id: user2.id, date: Date.parse("2018-12-30"), caption: "Make a wish!")
-image20.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/SpyB33FLBsAufbCTXwkext1h"), filename: "dandelion.jpeg")
+image20.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/dandelion.jpeg"), filename: "dandelion.jpeg")
 
 
 
@@ -120,7 +120,7 @@ image20.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 #sparklers
 image21 = Image.create!(user_id: user3.id, date: Date.parse("2017-12-2"), caption: "Sparklers for my friend's wedding")
-image21.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/YeFGKAE7Hz11a92Vng5r8Ppq"), filename: "sparklers.jpg")
+image21.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/sparklers.jpg"), filename: "sparklers.jpg")
 
 
 # paintthetown

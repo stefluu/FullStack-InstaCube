@@ -27,7 +27,7 @@ class modalImageWindowContainer extends React.Component {
   };
 
   render(){
-    if (!currentUser) return null;
+    // if (!currentUser) return null;
     if (!this.props.users[this.props.currentUserId]) return null;
 
     let allLikes = Object.values(this.props.likes);

@@ -38,15 +38,15 @@ image2.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/b
 
 # flower
 image3 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-1-12"), caption: "I grew this!")
-image3.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/kQevcka5GnL3EJ3QiRJ8L6vq"), filename: "flower.jpg")
+image3.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/flower.jpg"), filename: "flower.jpg")
 
 # wheat
 image4 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-7-29"), caption: "Windswept Wheat")
 image4.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/wheat.jpg"), filename: "wheat.jpg")
 
-# grassreading
+# grassing
 image5 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-8-10"), caption: "Read more!")
-image5.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/grnBCYkcm5q8GydPgqhzmPLz"), filename: "grassreading.jpeg")
+image5.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/grassreading.jpeg"), filename: "grassreading.jpeg")
 
 # bluewheat
 image6 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-8-11"), caption: "Wheat against the sky.")
@@ -58,14 +58,14 @@ image7.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/r
 
 # sunset
 image8 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-4-16"), caption: "Nature's paintings")
-image8.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/i1bW6ZFnHoYug3UgtPpkVULo"), filename: "sunset.jpg")
+image8.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/sunset.jpg"), filename: "sunset.jpg")
 
 
 #ChristopherSturm
 
 # beetle
 image9 = Image.create!(user_id: user1.id, date: Date.parse("2017-1-23"), caption: "Light Blue")
-image9.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/r135x1tWpJg41uzwfAV8wuf1"), filename: "beetle.jpg")
+image9.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/beetle.jpg"), filename: "beetle.jpg")
 
 # purplecup
 image10 = Image.create!(user_id: user1.id, date: Date.parse("2017-10-19"), caption: "Lavender")
@@ -228,4 +228,4 @@ image39.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 # matcha
 image40 = Image.create!(user_id: user7.id, date: Date.parse("2018-11-27"), caption: "Mmm Matcha....")
-image40.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/matcha.jpg"), filename: "matcha.jpg")
+image40.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/matcha_rotated.png"), filename: "matcha_rotated.png")

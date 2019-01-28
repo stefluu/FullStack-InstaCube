@@ -15,7 +15,6 @@ class SearchResult extends React.Component {
 
   render() {
       let user = this.props.user;
-
     return (
       <div className="searchresult">
          <a href={`/#/users/${user.id}`}

@@ -40,6 +40,7 @@ class Search extends React.Component {
     }
 
     addHidden(e) {
+        debugger
         let searchBar = document.getElementById("search-dropdown");
         searchBar.classList.add("hidden");
         this.setState({ query: "" });
@@ -52,6 +53,7 @@ class Search extends React.Component {
         let username = users[i].username;
         let fullname = users[i].full_name;
         let query = this.state.query;
+        // debugger
         if(query !== ""){
             if (username && (username.search(new RegExp(query, "i")) !== -1)){
                 // console.log("matching username")
@@ -71,7 +73,6 @@ class Search extends React.Component {
         }
     }
     
-
     return (
     <div>
         <div className="complete-searchbar">
@@ -79,7 +80,9 @@ class Search extends React.Component {
             id="searchbar"
             placeholder="Search"
             value={this.state.query}
-            onClick={(e) => this.clearQuery(e)}
+            // onClick={(e) => this.clearQuery(e)}
+            // onClick={(e) => this.addHidden(e)}
+            // onClick={(e)=> console.log(matchingUsers)}
             onChange={(e)=> this.handleQuery(e)}
             />
 

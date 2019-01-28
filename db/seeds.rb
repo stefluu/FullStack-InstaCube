@@ -44,7 +44,7 @@ image3.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/f
 image4 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-7-29"), caption: "Windswept Wheat")
 image4.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/wheat.jpg"), filename: "wheat.jpg")
 
-# grassing
+# grassreadining
 image5 = Image.create!(user_id: dummyUser.id, date: Date.parse("2018-8-10"), caption: "Read more!")
 image5.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/grassreading.jpeg"), filename: "grassreading.jpeg")
 

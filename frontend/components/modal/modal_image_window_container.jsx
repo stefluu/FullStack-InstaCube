@@ -28,6 +28,7 @@ class modalImageWindowContainer extends React.Component {
 
   render(){
     if (!currentUser) return null;
+    if (!this.props.users[this.props.currentUserId]) return null;
 
     let allLikes = Object.values(this.props.likes);
     let currentUserLikes = [];
@@ -46,7 +47,7 @@ class modalImageWindowContainer extends React.Component {
       let likesKeys = Object.keys(this.props.likes)
       currentLikeId = likesKeys[currentUserLikes.indexOf(this.props.imageId)];
       currentLikeId = parseInt(currentLikeId);
-
+      
     }
 
     let heart = (currentUserLikes.includes(this.props.imageId)) ?

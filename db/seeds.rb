@@ -185,7 +185,7 @@ image30.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/
 
 # beach.jpeg
 image31 = Image.create!(user_id: user5.id, date: Date.parse("2018-11-7"), caption: "Definitely looks colder than it was.")
-image31.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/V5p3a5bTiKq5rqv5iSQ6ibVU"), filename: "beach.jpeg")
+image31.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/instacube-dev/beach.jpeg"), filename: "beach.jpeg")
 
 
 
